@@ -132,14 +132,14 @@ nav a#pull:after {
 	font-weight:12;
 
 	 }
- .myTable th {
+table th {
 	background:url(../images/bg.png);
 	opacity:.9;
 	text-align:center;
 	font-weight:16;
 	color:#FFF;
  }
- table tr:nth-child(odd){
+ .myTable tr:nth-child(odd){
 	 background-color:#DBB25F;
 	 }
  .myTable tr:hover, .myTr:hover {
@@ -147,6 +147,18 @@ nav a#pull:after {
 	color:#FFF;
  }
 
+.orders img{
+        width:125px ;
+	height:100px ;
+}
+.orders {
+  text-align:center;
+}
+.orders li {
+  float:left ;
+  margin:5px 20px ;
+  
+}
 /************* form ********/
 
 .form h2{
