@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Add Product</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js" ></script> 
+<body>
+   <div class="container form " style="width:900px ; min-height:400px ; margin:100px 200px">
+       <h2>Add Product</h2><br/>
+       <form action="" method="post">
+            <div class="row">
+                 <span class="col-lg-2"><label>Product</label></span>
+                 <span class="col-lg-6"><input type="text" name="" /></span>
+            </div>
+            <br/>
+            <div class="row">
+                 <span class="col-lg-2"><label>Price</label></span>
+                 <span class="col-lg-2"><input type="number" step=".5" min="1" max="20" name=""  />&nbsp; &nbsp;EPG</span>
+            </div>
+            <br/>
+            <div class="row">
+                 <span class="col-lg-2"><label>Category</label></span>
+                 <span class="col-lg-3"><select>
+                       <option  value="">Hot drinks</option>
+                       <option  value="">Cold drinks</option>
+                 </select></span>
+                 <span><a href="">Add category</a></span>                
+                
+            </div>
+            <br/>
+            <div class="row">
+                 <span class="col-lg-2"><label>Product image</label></span>                 
+                 <div class="col-lg-2 btn btn-default myButton fileUpload ">
+                     <span>Browse</span>
+                     <span class="col-lg-2"><input type="file" name="browse"  value="browse" class="upload" /></span>
+                 </div>
+            </div>
+            <br/><br/>
+            <div class="row">
+                 <span class="col-lg-2 col-xs-offset-3"><input type="submit" value="Save" name=""  class="myButton"/></span>
+                 <span class="col-lg-2"><input type="reset" name=""   class="myButton"/></span>
+            </div>
+       </form> 
+   </div>
+   
+   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px">
+        <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
+   </div>
+    
+</body>
+</html>
