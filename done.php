@@ -19,10 +19,10 @@ require('tables.php');
             <div class="col-lg-offset-2 col-sm-6">
                 <?php
                 //var_dump($_POST);
-                $fname= $_POST['name'];
+                $name= $_POST['name'];
                 $email= $_POST['email'];
                 $pwd= $_POST['pwd'];
-                $ext=$_POST['EXT'];
+                $EXT=$_POST['EXT'];
                 $room=$_POST['room'];
                 $flag=true;
                 $pattern="/^[a-z][a-z0-9]*[_.\-a-z]?@[a-z0-9]+\.([a-z]{2,4})|([a-z]{2,4}\.[a-z]{2})/i";
@@ -95,7 +95,7 @@ require('tables.php');
                     $user->rid=$room;
                     $user->EXT=$EXT;
                     $user->password=md5($pwd);
-                    $user->profileimage=$_FILES['profileimage']['name'];
+                    $user->profileimage=$upfile;
                     $user->insert();
                     echo "<br><form action='admin.php' method='POST'><input type='submit' name='admin' class='alert-info' value='Go to Admin'/></form>";
                 }

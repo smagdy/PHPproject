@@ -51,21 +51,23 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-lg-offset-2 col-sm-2">
-							<label for="profilePicture">profilePicture:</label>
+							<label for="profileimage">profileimage:</label>
 						</div>
 						<div class="col-sm-6">
-							<input type="file" class="" id="profilePicture" name="profilePicture"/>
+							<input type="file" class="" id="profileimage" name="profileimage"/>
 						</div>
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="row">
 						<div class="col-lg-offset-2 col-sm-2">
-							<label for="room">Country:</label>
+							<label for="room">Room:</label>
 						</div>
 						<div class="col-sm-6">
 							<select class="form-control" id="room" name="room">
 								<option>Select RoomNumber</option>
+								<option>101</option>
+								<option>102</option>
 								<?php
 
 								?>
