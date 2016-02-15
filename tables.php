@@ -6,7 +6,11 @@
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
-            $con=connection :: createInstance();
+            //$this->con=connection :: createInstance();
+            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+            if (mysqli_connect_errno()) {
+                echo 'Error: Could not connect to database. Please try again later.';
+            }
         }
         function __get($name){
             return $this->$name;
@@ -20,6 +24,7 @@
         }
         function insert(){
             $query="insert into users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."');";
+            //echo $query;
             mysqli_query($this->con,$query);
         }
         function delete(){
@@ -47,9 +52,13 @@
     class Products{
         private $pid,$pname,$productPicture,$cid,$con;
         function __construct(){
-            $this->pid=0;$this->pname='';
-            $this->cid=0; $this->productPicture='';
-            $con=connection :: createInstance();
+            $this->pid=1;$this->pname='';
+            $this->cid=1; $this->productPicture='';
+            //$this->con=connection :: createInstance();
+            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+            if (mysqli_connect_errno()) {
+                echo 'Error: Could not connect to database. Please try again later.';
+            }
         }
         function __get($name){
             return $this->$name;
@@ -75,23 +84,32 @@
             return mysqli_fetch_row($result);
         }
         function select(){
-            $query="select * from Products ;";
+            $query="select * from Products;";
+            echo $query;
             $result=mysqli_query($this->con,$query);
             $i=0;
             $data=array();
             while($row=$result->fetch_array()){
                 $data[$i]=$row;
-                $i++;
+                $i=$i+1;
+                echo $i;
             }
+            //mysqli_close($this->con);
             return $data;
+
         }
+
     }
     ////////////////////////-----------Category--------------///////////////////
     class Category{
         private $cid,$categoryName,$con;
         function __construct(){
             $this->cid=0;$this->categoryName='';
-            $con=connection :: createInstance();
+            //$this->con=connection :: createInstance();
+            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+            if (mysqli_connect_errno()) {
+                echo 'Error: Could not connect to database. Please try again later.';
+            }
         }
         function __get($name){
             return $this->$name;
@@ -130,10 +148,14 @@
     }
     /////////////////////-----------Orders--------------///////////////////
     class Orders{
-        private $uid,$pid,$orderDate,$amount,$con;
+        private $uid,$pid,$orderDate,$amount,$status,$con;
         function __construct(){
             $this->uid=0;$this->pid=0;$this->orderDate=now();$this->amount=0;
-            $con=connection :: createInstance();
+            //$this->con=connection :: createInstance();
+            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+            if (mysqli_connect_errno()) {
+                echo 'Error: Could not connect to database. Please try again later.';
+            }
         }
         function __get($name){
             return $this->$name;
@@ -142,21 +164,27 @@
             $this->$name = $value;
         }
         function update(){
-            $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."' where uid='".$this->uid."' and pid='".$this->pid."';";
+            $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."' where uid='".$this->uid."' and pid='".$this->pid."';";
             mysqli_query($this->con,$query);
         }
         function insert(){
-            $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."');";
+            $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."');";
             mysqli_query($this->con,$query);
         }
         function delete(){
             $query="delete from Orders where uid='".$this->uid."' and pid='".$this->pid."';";
             mysqli_query($this->con,$query);
         }
-        function selectbykey(){
-            $query="select * from Orders where uid='".$this->uid."' and pid='".$this->pid."';";
+        function selectbykey($from,$to){
+            $query="select * from Orders where uid='".$this->uid."' and orderDate between $from and $to ;";
             $result=mysqli_query($this->con,$query);
-            return mysqli_fetch_row($result);
+            $i=0;
+            $data=array();
+            while($row=$result->fetch_array()){
+                $data[$i]=$row;
+                $i++;
+            }
+            return $data;
         }
         function select(){
             $query="select * from Orders ;";
@@ -175,7 +203,11 @@
         private $rid,$roomNumber,$con;
         function __construct(){
             $this->rid=0;$this->roomNumber=0;$this->EXT=0;
-            $con=connection :: createInstance();
+            //$this->con=connection :: createInstance();
+            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+            if (mysqli_connect_errno()) {
+                echo 'Error: Could not connect to database. Please try again later.';
+            }
         }
         function __get($name){
             return $this->$name;
@@ -212,4 +244,5 @@
             return $data;
         }
     }
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ?>
