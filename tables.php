@@ -6,11 +6,7 @@
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
-            //$this->con=connection :: createInstance();
-            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-            if (mysqli_connect_errno()) {
-                echo 'Error: Could not connect to database. Please try again later.';
-            }
+            $this->con=connection :: createInstance();
         }
         function __get($name){
             return $this->$name;
@@ -54,11 +50,7 @@
         function __construct(){
             $this->pid=1;$this->pname='';
             $this->cid=1; $this->productPicture='';
-            //$this->con=connection :: createInstance();
-            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-            if (mysqli_connect_errno()) {
-                echo 'Error: Could not connect to database. Please try again later.';
-            }
+            $this->con=connection :: createInstance();
         }
         function __get($name){
             return $this->$name;
@@ -92,7 +84,6 @@
                 $data[$i]=$row;
                 $i=$i+1;
             }
-            //mysqli_close($this->con);
             return $data;
         }
 
@@ -106,11 +97,7 @@ class Orders{
         $this->orderDate=date('Y-m-d H:i:s');
         $this->amount=0;
         $this->status="";
-        //$this->con=connection :: createInstance();
-        $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-        if (mysqli_connect_errno()) {
-            echo 'Error: Could not connect to database. Please try again later.';
-        }
+        $this->con=connection :: createInstance();
     }
     function __get($name){
         return $this->$name;
@@ -132,7 +119,6 @@ class Orders{
     }
     function selectbykey($from,$to){
         $query="select * from Orders where uid='".$this->uid."' and orderDate between '".$from."' and '".$to."'  ;";
-        //echo $query;
         $result=mysqli_query($this->con,$query);
         $i=0;
         $data=array();
@@ -159,11 +145,7 @@ class Orders{
         private $cid,$categoryName,$con;
         function __construct(){
             $this->cid=0;$this->categoryName='';
-            //$this->con=connection :: createInstance();
-            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-            if (mysqli_connect_errno()) {
-                echo 'Error: Could not connect to database. Please try again later.';
-            }
+            $this->con=connection :: createInstance();
         }
         function __get($name){
             return $this->$name;
@@ -205,11 +187,7 @@ class Orders{
         private $rid,$roomNumber,$con;
         function __construct(){
             $this->rid=0;$this->roomNumber=0;$this->EXT=0;
-            //$this->con=connection :: createInstance();
-            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-            if (mysqli_connect_errno()) {
-                echo 'Error: Could not connect to database. Please try again later.';
-            }
+            $this->con=connection :: createInstance();
         }
         function __get($name){
             return $this->$name;
@@ -217,18 +195,10 @@ class Orders{
         function __set ($name, $value){
             $this->$name = $value;
         }
-        /*function update(){
-            $query="update Room set roomNumber='".$this->roomNumber."' where rid='".$this->rid."';";
-            mysqli_query($this->con,$query);
-        }*/
         function insert(){
             $query="insert into Room values(null,'".$this->roomNumber."');";
             mysqli_query($this->con,$query);
         }
-        /*function delete(){
-            $query="delete from Room where cid='".$this->rid."';";
-            mysqli_query($this->con,$query);
-        }*/
         function selectbykey(){
             $query="select * from Room where rid='".$this->rid."';";
             $result=mysqli_query($this->con,$query);
@@ -249,6 +219,10 @@ class Orders{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class changes
 {
+    private $con;
+    function __construct(){
+        $this->con=connection :: createInstance();
+    }
     function selectChangeDate($tablename)
     {
         $query = "select changeDate from changes where tableName=$tablename ;";
