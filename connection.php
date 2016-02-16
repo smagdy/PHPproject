@@ -37,7 +37,7 @@
 				echo "Error creating table: " . connection :: $obj->error;
 			}
 			////create table products
-			$sq = "CREATE TABLE IF NOT EXISTS Products (pid int unsigned not null auto_increment primary key,pname char(50) not null,productPicture char(50) not null,price int not null,cid int unsigned not null);";
+			$sq = "CREATE TABLE IF NOT EXISTS Products (pid int unsigned not null auto_increment primary key,pname char(50) not null,productPicture char(50) not null,cid int unsigned not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}

@@ -6,7 +6,7 @@
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
-            $this->con=connection :: createInstance();
+            $this->con=connection :: createInstance();        
         }
         function __get($name){
             return $this->$name;
@@ -219,10 +219,10 @@ class Orders{
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 class changes
 {
-    private $con;
-    function __construct(){
-        $this->con=connection :: createInstance();
-    }
+     private $con;
+     function __construct(){
+            $this->con=connection :: createInstance();
+     }
     function selectChangeDate($tablename)
     {
         $query = "select changeDate from changes where tableName=$tablename ;";
