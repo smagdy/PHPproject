@@ -193,6 +193,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/js/task.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/order.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/order.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/css/bootstrap.min.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/css/style.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/CaviarDreams-webfont.ttf" afterPath="" />
@@ -218,9 +220,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/code.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/jquery-1.11.2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/task.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxOrder.php" afterPath="$PROJECT_DIR$/ajaxOrder.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables.php" afterPath="$PROJECT_DIR$/tables.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userOrder.html" afterPath="$PROJECT_DIR$/userOrder.html" />
     </list>
     <ignored path="PHPproject.iws" />
@@ -311,21 +311,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxOrder.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajaxOrder.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ajaxOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.875">
-              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.11299435">
+              <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userOrder.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userOrder.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/userOrder.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4288577">
-              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+            <state vertical-scroll-proportion="-4.892857">
+              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -368,20 +368,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.625">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-              <folding>
-                <marker date="1455573298442" expanded="true" signature="68:115" placeholder="select chang... changes" />
-                <marker date="1455573298442" expanded="true" signature="315:362" placeholder="select serve... changes" />
-                <marker date="1455573298442" expanded="true" signature="562:614" placeholder="update chang... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -402,8 +388,8 @@
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/connection.php" />
         <option value="$PROJECT_DIR$/tables.php" />
-        <option value="$PROJECT_DIR$/ajaxOrder.php" />
         <option value="$PROJECT_DIR$/userOrder.html" />
+        <option value="$PROJECT_DIR$/ajaxOrder.php" />
       </list>
     </option>
   </component>
@@ -642,31 +628,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eventOrder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1455573298442" expanded="true" signature="68:115" placeholder="select chang... changes" />
-            <marker date="1455573298442" expanded="true" signature="315:362" placeholder="select serve... changes" />
-            <marker date="1455573298442" expanded="true" signature="562:614" placeholder="update chang... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -941,14 +907,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3502825">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625">
@@ -960,18 +918,6 @@
             <marker date="1455612428633" expanded="true" signature="7641:7663" placeholder="..." />
             <marker date="1455612428633" expanded="true" signature="7943:7965" placeholder="..." />
             <marker date="1455612428633" expanded="true" signature="8246:8268" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.625">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <marker date="1455573298442" expanded="true" signature="68:115" placeholder="select chang... changes" />
-            <marker date="1455573298442" expanded="true" signature="315:362" placeholder="select serve... changes" />
-            <marker date="1455573298442" expanded="true" signature="562:614" placeholder="update chang... " />
           </folding>
         </state>
       </provider>
@@ -1003,10 +949,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajaxOrder.php">
+    <entry file="file://$PROJECT_DIR$/userOrder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.875">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state vertical-scroll-proportion="-4.892857">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1048,10 +994,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/userOrder.html">
+    <entry file="file://$PROJECT_DIR$/ajaxOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4288577">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.11299435">
+          <caret line="4" column="58" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="58" />
           <folding />
         </state>
       </provider>
