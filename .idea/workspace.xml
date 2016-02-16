@@ -220,8 +220,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/code.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/jquery-1.11.2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/task.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connection.php" afterPath="$PROJECT_DIR$/connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables.php" afterPath="$PROJECT_DIR$/tables.php" />
     </list>
     <ignored path="PHPproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -243,11 +241,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="connection.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375">
-              <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.3220339">
+              <caret line="39" column="132" selection-start-line="39" selection-start-column="132" selection-end-line="39" selection-end-column="132" />
               <folding>
                 <marker date="1455636393359" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
                 <marker date="1455636393359" expanded="true" signature="1554:1727" placeholder="CREATE TABLE... IF" />
@@ -272,10 +270,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tables.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tables.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2259887">
+            <state vertical-scroll-proportion="-5.0">
               <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
               <folding>
                 <marker date="1455636645006" expanded="true" signature="643:851" placeholder="update users... " />
@@ -938,36 +936,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding>
-            <marker date="1455636393359" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="1554:1727" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="1889:2010" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="2168:2278" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="2544:2586" placeholder="insert into Room... " />
-            <marker date="1455636393359" expanded="true" signature="2696:2787" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="2958:3114" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="3321:3435" placeholder="CREATE TABLE... IF" />
-            <marker date="1455636393359" expanded="true" signature="3619:3666" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="3725:3775" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="3834:3884" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="3943:3989" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="4048:4096" placeholder="insert into users... " />
-            <marker date="1455636393359" expanded="true" signature="5789:5851" placeholder="alter table Users... " />
-            <marker date="1455636393359" expanded="true" signature="5898:5967" placeholder="alter table Products... " />
-            <marker date="1455636393359" expanded="true" signature="6014:6078" placeholder="alter table Orders... " />
-            <marker date="1455636393359" expanded="true" signature="6125:6192" placeholder="alter table Orders... " />
-            <marker date="1455636393359" expanded="true" signature="6239:6283" placeholder="alter table Orders... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tables.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2259887">
+        <state vertical-scroll-proportion="-5.0">
           <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
           <folding>
             <marker date="1455636645006" expanded="true" signature="643:851" placeholder="update users... " />
@@ -998,6 +969,33 @@
             <marker date="1455636645006" expanded="true" signature="8274:8321" placeholder="select chang... changes" />
             <marker date="1455636645006" expanded="true" signature="8630:8677" placeholder="select serve... changes" />
             <marker date="1455636645006" expanded="true" signature="8986:9038" placeholder="update chang... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3220339">
+          <caret line="39" column="132" selection-start-line="39" selection-start-column="132" selection-end-line="39" selection-end-column="132" />
+          <folding>
+            <marker date="1455636393359" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="1554:1727" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="1889:2010" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="2168:2278" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="2544:2586" placeholder="insert into Room... " />
+            <marker date="1455636393359" expanded="true" signature="2696:2787" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="2958:3114" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="3321:3435" placeholder="CREATE TABLE... IF" />
+            <marker date="1455636393359" expanded="true" signature="3619:3666" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="3725:3775" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="3834:3884" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="3943:3989" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="4048:4096" placeholder="insert into users... " />
+            <marker date="1455636393359" expanded="true" signature="5789:5851" placeholder="alter table Users... " />
+            <marker date="1455636393359" expanded="true" signature="5898:5967" placeholder="alter table Products... " />
+            <marker date="1455636393359" expanded="true" signature="6014:6078" placeholder="alter table Orders... " />
+            <marker date="1455636393359" expanded="true" signature="6125:6192" placeholder="alter table Orders... " />
+            <marker date="1455636393359" expanded="true" signature="6239:6283" placeholder="alter table Orders... " />
           </folding>
         </state>
       </provider>
