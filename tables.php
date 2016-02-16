@@ -46,7 +46,7 @@
     }
     ////////////////////////-----------products--------------///////////////////
     class Products{
-        private $pid,$pname,$productPicture,$cid,$price,$con;
+        private $pid,$pname,$productPicture,$cid,$price,$available,$con;
         function __construct(){
             $this->pid=1;$this->pname='';
             $this->cid=1; $this->productPicture='';
@@ -59,11 +59,11 @@
             $this->$name = $value;
         }
         function update(){
-            $query="update Products set pname='".$this->pname."',cid='".$this->cid."',productPicture='".$this->productPicture."',price='".$this->price."' where pid='".$this->pid."';";
+            $query="update Products set pname='".$this->pname."',cid='".$this->cid."',productPicture='".$this->productPicture."',price='".$this->price."',available='".$this->available."' where pid='".$this->pid."';";
             mysqli_query($this->con,$query);
         }
         function insert(){
-            $query="insert into Products values(null,'".$this->pname."','".$this->productPicture."','".$this->price."','".$this->cid."');";
+            $query="insert into Products values(null,'".$this->pname."','".$this->productPicture."','".$this->price."','".$this->available."','".$this->cid."');";
             mysqli_query($this->con,$query);
         }
         function delete(){
