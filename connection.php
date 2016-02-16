@@ -3,17 +3,17 @@
     {
         static $obj;
         private  function __construct(){
-			connection :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+			self :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
 			if (mysqli_connect_errno()) {
 				echo 'Error: Could not connect to database. Please try again later.';
 			}
         }
         public static function createInstance(){
-            if(connection :: $obj)
-                return connection :: $obj;
+            if(self :: $obj)
+                return self :: $obj;
             else {
-				connection :: $obj = new connection();
-                return connection :: $obj;
+				self :: $obj = new connection();
+                return self :: $obj;
             }
         }
 		public static function create(){
