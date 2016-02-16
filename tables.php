@@ -131,7 +131,7 @@ class Orders{
         mysqli_query($this->con,$query);
     }
     function selectbykey($from,$to){
-        $query="select * from Orders where uid='".$this->uid."' and orderDate between $from and $to ;";
+        $query="select * from Orders where uid='".$this->uid."' and orderDate between '".$from."' and '".$to."'  ;";
         //echo $query;
         $result=mysqli_query($this->con,$query);
         $i=0;
