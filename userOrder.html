@@ -1,3 +1,6 @@
+<?php
+require('tables.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,23 +9,64 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style1.css">
-	<style>
-	
- 	 
-	</style>
-	
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/task.js"></script> 
-	  <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker1').data();
-		 $('#datetimepicker2').data();
-            });
-        </script>
+	<script src="js/jquery-1.9.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+	<script>
+		$(function() {
+			$( ".datepicker" ).datepicker();
+			$( ".datepicker" ).change(function(e){
+				//console.log (e.timeStamp);
+				if($( "#datetimepicker1").val() != "" && $( "#datetimepicker2").val() != "") {
+					var uid=1;
+					var from = $("#datetimepicker1").val();
+					var to = $("#datetimepicker2").val();
+					$.ajax({
+						url:"ajaxOrder.php",
+						method:'get',
+						data:{
+							"uid":uid,
+							"to":to,
+							"from":from
+						},
+						success:function(response){
+							//twoDArr=JSON.parse(response)
+							//var data = response.split('|');
+							//console.log(data);
+							console.log(response);
+							//console.log(twoDArr);
+						},
+						error:function(xhr,status,error){
+							console.log(error);
+						},
+						complete:function(xhr){
+							console.log("Complete ");
+						},
+						//dataType:'json',
+						async:true
 
+					});
+				}
+
+			});
+			/////////////////--------ajax-------////////////
+			/*
+
+			*/
+		});
+	</script>
+
+	<style type="text/css">
+		.ui-datepicker {
+			background-color:aliceblue;
+			font-size: 9pt !important;
+		}
+	</style>
 </head>
 <body>
+
 <div class="container">
 	<div class="row"> 
 
@@ -70,8 +114,8 @@
 	<div class='col-sm-1'></div>
         <div class='col-sm-4'>
             <div class="form-group">
-                <div class="input-group date" id='datetimepicker1'>
-                    <input type='text' class="form-control" />
+                <div class="input-group date" >
+                    <input type='text' class="form-control datepicker" id='datetimepicker1' />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
@@ -81,8 +125,8 @@
 
 	 <div class='col-sm-4'>
             <div class="form-group">
-                <div class="input-group date" id='datetimepicker2'>
-                    <input type='text' class="form-control" />
+                <div class="input-group date" >
+                    <input type='text' class="form-control datepicker" id='datetimepicker2'/>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>

@@ -94,6 +94,7 @@ require('tables.php');
                     $user->email=$email;
                     $user->rid=$room;
                     $user->EXT=$EXT;
+                    $user->rid=$rid;
                     $user->password=md5($pwd);
                     $user->profileimage=$upfile;
                     $user->insert();

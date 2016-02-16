@@ -1,7 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4719a951-0004-44b6-b961-680e02ec2495" name="Default" comment="" />
+    <list default="true" id="4719a951-0004-44b6-b961-680e02ec2495" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/DataBaseClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/addProduct.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/addUser.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/allProducts.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/allUsesr.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/fonts/CaviarDreams-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/Custom-Photo-Wallpaper-3D-Stereoscopic-Retro-Nostalgia-Wall-font-b-paper-b-font-KTV-Cafe-Bar.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/O1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/O2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/O3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/O4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/aftnun.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/bdd75fbaee17fb13c178a738b244083f.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/coffee-java-times.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/download.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/evg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/grid-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/header_img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/image.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (1).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (10).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (11).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (12).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (13).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (14).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (15).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (16).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (17).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (18).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (19).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (2).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (20).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (21).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (22).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (23).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (24).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (25).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (26).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (27).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (28).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (29).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (3).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (30).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (31).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (32).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (33).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (34).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (35).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (36).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (4).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (5).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (6).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (7).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (8).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images (9).jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/images2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/index.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/indx.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/intro.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/lion-mascot-logo-11084222.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/lion_coffee_mug_by_juffs-d4p47ba.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/marker2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/menu-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/nav-arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/night.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/service-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/service-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/service-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/signature-hot-chocolate.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/slider-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/slider-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/slider-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/slider-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/special-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/special-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/images/special-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/js/jquery-1.11.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/js/jquery-1.9.0.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/orders.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/CaviarDreams-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/aftnun.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/coffee-heart.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/evg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/grid-bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/header_img.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image001.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image002.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image003.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image004.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image005.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/image3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/img4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/img5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/marker.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/marker2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/menu-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/menu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/nav-arrows.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/night.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/service-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/service-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/service-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/slider-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/slider-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/slider-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/slider-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/special-img1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/special-img2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/special-img3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/images/tea6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/js/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/js/jquery-1.11.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork/js/task.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/check.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/CaviarDreams-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/menu-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/minus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/plus.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea11.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/images/tea9.jpe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/js/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/js/jquery-1.11.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/js/task.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mywork1/order.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/order.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/CaviarDreams-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/bg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/bg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/bg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/d.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/menu-hover.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/images/tea6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/code.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/jquery-1.11.2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/task.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/userOrder.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajaxOrder.php" afterPath="$PROJECT_DIR$/ajaxOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connection.php" afterPath="$PROJECT_DIR$/connection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/done.php" afterPath="$PROJECT_DIR$/done.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventOrder.php" afterPath="$PROJECT_DIR$/eventOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.php" afterPath="$PROJECT_DIR$/home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userHome.html" afterPath="$PROJECT_DIR$/userHome.html" />
+    </list>
     <ignored path="PHPproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -21,25 +249,172 @@
     <favorites_list name="PHPproject" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="connection.php" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.060263652">
-              <caret line="11" column="34" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="45" />
+            <state vertical-scroll-proportion="-10.875">
+              <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
               <folding>
-                <marker date="1455392080400" expanded="true" signature="1172:1414" placeholder="CREATE TABLE... IF" />
-                <marker date="1455392080400" expanded="true" signature="1576:1749" placeholder="CREATE TABLE... IF" />
-                <marker date="1455392080400" expanded="true" signature="1911:2032" placeholder="CREATE TABLE... IF" />
-                <marker date="1455392080400" expanded="true" signature="2190:2300" placeholder="CREATE TABLE... IF" />
-                <marker date="1455392080400" expanded="true" signature="2566:2608" placeholder="insert into Room... " />
-                <marker date="1455392080400" expanded="true" signature="2718:2809" placeholder="insert into users... " />
-                <marker date="1455392080400" expanded="true" signature="2980:3111" placeholder="CREATE TABLE... IF" />
-                <marker date="1455392080400" expanded="true" signature="3294:3356" placeholder="alter table Users... " />
-                <marker date="1455392080400" expanded="true" signature="3403:3472" placeholder="alter table Products... " />
-                <marker date="1455392080400" expanded="true" signature="3519:3583" placeholder="alter table Orders... " />
-                <marker date="1455392080400" expanded="true" signature="3630:3697" placeholder="alter table Orders... " />
-                <marker date="1455392080400" expanded="true" signature="3744:3788" placeholder="alter table Orders... " />
+                <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+                <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+                <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+                <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+                <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+                <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+                <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+                <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tables.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-70.625">
+              <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+              <folding>
+                <marker date="1455612115072" expanded="true" signature="872:1080" placeholder="update users... " />
+                <marker date="1455612115072" expanded="true" signature="1186:1337" placeholder="insert into users... " />
+                <marker date="1455612115072" expanded="true" signature="1470:1514" placeholder="delete from " />
+                <marker date="1455612115072" expanded="true" signature="1625:1671" placeholder="select * fro... users" />
+                <marker date="1455612115072" expanded="true" signature="1831:1850" placeholder="select * fro... users" />
+                <marker date="1455612115072" expanded="true" signature="2893:3028" placeholder="update Produ... " />
+                <marker date="1455612115072" expanded="true" signature="3134:3231" placeholder="insert into Products... " />
+                <marker date="1455612115072" expanded="true" signature="3337:3384" placeholder="delete from " />
+                <marker date="1455612115072" expanded="true" signature="3495:3544" placeholder="select * fro... Products" />
+                <marker date="1455612115072" expanded="true" signature="3704:3726" placeholder="select * fro... Products" />
+                <marker date="1455612115072" expanded="true" signature="4784:4982" placeholder="update Order... " />
+                <marker date="1455612115072" expanded="true" signature="5072:5195" placeholder="insert into Orders... " />
+                <marker date="1455612115072" expanded="true" signature="5285:5355" placeholder="delete from " />
+                <marker date="1455612115072" expanded="true" signature="5459:5539" placeholder="select * fro... Orders" />
+                <marker date="1455612115072" expanded="true" signature="5823:5843" placeholder="select * fro... Orders" />
+                <marker date="1455612115072" expanded="true" signature="6787:6872" placeholder="update Categ... " />
+                <marker date="1455612115072" expanded="true" signature="6978:7037" placeholder="insert into Category... " />
+                <marker date="1455612115072" expanded="true" signature="7143:7190" placeholder="delete from " />
+                <marker date="1455612115072" expanded="true" signature="7301:7350" placeholder="select * fro... Category" />
+                <marker date="1455612115072" expanded="true" signature="7510:7532" placeholder="select * fro... Category" />
+                <marker date="1455612115072" expanded="true" signature="8696:8749" placeholder="insert into Room... " />
+                <marker date="1455612115072" expanded="true" signature="9013:9058" placeholder="select * fro... Room" />
+                <marker date="1455612115072" expanded="true" signature="9218:9236" placeholder="select * fro... Room" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="done.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/done.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3220339">
+              <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userOrder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.017857">
+              <caret line="30" column="33" selection-start-line="25" selection-start-column="20" selection-end-line="30" selection-end-column="33" />
+              <folding>
+                <marker date="1455604982213" expanded="true" signature="3085:3166" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3132:3166" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3281:3384" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3504:3585" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3551:3585" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3699:3802" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="3994:4944" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4048:4936" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4099:4929" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4110:4231" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4123:4217" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4244:4919" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4258:4467" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4478:4686" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="4696:4905" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5072:5796" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5133:5789" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5160:5774" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5193:5339" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5406:5553" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5620:5765" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5924:6140" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="5994:6020" placeholder="..." />
+                <marker date="1455604982213" expanded="true" signature="6051:6094" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxOrder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ajaxOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.6666665">
+              <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+              <folding>
+                <marker date="1455612428633" expanded="true" signature="6604:6626" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="6905:6927" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="7207:7229" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="7641:7663" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="7943:7965" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="8246:8268" placeholder="..." />
+                <marker date="1455612428633" expanded="true" signature="8649:8668" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eventOrder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/eventOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.0">
+              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1455573298442" expanded="true" signature="68:115" placeholder="select chang... changes" />
+                <marker date="1455573298442" expanded="true" signature="315:362" placeholder="select serve... changes" />
+                <marker date="1455573298442" expanded="true" signature="562:614" placeholder="update chang... " />
               </folding>
             </state>
           </provider>
@@ -53,10 +428,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/tables.php" />
         <option value="$PROJECT_DIR$/creation.php" />
         <option value="$PROJECT_DIR$/register.php" />
+        <option value="$PROJECT_DIR$/eventOrder.php" />
+        <option value="$PROJECT_DIR$/userHome.html" />
+        <option value="$PROJECT_DIR$/DataBaseClass.php" />
+        <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/done.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/userOrder.html" />
+        <option value="$PROJECT_DIR$/userOrder.php" />
+        <option value="$PROJECT_DIR$/ajaxOrder.php" />
+        <option value="$PROJECT_DIR$/tables.php" />
+        <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/connection.php" />
       </list>
     </option>
@@ -117,7 +501,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PushPullDay2 " />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -164,11 +548,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="707" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -204,6 +588,218 @@
     <entry file="file://$PROJECT_DIR$/connection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="71" selection-start-line="5" selection-start-column="71" selection-end-line="5" selection-end-column="71" />
+          <folding>
+            <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+            <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+            <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+            <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="57" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding>
+            <marker date="1455612115072" expanded="true" signature="872:1080" placeholder="update users... " />
+            <marker date="1455612115072" expanded="true" signature="1186:1337" placeholder="insert into users... " />
+            <marker date="1455612115072" expanded="true" signature="1470:1514" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="1625:1671" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="1831:1850" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="2893:3028" placeholder="update Produ... " />
+            <marker date="1455612115072" expanded="true" signature="3134:3231" placeholder="insert into Products... " />
+            <marker date="1455612115072" expanded="true" signature="3337:3384" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="3495:3544" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="3704:3726" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="4784:4982" placeholder="update Order... " />
+            <marker date="1455612115072" expanded="true" signature="5072:5195" placeholder="insert into Orders... " />
+            <marker date="1455612115072" expanded="true" signature="5285:5355" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="5459:5539" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="5823:5843" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="6787:6872" placeholder="update Categ... " />
+            <marker date="1455612115072" expanded="true" signature="6978:7037" placeholder="insert into Category... " />
+            <marker date="1455612115072" expanded="true" signature="7143:7190" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="7301:7350" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="7510:7532" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="8696:8749" placeholder="insert into Room... " />
+            <marker date="1455612115072" expanded="true" signature="9013:9058" placeholder="select * fro... Room" />
+            <marker date="1455612115072" expanded="true" signature="9218:9236" placeholder="select * fro... Room" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/done.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="24" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
+          <folding>
+            <marker date="1455612428633" expanded="true" signature="6604:6626" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="6905:6927" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7207:7229" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7641:7663" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7943:7965" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="8246:8268" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="8649:8668" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="163" selection-start-line="65" selection-start-column="163" selection-end-line="65" selection-end-column="163" />
+          <folding>
+            <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+            <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+            <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+            <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="155" column="40" selection-start-line="155" selection-start-column="40" selection-end-line="155" selection-end-column="40" />
+          <folding>
+            <marker date="1455612115072" expanded="true" signature="872:1080" placeholder="update users... " />
+            <marker date="1455612115072" expanded="true" signature="1186:1337" placeholder="insert into users... " />
+            <marker date="1455612115072" expanded="true" signature="1470:1514" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="1625:1671" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="1831:1850" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="2893:3028" placeholder="update Produ... " />
+            <marker date="1455612115072" expanded="true" signature="3134:3231" placeholder="insert into Products... " />
+            <marker date="1455612115072" expanded="true" signature="3337:3384" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="3495:3544" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="3704:3726" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="4784:4982" placeholder="update Order... " />
+            <marker date="1455612115072" expanded="true" signature="5072:5195" placeholder="insert into Orders... " />
+            <marker date="1455612115072" expanded="true" signature="5285:5355" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="5459:5539" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="5823:5843" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="6787:6872" placeholder="update Categ... " />
+            <marker date="1455612115072" expanded="true" signature="6978:7037" placeholder="insert into Category... " />
+            <marker date="1455612115072" expanded="true" signature="7143:7190" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="7301:7350" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="7510:7532" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="8696:8749" placeholder="insert into Room... " />
+            <marker date="1455612115072" expanded="true" signature="9013:9058" placeholder="select * fro... Room" />
+            <marker date="1455612115072" expanded="true" signature="9218:9236" placeholder="select * fro... Room" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+            <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+            <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+            <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+            <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+            <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+            <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
@@ -222,45 +818,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tables.php">
+    <entry file="file://$PROJECT_DIR$/userHome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31073445">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.57114226">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/register.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20903955">
+        <state vertical-scroll-proportion="0.15254237">
           <caret line="77" column="20" selection-start-line="77" selection-start-column="20" selection-end-line="77" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/done.php">
+    <entry file="file://$PROJECT_DIR$/userOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23728813">
-          <caret line="86" column="35" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="35" />
+        <state vertical-scroll-proportion="-3.017857">
+          <caret line="30" column="33" selection-start-line="25" selection-start-column="20" selection-end-line="30" selection-end-column="33" />
+          <folding>
+            <marker date="1455604982213" expanded="true" signature="3085:3166" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3132:3166" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3281:3384" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3504:3585" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3551:3585" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3699:3802" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="3994:4944" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4048:4936" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4099:4929" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4110:4231" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4123:4217" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4244:4919" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4258:4467" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4478:4686" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="4696:4905" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5072:5796" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5133:5789" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5160:5774" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5193:5339" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5406:5553" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5620:5765" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5924:6140" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="5994:6020" placeholder="..." />
+            <marker date="1455604982213" expanded="true" signature="6051:6094" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ajaxOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tables.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-70.625">
+          <caret line="113" column="5" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+          <folding>
+            <marker date="1455612115072" expanded="true" signature="872:1080" placeholder="update users... " />
+            <marker date="1455612115072" expanded="true" signature="1186:1337" placeholder="insert into users... " />
+            <marker date="1455612115072" expanded="true" signature="1470:1514" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="1625:1671" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="1831:1850" placeholder="select * fro... users" />
+            <marker date="1455612115072" expanded="true" signature="2893:3028" placeholder="update Produ... " />
+            <marker date="1455612115072" expanded="true" signature="3134:3231" placeholder="insert into Products... " />
+            <marker date="1455612115072" expanded="true" signature="3337:3384" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="3495:3544" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="3704:3726" placeholder="select * fro... Products" />
+            <marker date="1455612115072" expanded="true" signature="4784:4982" placeholder="update Order... " />
+            <marker date="1455612115072" expanded="true" signature="5072:5195" placeholder="insert into Orders... " />
+            <marker date="1455612115072" expanded="true" signature="5285:5355" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="5459:5539" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="5823:5843" placeholder="select * fro... Orders" />
+            <marker date="1455612115072" expanded="true" signature="6787:6872" placeholder="update Categ... " />
+            <marker date="1455612115072" expanded="true" signature="6978:7037" placeholder="insert into Category... " />
+            <marker date="1455612115072" expanded="true" signature="7143:7190" placeholder="delete from " />
+            <marker date="1455612115072" expanded="true" signature="7301:7350" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="7510:7532" placeholder="select * fro... Category" />
+            <marker date="1455612115072" expanded="true" signature="8696:8749" placeholder="insert into Room... " />
+            <marker date="1455612115072" expanded="true" signature="9013:9058" placeholder="select * fro... Room" />
+            <marker date="1455612115072" expanded="true" signature="9218:9236" placeholder="select * fro... Room" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.6666665">
+          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
+          <folding>
+            <marker date="1455612428633" expanded="true" signature="6604:6626" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="6905:6927" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7207:7229" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7641:7663" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="7943:7965" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="8246:8268" placeholder="..." />
+            <marker date="1455612428633" expanded="true" signature="8649:8668" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eventOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1455573298442" expanded="true" signature="68:115" placeholder="select chang... changes" />
+            <marker date="1455573298442" expanded="true" signature="315:362" placeholder="select serve... changes" />
+            <marker date="1455573298442" expanded="true" signature="562:614" placeholder="update chang... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/connection.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060263652">
-          <caret line="11" column="34" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="45" />
+        <state vertical-scroll-proportion="-10.875">
+          <caret line="129" column="36" selection-start-line="129" selection-start-column="36" selection-end-line="129" selection-end-column="36" />
           <folding>
-            <marker date="1455392080400" expanded="true" signature="1172:1414" placeholder="CREATE TABLE... IF" />
-            <marker date="1455392080400" expanded="true" signature="1576:1749" placeholder="CREATE TABLE... IF" />
-            <marker date="1455392080400" expanded="true" signature="1911:2032" placeholder="CREATE TABLE... IF" />
-            <marker date="1455392080400" expanded="true" signature="2190:2300" placeholder="CREATE TABLE... IF" />
-            <marker date="1455392080400" expanded="true" signature="2566:2608" placeholder="insert into Room... " />
-            <marker date="1455392080400" expanded="true" signature="2718:2809" placeholder="insert into users... " />
-            <marker date="1455392080400" expanded="true" signature="2980:3111" placeholder="CREATE TABLE... IF" />
-            <marker date="1455392080400" expanded="true" signature="3294:3356" placeholder="alter table Users... " />
-            <marker date="1455392080400" expanded="true" signature="3403:3472" placeholder="alter table Products... " />
-            <marker date="1455392080400" expanded="true" signature="3519:3583" placeholder="alter table Orders... " />
-            <marker date="1455392080400" expanded="true" signature="3630:3697" placeholder="alter table Orders... " />
-            <marker date="1455392080400" expanded="true" signature="3744:3788" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="1180:1422" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1584:1757" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="1919:2040" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2198:2308" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="2574:2616" placeholder="insert into Room... " />
+            <marker date="1455619060776" expanded="true" signature="2726:2817" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="2988:3144" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3351:3465" placeholder="CREATE TABLE... IF" />
+            <marker date="1455619060776" expanded="true" signature="3649:3696" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3755:3805" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3864:3914" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="3973:4019" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="4078:4126" placeholder="insert into users... " />
+            <marker date="1455619060776" expanded="true" signature="5819:5881" placeholder="alter table Users... " />
+            <marker date="1455619060776" expanded="true" signature="5928:5997" placeholder="alter table Products... " />
+            <marker date="1455619060776" expanded="true" signature="6044:6108" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6155:6222" placeholder="alter table Orders... " />
+            <marker date="1455619060776" expanded="true" signature="6269:6313" placeholder="alter table Orders... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/done.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3220339">
+          <caret line="90" column="21" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,6 +1,6 @@
 
 <?php
-require "tables.php";
+require('tables.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -192,16 +192,11 @@ require "tables.php";
 	<div class="row">
 		
 		<div class="col-sm-3" >
-			<?php 
-			require('tables.php');
-                       $new= new Products();
-			echo "hjgj";
-			/*$result=$new->select();
-
-                       if($result->num_rows ==0){
-                          echo "ddd";
-
-                        } */
+			<?php
+			$new= new Products();
+			$result=$new->select();
+			echo  $result[0][0];
+			print_r($result);
 			?>
 			 <img src="images/tea1.jpg" class="img-rounded" name="img1"  height="150" width="150" alt="">
 		</div>
