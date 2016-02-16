@@ -247,4 +247,38 @@ class Orders{
         }
     }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class changes
+{
+    function selectChangeDate($tablename)
+    {
+        $query = "select changeDate from changes where tableName=$tablename ;";
+        $result = mysqli_query($this->con, $query);
+        $i = 0;
+        $data = array();
+        while ($row = $result->fetch_array()) {
+            $data[$i] = $row;
+            $i++;
+        }
+        return $data;
+    }
+
+    function selectServerDate($tablename)
+    {
+        $query = "select serverDate from changes where tableName=$tablename ;";
+        $result = mysqli_query($this->con, $query);
+        $i = 0;
+        $data = array();
+        while ($row = $result->fetch_array()) {
+            $data[$i] = $row;
+            $i++;
+        }
+        return $data;
+    }
+
+    function updateServerDate($tablename)
+    {
+        $query = "update changes set serverName=NOW() where tableName=$tablename ;";
+        mysqli_query($this->con, $query);
+    }
+}
 ?>
