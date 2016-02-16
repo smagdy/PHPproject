@@ -1,8 +1,8 @@
 <?php
     require('connection.php');
     //////////////////////////-----Users--------/////////////////////////////
-    class users{
-        private $uid,$name,$email,$password,$profilePicture,$EXT,$con;
+    class Users{
+        private $uid,$name,$email,$password,$profilePicture,$EXT,$rid,$con;
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
@@ -19,25 +19,25 @@
             $this->$name = $value;
         }
         function update(){
-            $query="update users set name='".$this->name."',email='".$this->email."',password='".$this->password."',profilePicture='".$this->profilePicture."',EXT='".$this->EXT."' where uid='".$this->uid."';";
+            $query="update Users set name='".$this->name."',email='".$this->email."',password='".$this->password."',profilePicture='".$this->profilePicture."',EXT='".$this->EXT."' rid='".$this->rid."'  where uid='".$this->uid."';";
             mysqli_query($this->con,$query);
         }
         function insert(){
-            $query="insert into users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."');";
+            $query="insert into Users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."','".$this->rid."');";
             //echo $query;
             mysqli_query($this->con,$query);
         }
         function delete(){
-            $query="delete from users where uid='".$this->uid."';";
+            $query="delete from Users where uid='".$this->uid."';";
             mysqli_query($this->con,$query);
         }
         function selectbykey(){
-            $query="select * from users where uid='".$this->uid."';";
+            $query="select * from Users where uid='".$this->uid."';";
             $result=mysqli_query($this->con,$query);
             return mysqli_fetch_row($result);
         }
         function select(){
-            $query="select * from users ;";
+            $query="select * from Users ;";
             $result=mysqli_query($this->con,$query);
             $i=0;
             $data=array();
@@ -85,21 +85,75 @@
         }
         function select(){
             $query="select * from Products;";
-            echo $query;
             $result=mysqli_query($this->con,$query);
             $i=0;
             $data=array();
             while($row=$result->fetch_array()){
                 $data[$i]=$row;
                 $i=$i+1;
-                echo $i;
             }
             //mysqli_close($this->con);
             return $data;
-
         }
 
     }
+/////////////////////-----------Orders--------------///////////////////
+class Orders{
+    private $uid,$pid,$orderDate,$amount,$status,$con;
+    function __construct(){
+        $this->uid=0;
+        $this->pid=0;
+        $this->orderDate=date('Y-m-d H:i:s');
+        $this->amount=0;
+        $this->status="";
+        //$this->con=connection :: createInstance();
+        $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+        if (mysqli_connect_errno()) {
+            echo 'Error: Could not connect to database. Please try again later.';
+        }
+    }
+    function __get($name){
+        return $this->$name;
+    }
+    function __set ($name, $value){
+        $this->$name = $value;
+    }
+    function update(){
+        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."' where uid='".$this->uid."' and pid='".$this->pid."';";
+        mysqli_query($this->con,$query);
+    }
+    function insert(){
+        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."');";
+        mysqli_query($this->con,$query);
+    }
+    function delete(){
+        $query="delete from Orders where uid='".$this->uid."' and pid='".$this->pid."';";
+        mysqli_query($this->con,$query);
+    }
+    function selectbykey($from,$to){
+        $query="select * from Orders where uid='".$this->uid."' and orderDate between $from and $to ;";
+        //echo $query;
+        $result=mysqli_query($this->con,$query);
+        $i=0;
+        $data=array();
+        while($row=$result->fetch_array()){
+            $data[$i]=$row;
+            $i++;
+        }
+        return $data;
+    }
+    function select(){
+        $query="select * from Orders ;";
+        $result=mysqli_query($this->con,$query);
+        $i=0;
+        $data=array();
+        while($row=$result->fetch_array()){
+            $data[$i]=$row;
+            $i++;
+        }
+        return $data;
+    }
+}
     ////////////////////////-----------Category--------------///////////////////
     class Category{
         private $cid,$categoryName,$con;
@@ -136,58 +190,6 @@
         }
         function select(){
             $query="select * from Category ;";
-            $result=mysqli_query($this->con,$query);
-            $i=0;
-            $data=array();
-            while($row=$result->fetch_array()){
-                $data[$i]=$row;
-                $i++;
-            }
-            return $data;
-        }
-    }
-    /////////////////////-----------Orders--------------///////////////////
-    class Orders{
-        private $uid,$pid,$orderDate,$amount,$status,$con;
-        function __construct(){
-            $this->uid=0;$this->pid=0;$this->orderDate=now();$this->amount=0;
-            //$this->con=connection :: createInstance();
-            $this->con = mysqli_connect('localhost','root','','Cafeteria_DataBase');
-            if (mysqli_connect_errno()) {
-                echo 'Error: Could not connect to database. Please try again later.';
-            }
-        }
-        function __get($name){
-            return $this->$name;
-        }
-        function __set ($name, $value){
-            $this->$name = $value;
-        }
-        function update(){
-            $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."' where uid='".$this->uid."' and pid='".$this->pid."';";
-            mysqli_query($this->con,$query);
-        }
-        function insert(){
-            $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."');";
-            mysqli_query($this->con,$query);
-        }
-        function delete(){
-            $query="delete from Orders where uid='".$this->uid."' and pid='".$this->pid."';";
-            mysqli_query($this->con,$query);
-        }
-        function selectbykey($from,$to){
-            $query="select * from Orders where uid='".$this->uid."' and orderDate between $from and $to ;";
-            $result=mysqli_query($this->con,$query);
-            $i=0;
-            $data=array();
-            while($row=$result->fetch_array()){
-                $data[$i]=$row;
-                $i++;
-            }
-            return $data;
-        }
-        function select(){
-            $query="select * from Orders ;";
             $result=mysqli_query($this->con,$query);
             $i=0;
             $data=array();
