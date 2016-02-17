@@ -11,25 +11,20 @@
         $(document).ready(function(){
             var f = "true" ;
 	    $(".Availability").click(function(){
-                $(this).toggleClass("Availability")
+// 		$(this).attr('clicked','clicked');
+// 		$(this).toggle();
+                if(f == "true"){
+//                      $(this).attr
+                }else{
+                
+                }
 		console.log("hi");
 	    });
-	    //---------------server Evet to show & update table ------------ 
-	        var source = new EventSource("allProductsServerEvent.php");
-		source.onmessage = function(event) {
-			var x = JSON.parse(event.data);
-			console.log(x);
-		};
-	    //--------------------------------------------------------------
 	});
     </script>
     <style>
         .Availability{
-              background-color:gray ;
-              border-radius:5px ;
-              width:88px ;
-              height:18px ;
-              color:white ;
+                
         }
     </style>
 <body>
@@ -50,7 +45,7 @@
                
                 for( $i =0 ; $i< count($res); $i++){
 		    echo "<tr><td>".$res[$i][1]."</td>" ;
-		    echo "<td>".$res[$i][3]." EPG</td>" ;
+		    echo "<td>".$res[$i][4]." EPG</td>" ;
 		    echo "<td><img width='60px' height='60px' src='images/".$res[$i][2]."'/></td>" ; 
 		    echo "<td><button class='Availability' >Availability</button><button>DEL</button><button>Edit</button></td></tr>" ;        
               }

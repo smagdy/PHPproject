@@ -1,20 +1,17 @@
-<?php
-require_once('tables.php') ;
-header('Content-Type: text/event-stream');
-header('Cache-Control: no-cache');
 
-  $change = new changes() ;
-  $changeTime  = $change->selectChangeDate("Products") ;
-  $servertime = $change->selectServerDate("Products");
-     
-  if($changeTime > $servertime ){
-       $change->updateServerDate("Products");
-       $product = new Products() ; 
-       $res =  $product->select(); 
-       $res =  json_encode($res);
-       echo "data: {$response}";
-	//echo "retry: 3000";
-       flush();   
-       }
- ?>
-  
+           <?php 
+               require_once('tables.php') ;
+               $product = new Products() ;           
+               $res =  $product->select(); 
+               
+                for( $i =0 ; $i< count($res); $i++){
+		    echo "<tr><td>".$res[$i][1]."</td>" ;
+		    echo "<td>".$res[$i][4]." EPG</td>" ;
+		    echo "<td><img width='60px' height='60px' src='images/".$res[$i][2]."'/></td>" ; 
+		    echo "<td><button class='Availability' >Availability</button><button>DEL</button><button>Edit</button></td></tr>" ;        
+              }
+           ?>
+               
+       </table>
+      
+ 
