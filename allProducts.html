@@ -8,6 +8,17 @@
 </head>
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.min.js" ></script> 
+<script>
+
+	    //---------------server Evet to show & update table ------------ 
+	        var source = new EventSource("allProductsServerEvent.php");
+		source.onmessage = function(event) {
+			var x = JSON.parse(event.data);
+			console.log(x);
+		};
+	    //--------------------------------------------------------------
+	
+    </script>
 <body>
    <div class="container form" style="width:900px ; min-height:400px ; margin:100px 200px">
        <h2>All Users</h2><br/>
