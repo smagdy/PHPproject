@@ -6,7 +6,7 @@
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
-            $this->con=connection :: createInstance();        
+            $this->con=connection :: createInstance();
         }
         function __get($name){
             return $this->$name;
@@ -28,6 +28,11 @@
         }
         function selectbykey(){
             $query="select * from Users where uid='".$this->uid."';";
+            $result=mysqli_query($this->con,$query);
+            return mysqli_fetch_row($result);
+        }
+        function selectbyName(){
+            $query="select uid,password from Users where name='".$this->name."';";
             $result=mysqli_query($this->con,$query);
             return mysqli_fetch_row($result);
         }
