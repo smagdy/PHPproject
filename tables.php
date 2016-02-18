@@ -90,13 +90,14 @@
     }
 /////////////////////-----------Orders--------------///////////////////
 class Orders{
-    private $uid,$pid,$orderDate,$amount,$status,$con;
+    private $uid,$pid,$orderDate,$amount,$status,$rid,$con;
     function __construct(){
         $this->uid=0;
         $this->pid=0;
-        $this->orderDate=date('Y-m-d H:i:s');
+        $this->orderDate=date('Y-mm-dd');
         $this->amount=0;
         $this->status="";
+        $this->rid=0;
         $this->con=connection :: createInstance();
     }
     function __get($name){
@@ -106,11 +107,11 @@ class Orders{
         $this->$name = $value;
     }
     function update(){
-        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."' where uid='".$this->uid."' and pid='".$this->pid."';";
+        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',rid='".$this->rid."' where uid='".$this->uid."' and pid='".$this->pid."';";
         mysqli_query($this->con,$query);
     }
     function insert(){
-        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."');";
+        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."','".$this->rid."');";
         mysqli_query($this->con,$query);
     }
     function delete(){

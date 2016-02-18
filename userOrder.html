@@ -18,7 +18,6 @@ require('tables.php');
 		$(function() {
 			$( ".datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
 			$( ".datepicker" ).change(function(e){
-				//console.log (e.timeStamp);
 				if($( "#datetimepicker1").val() != "" && $( "#datetimepicker2").val() != "") {
 					var uid=1;
 					var from = $("#datetimepicker1").val();
@@ -32,7 +31,7 @@ require('tables.php');
 							"from":from
 						},
 						success:function(response){
-							console.log(response);
+							bulidTable(response);
 						},
 						error:function(xhr,status,error){
 							console.log(error);
@@ -46,11 +45,12 @@ require('tables.php');
 					});
 				}
 
-			});
-			/////////////////--------ajax-------////////////
-			/*
-
-			*/
+		});
+		function bulidTable(data){
+			for(var i=0;i<data.length;i++){
+				$('.tbody').html($('.tbody').html()+" <tr><td>data[i][orderDate] AM <button><img src='images/plus.png' heigth='25' width='25' align='right'/></button></td><td>data[i][status]</td><td>data[i][amount] LE </td><td><button class='action'> Cancel</button></td></tr>");
+			}
+		}
 		});
 	</script>
 
@@ -145,9 +145,9 @@ require('tables.php');
 			<th>Action</th>
 		      </tr>
 	    </thead>
-	    <tbody>
+	    <tbody class="tbody">
 		       <tr>
-			<td>2016/1/12 10:44 AM <a href="#"><img src="images/plus.png" heigth="25" width="25" align="right"></img></a></td>
+			<td>2016/1/12 10:44 AM <button><img src="images/plus.png" heigth="25" width="25" align="right"/></button></td>
 			<td>Processing</td>
 			<td>55 LE </td>
 			<td><a href="#"> Cancel</a></td>
