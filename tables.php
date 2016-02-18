@@ -1,6 +1,6 @@
 <?php
     require('connection.php');
-    //////////////////////////-----Users--------/////////////////////////////
+//////////////////////////-----Users-----------------///////////////////
     class Users{
         private $uid,$name,$email,$password,$profilePicture,$EXT,$rid,$con;
         function __construct(){
@@ -20,7 +20,6 @@
         }
         function insert(){
             $query="insert into Users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."','".$this->rid."');";
-            //echo $query;
             mysqli_query($this->con,$query);
         }
         function delete(){
@@ -44,7 +43,7 @@
             return $data;
         }
     }
-    ////////////////////////-----------products--------------///////////////////
+////////////////////////------products--------------///////////////////
     class Products{
         private $pid,$pname,$productPicture,$cid,$price,$available,$con;
         function __construct(){
@@ -88,8 +87,8 @@
         }
 
     }
-/////////////////////-----------Orders--------------///////////////////
-class Orders{
+////////////////////////------Orders---------------///////////////////
+    class Orders{
     private $uid,$pid,$orderDate,$amount,$status,$rid,$con;
     function __construct(){
         $this->uid=0;
@@ -141,7 +140,7 @@ class Orders{
         return $data;
     }
 }
-    ////////////////////////-----------Category--------------///////////////////
+///////////////////////------Category--------------///////////////////
     class Category{
         private $cid,$categoryName,$con;
         function __construct(){
@@ -183,7 +182,7 @@ class Orders{
             return $data;
         }
     }
-/////////////////////-----------Room--------------///////////////////
+///////////////////////------Room-----------------///////////////////
     class Room{
         private $rid,$roomNumber,$con;
         function __construct(){
