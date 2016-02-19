@@ -3,10 +3,10 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>All Products</title>
   <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
-  <!--<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />-->
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
     <script src="js/jquery-1.11.2.js"></script>
-<!--    <script src="js/bootstrap.min.js" ></script> -->
+    <script src="js/bootstrap.min.js" ></script> 
     <script>
         $(document).ready(function(){
             var f = "true" ;

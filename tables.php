@@ -43,6 +43,17 @@
             }
             return $data;
         }
+         function selectLimit($limit,$length){
+            $query="select * from Users limit ".$limit.",".$length.";";
+            $result=mysqli_query($this->con,$query);
+            $i=0;
+            $data=array();
+            while($row=$result->fetch_array()){
+                $data[$i]=$row;
+                $i++;
+            }
+            return $data;
+        }
     }
     ////////////////////////-----------products--------------///////////////////
     class Products{
