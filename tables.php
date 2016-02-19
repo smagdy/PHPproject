@@ -106,10 +106,10 @@ return $data;
 }
 /////////////////////-----------Orders--------------///////////////////
 class Orders{
-private $uid,$pid,$orderDate,$amount,$status,$comment,$con;
+private $oid,$uid,$orderDate,$amount,$status,$comment,$con;
 function __construct(){
+$this->oid=0;
 $this->uid=0;
-$this->pid=0;
 $this->orderDate=date('Y-m-d H:i:s');
 $this->amount=0;
 $this->status="";
@@ -123,15 +123,15 @@ function __set ($name, $value){
 $this->$name = $value;
 }
 function update(){
-$query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->comment."' where uid='".$this->uid."' and pid='".$this->pid."';";
+$query="update Orders set uid='".$this->uid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->comment."' where oid='".$this->oid."' and uid='".$this->uid."';";
 mysqli_query($this->con,$query);
 }
 function insert(){
-$query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."','".$this->comment."');";
+$query="insert into Orders values(null,'".$this->uid."',".$this->orderDate."','".$this->amount."','".$this->status."','".$this->comment."');";
 mysqli_query($this->con,$query);
 }
 function delete(){
-$query="delete from Orders where uid='".$this->uid."' and pid='".$this->pid."';";
+$query="delete from Orders where oid='".$this->oid."' and uid='".$this->uid."';";
 mysqli_query($this->con,$query);
 }
 function selectbykey($from,$to){
@@ -156,6 +156,44 @@ $i++;
 }
 return $data;
 }
+}
+class orderProducts{
+    private $oid,$pid,$numofItems,$con;
+    function __construct(){
+        $this->oid=0;
+        $this->pid=0;
+        $this->numofItems=0;
+        $this->con=connection :: createInstance();
+    }
+    function __get($name){
+        return $this->$name;
+    }
+    function __set ($name, $value){
+        $this->$name = $value;
+    }
+    function update(){
+        $query="update orderProducts set pid='".$this->pid."',numofItems='".$this->numofItems."' where oid='".$this->oid."' and pid='".$this->pid."';";
+        mysqli_query($this->con,$query);
+    }
+    function insert(){
+        $query="insert into orderProducts values('".$this->oid."',".$this->pid."','".$this->numofItems."');";
+        mysqli_query($this->con,$query);
+    }
+    function delete(){
+        $query="delete from orderProducts where oid='".$this->oid."' and pid='".$this->pid."';";
+        mysqli_query($this->con,$query);
+    }
+    function select(){
+        $query="select * from orderProducts ;";
+        $result=mysqli_query($this->con,$query);
+        $i=0;
+        $data=array();
+        while($row=$result->fetch_array()){
+            $data[$i]=$row;
+            $i++;
+        }
+        return $data;
+    }
 }
 ////////////////////////-----------Category--------------///////////////////
 class Category{

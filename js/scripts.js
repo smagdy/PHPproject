@@ -113,24 +113,23 @@ var result=$("#search_input").val();
 	var name_order=$("#myOrders tr");
 
 		console.log(name_order);
-	/*for(var i=0;i<name_order.size();i++){
-		$.ajax({
-			url:"Ajax/home_user_Ajax.php",
-			method:'get',
-			data:{
-				"uid":node.attr('name'),
-				"pid":node.attr('id'),
-				"comment":
-			},
-			success:function(response){
-				$('#display').html(response);
-			}
-		});
+		var object=array();
+	for(var i=0;i<name_order.size();i++){
 			var node = $(name_order.get(i));
 			var pid = node.attr('id');
 			var uid = node.attr('name');
 			var order =new Orders();
 			console.log(pid+","+uid);
-	}*/
+	}
+		$.ajax({
+			url:"Ajax/home_user_Ajax.php",
+			method:'get',
+			data:{
+				"order":json.stringify(object)
+			},
+			success:function(response){
+
+			}
+		});
 });
 });
