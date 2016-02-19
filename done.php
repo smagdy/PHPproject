@@ -38,7 +38,7 @@ if(empty($confirmpwd)) {
     $erormessage.= 'Error you must enter comfirmpwd <br>';
     $flag = false;
 }
-if($pwd==$confirmpwd) {
+if(strcmp($pwd,$confirmpwd)) {
     $erormessage.= 'Error password not equal comfirm password <br>';
     $flag = false;
 }
