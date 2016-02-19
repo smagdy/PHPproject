@@ -12,34 +12,8 @@
 	
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/task.js"></script> 
+	<script src="js/task.js"></script>
 	<script src="js/scripts.js"></script>
-	<script>
-		$(function() {
-			$.ajax({
-				url: "selectRoom.php",
-				method: 'get',
-				data: {
-					"all":"all"
-				},
-				success: function (response) {
-					console.log(response);
-					for(var i=0;i<response.length;i++){
-						$('#roomNum').html($('#roomNum').html()+"<option value= "+(i+1)+" >"+response[i][1]+"</option>");
-					}
-				},
-				error: function (xhr, status, error) {
-					console.log(error);
-				},
-				complete: function (xhr) {
-					console.log("Complete ");
-				},
-				dataType: 'json',
-				async: true
-
-			});
-		});
-	</script>
 </head>
 <body>
 

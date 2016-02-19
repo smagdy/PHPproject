@@ -10,6 +10,28 @@ $(function(){
 		$('#display').html(response);		
 		}	
 	});
+	$.ajax({
+		url: "selectRoom.php",
+		method: 'get',
+		data: {
+			"all":"all"
+		},
+		success: function (response) {
+			console.log(response);
+			for(var i=0;i<response.length;i++){
+				$('#roomNum').html($('#roomNum').html()+"<option value= "+(i+1)+" >"+response[i][1]+"</option>");
+			}
+		},
+		error: function (xhr, status, error) {
+			console.log(error);
+		},
+		complete: function (xhr) {
+			console.log("Complete ");
+		},
+		dataType: 'json',
+		async: true
+
+	});
 
 $("#search_input").keyup(function(e){
 var result=$("#search_input").val();
@@ -86,12 +108,9 @@ var result=$("#search_input").val();
 	});
 
 	$("#mySubmit").click(function(){
-	var tota ;
-	var name_order=$("#myOrders").children("tr").attr("id");
-	console.log(name_order);
-	var count_order=$("#myOrders").children("tr").children("td").next("td").chilren("h3").text();
-	console.log(count_order);
+	var name_order=$("#myOrders").find('tr');
+	for($i=0;$i<name_order.size();$i++){
+		console.log(name_order[$i]);
+	}
 });
-
-	
 });
