@@ -55,22 +55,22 @@ var result=$("#search_input").val();
 
 	$("#display").on('click','.price',function(){
 		var sumOrder=parseInt($("#mytotal").text());
-		var price =$(this).parent("span").parent("div").prev("input").attr("name");
-		var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").attr("name");
-		var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("img").attr("name");
-		var id =$(this).parent("span").parent("div").prev("input").prev("input").prev("img").attr("id");
+		var price =$(this).parent("span").parent("div").prev("input").prev("input").attr("name");
+		var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").attr("name");
+		var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").prev("img").attr("name");
+		var pid=$(this).parent("span").parent("div").prev("input").val();
 		sumOrder+=parseInt(price);
 		$("#mytotal").text(sumOrder);
-		if(document.getElementById(name)){
-			var myval = parseInt($("#"+name).children("td").next("td").children("input").attr("value"));
+		if(document.getElementById(pid)){
+			var myval = parseInt($("#"+pid).children("td").next("td").children("input").attr("value"));
 			myval= myval + 1;
 			price = price * myval;
-			$("#"+name).children("td").next("td").children("input").attr("value" ,myval);
-			$("#"+name).children("td").next("td").next("td").children("label").children("h3").text(price);
+			$("#"+pid).children("td").next("td").children("input").attr("value" ,myval);
+			$("#"+pid).children("td").next("td").next("td").children("label").children("h3").text(price);
 		}
 		else
 		{
-			$("#myOrders").append("<tr id='"+id+"' name='"+name+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text'  style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
+			$("#myOrders").append("<tr id='"+pid+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text'  style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
 		}
 	});
 	$('#myOrders').on('click','.decrease',function(){
