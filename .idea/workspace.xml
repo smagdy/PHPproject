@@ -220,12 +220,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/jquery-1.11.2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/task.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/⁄⁄⁄⁄index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connection.php" afterPath="$PROJECT_DIR$/connection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tables.php" afterPath="$PROJECT_DIR$/tables.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/somedatatoenterindatabase" afterPath="$PROJECT_DIR$/somedatatoenterindatabase" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userHome.php" afterPath="$PROJECT_DIR$/userHome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userOrder.html" afterPath="$PROJECT_DIR$/userOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validateUser.php" afterPath="$PROJECT_DIR$/validateUser.php" />
     </list>
     <ignored path="PHPproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -250,8 +246,8 @@
       <file leaf-file-name="connection.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connection.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.964286">
-              <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
+            <state vertical-scroll-proportion="29.392857">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <marker date="1455893179502" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
                 <marker date="1455893179502" expanded="true" signature="1554:1780" placeholder="CREATE TABLE... IF" />
@@ -329,8 +325,28 @@
       <file leaf-file-name="userHome.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/userHome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1655914">
-              <caret line="123" column="28" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.48387095">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="done.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/done.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.125">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="somedatatoenterindatabase" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somedatatoenterindatabase">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -384,8 +400,9 @@
         <option value="$PROJECT_DIR$/tables.php" />
         <option value="$PROJECT_DIR$/validateUser.php" />
         <option value="$PROJECT_DIR$/js/jstest.js" />
-        <option value="$PROJECT_DIR$/userHome.php" />
         <option value="$PROJECT_DIR$/connection.php" />
+        <option value="$PROJECT_DIR$/somedatatoenterindatabase" />
+        <option value="$PROJECT_DIR$/userHome.php" />
       </list>
     </option>
   </component>
@@ -494,7 +511,7 @@
     <frame x="-1" y="28" width="1368" height="707" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -512,6 +529,25 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20058565" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -956,45 +992,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.964286">
-          <caret line="66" column="59" selection-start-line="66" selection-start-column="59" selection-end-line="66" selection-end-column="59" />
-          <folding>
-            <marker date="1455893179502" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="1554:1780" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="1942:2063" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="2221:2331" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="2606:2646" placeholder="insert into Room... " />
-            <marker date="1455893179502" expanded="true" signature="2756:2844" placeholder="insert into users... " />
-            <marker date="1455893179502" expanded="true" signature="3015:3171" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="3378:3492" placeholder="CREATE TABLE... IF" />
-            <marker date="1455893179502" expanded="true" signature="3676:3723" placeholder="insert into changes... " />
-            <marker date="1455893179502" expanded="true" signature="3782:3832" placeholder="insert into changes... " />
-            <marker date="1455893179502" expanded="true" signature="3891:3941" placeholder="insert into changes... " />
-            <marker date="1455893179502" expanded="true" signature="4000:4046" placeholder="insert into changes... " />
-            <marker date="1455893179502" expanded="true" signature="4105:4153" placeholder="insert into changes... " />
-            <marker date="1455893179502" expanded="true" signature="5846:5908" placeholder="alter table Users... " />
-            <marker date="1455893179502" expanded="true" signature="5955:6024" placeholder="alter table Products... " />
-            <marker date="1455893179502" expanded="true" signature="6071:6135" placeholder="alter table Orders... " />
-            <marker date="1455893179502" expanded="true" signature="6182:6249" placeholder="alter table Orders... " />
-            <marker date="1455893179502" expanded="true" signature="6296:6340" placeholder="alter table Orders... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/userOrder.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23246492">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/done.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.028248588">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1027,10 +1028,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/done.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="29.392857">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <marker date="1455893179502" expanded="true" signature="1150:1392" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="1554:1780" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="1942:2063" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="2221:2331" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="2606:2646" placeholder="insert into Room... " />
+            <marker date="1455893179502" expanded="true" signature="2756:2844" placeholder="insert into users... " />
+            <marker date="1455893179502" expanded="true" signature="3015:3171" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="3378:3492" placeholder="CREATE TABLE... IF" />
+            <marker date="1455893179502" expanded="true" signature="3676:3723" placeholder="insert into changes... " />
+            <marker date="1455893179502" expanded="true" signature="3782:3832" placeholder="insert into changes... " />
+            <marker date="1455893179502" expanded="true" signature="3891:3941" placeholder="insert into changes... " />
+            <marker date="1455893179502" expanded="true" signature="4000:4046" placeholder="insert into changes... " />
+            <marker date="1455893179502" expanded="true" signature="4105:4153" placeholder="insert into changes... " />
+            <marker date="1455893179502" expanded="true" signature="5846:5908" placeholder="alter table Users... " />
+            <marker date="1455893179502" expanded="true" signature="5955:6024" placeholder="alter table Products... " />
+            <marker date="1455893179502" expanded="true" signature="6071:6135" placeholder="alter table Orders... " />
+            <marker date="1455893179502" expanded="true" signature="6182:6249" placeholder="alter table Orders... " />
+            <marker date="1455893179502" expanded="true" signature="6296:6340" placeholder="alter table Orders... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somedatatoenterindatabase">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/userHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1655914">
-          <caret line="123" column="28" selection-start-line="123" selection-start-column="28" selection-end-line="123" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.48387095">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding />
         </state>
       </provider>
