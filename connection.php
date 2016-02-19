@@ -63,7 +63,7 @@
 			///////////////////////////////////
 			////////////////////////////////////////////
 			////create table Order
-			$sq = "CREATE TABLE IF NOT EXISTS Orders (uid int unsigned not null,pid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,,comment varchar(100) not null);";
+			$sq = "CREATE TABLE IF NOT EXISTS Orders (uid int unsigned not null,pid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}
