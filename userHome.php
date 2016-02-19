@@ -13,7 +13,33 @@
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/task.js"></script> 
-	<script src="js/scripts.js"></script> 
+	<script src="js/jstest.js"></script>
+	<script>
+		$(function() {
+			$.ajax({
+				url: "selectRoom.php",
+				method: 'get',
+				data: {
+					"all":"all"
+				},
+				success: function (response) {
+					console.log(response);
+					for(var i=0;i<response.length;i++){
+						$('#roomNum').html($('#roomNum').html()+"<option value= "+(i+1)+" >"+response[i][1]+"</option>");
+					}
+				},
+				error: function (xhr, status, error) {
+					console.log(error);
+				},
+				complete: function (xhr) {
+					console.log("Complete ");
+				},
+				dataType: 'json',
+				async: true
+
+			});
+		});
+	</script>
 </head>
 <body>
 
@@ -105,21 +131,9 @@
 
 	<td>  <div class="form-group">		
 			<div>
-				<select class="element select medium  form-control" id="room" name="room" > 
+				<select class="element select medium  form-control" id="roomNum" name="room" >
 					<option value="Select Room" selected="selected"> Select Room</option>
-					<?php 
-					require_once('connection.php');
-					$mysqli =connection::createInstance();
-					$query = " select * from Room";
-					$res = $mysqli->query($query) or die (mysqli_error($mysqli));
 
-					while ($row=mysqli_fetch_array($res))
-					{
-					 ?>
-					<option value="<?php echo $row['roomNumber']; ?>" ><?php echo $row['roomNumber']; ?></option>
-					<?php
-					}
-					?>
 				</select>
 			</div> 	
 		</div>
@@ -128,8 +142,8 @@
 			      </tr>
 			      <tr>
 				<td><h3>Total</h3></td>
-				<td> </td>
-				<td><label name="result"><h3 id="mytotal"></h3></label></td>
+				<td > </td>
+				<td><label name="result"><h3 id="mytotal">0</h3></label></td>
 				<td><label name="coin"><h3>EGP</h3></label> </td>
 			      </tr>
 		

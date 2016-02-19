@@ -32,6 +32,11 @@
             $result=mysqli_query($this->con,$query);
             return mysqli_fetch_row($result);
         }
+        function selectbyName(){
+            $query="select uid,password from Users where name='".$this->name."';";
+            $result=mysqli_query($this->con,$query);
+            return mysqli_fetch_row($result);
+        }
         function select(){
             $query="select * from Users ;";
             $result=mysqli_query($this->con,$query);

@@ -53,12 +53,12 @@
 			}
 			////////////////////////////////////////////
 			////////////////////--Rooms--///////////////
-			for($i=1010;$i<1020;$i+=1) {
-				$query = "insert into Room values(null,'" . $i . "');";
+			for($i=2000,$j=1;$i<2020;$i+=1,$j++) {
+				$query = "insert into Room values($j,'" . $i . "');";
 				mysqli_query(connection :: $obj, $query);
 			}
 			/////////////--adminRecord--////////////
-			$query="insert into users values(null,'admin','admin123@gmail.com',md5('123'),'admin.jpg','1010',1);";
+			$query="insert into users values(1,'admin','admin123@gmail.com',md5('123'),'admin.jpg','1010',1);";
 			mysqli_query(connection :: $obj,$query);
 			///////////////////////////////////
 			////////////////////////////////////////////
