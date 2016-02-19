@@ -35,7 +35,6 @@ var result=$("#search_input").val();
 //-------------------------------------------------------------------------------------------------------
 	var sumOrder=0;
 	$("#display").on('click','.price',function(){
-	
 	var price =$(this).parent("span").parent("div").prev("input").attr("name");
 	var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").attr("name");
 	var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("img").attr("name");
@@ -50,15 +49,32 @@ var result=$("#search_input").val();
 		}
 		else
 		{
-			$("#myOrders").append('<tr id="'+name+'"><td><button name="delete" >Delete</button></td><td><h3>'+name+'</h3></td><td><input type="number" class="myInc" name="prod_id" placeholder="counter"value="1"  min="1" step="1" max="100"></td><td><label name="result"><h3>'+price+'</h3></label></td><td><label name="coin"><h4>EGP</h4></label> </td>  </tr>');
+			$("#myOrders").append('<tr id="'+name+'"><td><button name="delete" >Delete</button></td><td><h3>'+name+'</h3></td><td><input type="button" value="+" name="sum" /><input type="button" value="-" name="sub" /><input type="text"  class="myInc" name="prod_id"/></td><td><label name="result"><h3>'+price+'</h3></label></td><td><label name="coin"><h4>EGP</h4></label> </td>  </tr>');
 		}
 		
-		
+	//<td><input type="number" class="myInc" name="prod_id" placeholder="counter"value="1"  min="1" step="1" max="100"></td>	
 	
 	
 });
 
-$("#myOreder tr td:first button").click(function(e){
+$("#mySubmit").click(function(){
+	var tota ;
+	var name_order=$("#myOrders").children("tr").attr("id");
+	console.log(name_order);
+	//var count_order=$("#")
+	var count_order=$("#myOrders").children("tr").children("td").next("td").chilren("h3").text();
+	console.log(count_order);
+		
+	
+
+
+});
+
+
+
+
+
+$("#myOreder #cola td:first button").click(function(e){
 		   console.log("dqqqqqqqqqqqqe");
 		
 		});

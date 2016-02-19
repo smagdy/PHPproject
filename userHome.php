@@ -7,8 +7,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style1.css">
 	<style>
-	
- 	 
+	 	 
 	</style>
 	
 	<script src="js/jquery-1.11.2.js"></script>
@@ -143,7 +142,7 @@
 <div class="row">
 	<div class="col-sm-6"> </div>
 	<div >
-		<span><input value="Submit" class="myButton" type="submit"></span>
+		<span><input value="Submit" class="myButton" id="mySubmit" type="submit"></span>
 	</div>
 	
 </div>
