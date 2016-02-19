@@ -9,7 +9,31 @@
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.min.js" ></script> 
 <script>
+	
+	 $(function() {
+                $.ajax({
+                    url: "allCategory.php",
+                    method: 'get',
+                    data: {
+                        "all":"all"
+                    },
+                    success: function (response) {
+                        console.log(response);
+                       for(var i=0;i<response.length;i++){
+                          $('#category').html($('#category').html()+"<option value= "+(i+1)+" >"+response[i][1]+"</option>");
+                       }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    },
+                    complete: function (xhr) {
+                        console.log("Complete ");
+                    },
+                    dataType: 'json',
+                    async: true
 
+                });
+        });
 
 </script>
 <body>
@@ -28,9 +52,9 @@
             <br/>
             <div class="row">
                  <span class="col-lg-2"><label>Category</label></span>
-                 <span class="col-lg-3"><select name="category">
-                       <option  value="Hot drinks">Hot drinks</option>
-                       <option  value="Cold drinks">Cold drinks</option>
+                 <span class="col-lg-3"><select name="category" id="category">
+                       <!--<option  value="Hot drinks">Hot drinks</option>
+                       <option  value="Cold drinks">Cold drinks</option>-->
                  </select></span>
                  <span><a href="">Add category</a></span>                
                 
