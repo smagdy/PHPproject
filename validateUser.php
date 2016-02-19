@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('tables.php');
 if(isset($_POST['userName']) && isset($_POST['userPass']))
 {
@@ -11,18 +12,19 @@ if(isset($_POST['userName']) && isset($_POST['userPass']))
     if(trim($_POST['userName'])=="admin"&&$pass==$row[1]){
         if(isset($_POST['keep']))
         {
-            $date_of_expiry = time() + 360 ;
+            $date_of_expiry = time() + 3600 ;
             setcookie("admin",$pass,$date_of_expiry );
         }
         $_SESSION['admin'] = "admin";
         header('Location:adminHome.php');
     }
     else{
+        echo $_POST['userName'].' '.$row[1].'---'.$pass;
         if($row[1]==$pass)
         {
             if(isset($_POST['keep']))
             {
-                $date_of_expiry = time() + 360 ;
+                $date_of_expiry = time() + 3600 ;
                 setcookie('userName',$_POST['userName'],$date_of_expiry );
             }
             $_SESSION['userName'] =$_POST['userName'];

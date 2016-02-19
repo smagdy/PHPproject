@@ -55,10 +55,11 @@ var result=$("#search_input").val();
 
 	$("#display").on('click','.price',function(){
 		var sumOrder=parseInt($("#mytotal").text());
-		var price =$(this).parent("span").parent("div").prev("input").prev("input").attr("name");
-		var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").attr("name");
-		var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").prev("img").attr("name");
-		var pid=$(this).parent("span").parent("div").prev("input").val();
+		var price =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").attr("name");
+		var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").prev("input").attr("name");
+		var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("input").prev("input").prev("img").attr("name");
+		var pid=$(this).parent("span").parent("div").prev("input").prev("input").val();
+		var uid=$(this).parent("span").parent("div").prev("input").val();
 		sumOrder+=parseInt(price);
 		$("#mytotal").text(sumOrder);
 		if(document.getElementById(pid)){
@@ -70,7 +71,7 @@ var result=$("#search_input").val();
 		}
 		else
 		{
-			$("#myOrders").append("<tr id='"+pid+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text'  style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
+			$("#myOrders").append("<tr id='"+pid+"' name='"+uid+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text'  style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
 		}
 	});
 	$('#myOrders').on('click','.decrease',function(){
@@ -109,9 +110,27 @@ var result=$("#search_input").val();
 	});
 
 	$("#mySubmit").click(function(){
-	var name_order=$("#myOrders").find('tr');
-	for($i=0;$i<name_order.size();$i++){
-		console.log(name_order[$i]);
-	}
+	var name_order=$("#myOrders tr");
+
+		console.log(name_order);
+	/*for(var i=0;i<name_order.size();i++){
+		$.ajax({
+			url:"Ajax/home_user_Ajax.php",
+			method:'get',
+			data:{
+				"uid":node.attr('name'),
+				"pid":node.attr('id'),
+				"comment":
+			},
+			success:function(response){
+				$('#display').html(response);
+			}
+		});
+			var node = $(name_order.get(i));
+			var pid = node.attr('id');
+			var uid = node.attr('name');
+			var order =new Orders();
+			console.log(pid+","+uid);
+	}*/
 });
 });
