@@ -54,6 +54,9 @@
                  <span class="col-lg-2"><label>Category</label></span>
                  <span class="col-lg-3"><select name="category" id="category">
                        <!--<option  value="Hot drinks">Hot drinks</option>
+                       
+                       
+                       
                        <option  value="Cold drinks">Cold drinks</option>-->
                  </select></span>
                  <span><a href="">Add category</a></span>                

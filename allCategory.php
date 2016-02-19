@@ -1,4 +1,5 @@
 <?php
+///////////////////////////////////
 require('tables.php');
 $Categorys=new Category();
 $data=$Categorys->select();
