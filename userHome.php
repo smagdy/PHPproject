@@ -7,14 +7,13 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style1.css">
 	<style>
-	
- 	 
+	 	 
 	</style>
 	
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/task.js"></script> 
-	<script src="js/scripts.js"></script> 
+	<script src="js/task.js"></script>
+	<script src="js/scripts.js"></script>
 </head>
 <body>
 
@@ -40,7 +39,8 @@
 				<ul class="nav navbar-nav navbar-right">
 
 					<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
-
+					
+					
 					<li class="ts" ><a href="#"><span class="glyphicon "></span> Doaa Negm </a></li>
 				
 					 <li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
@@ -50,8 +50,6 @@
 			
 		</div>	
 	</nav>
-
-
 
 <!--------------------------- end Nav ------------------------------------------------>
 		</div>
@@ -64,25 +62,10 @@
 <!---------------------------------- sub row 00 ------------------------------------------>
 		<div class="row" >
 <br><br>
-	<div class="col-sm-1" ></div>
+	<!--<div class="col-sm-1" ></div> -->
 	<div class="col-sm-2" >	
 		 <table class="table" id="myOrders">
-		   <!--
-			      <tr>
-				<td><h3>tea</h3></td>
-				<td><input type="number" name="count" placeholder="counter" min='1' step='1' max='100'></td>
-				<td><label name="result"><h3>30</h3></label></td>
-				<td><label name="coin"><h3>EGP</h3></label> </td>
-			      </tr>
-
-			      <tr>
-				<td><h3>tea</h3></td>
-				<td><input type="number" class="myInc" name="count1" placeholder="counter" min='1' step='1' max='100'></td>
-				<td><label name="result"><h3>30</h3></label></td>
-				<td><label name="coin"><h3>EGP</h3></label> </td>
-			      </tr>
-		
-		   -->
+		  
 	  	</table>
 	</div>
 </div>	
@@ -117,23 +100,22 @@
 				<td><h3>Room</h3></td>
 				<td><h3> </h3> </td>
 				<td> <h3> </h3></td>
-				<td>  <div class="form-group">		
-						<div>
-							<select class="element select medium  form-control" id="room" name="room" > 
-								<option value="Select Room" selected="selected"> Select Room</option>
-								<option value="1002" >1002</option>
-								<option value="1003" >1003</option>
-								<option value="1004" >1004</option>
-							</select>
-						</div> 	
-					</div>
-				 </td>
-			      </tr>
 
+	<td>  <div class="form-group">		
+			<div>
+				<select class="element select medium  form-control" id="roomNum" name="room" >
+					<option value="Select Room" selected="selected"> Select Room</option>
+
+				</select>
+			</div> 	
+		</div>
+	 </td>	     
+
+			      </tr>
 			      <tr>
 				<td><h3>Total</h3></td>
-				<td> </td>
-				<td><label name="result"><h3 id="mytotal"></h3></label></td>
+				<td > </td>
+				<td><label name="result"><h3 id="mytotal">0</h3></label></td>
 				<td><label name="coin"><h3>EGP</h3></label> </td>
 			      </tr>
 		
@@ -146,7 +128,7 @@
 <div class="row">
 	<div class="col-sm-6"> </div>
 	<div >
-		<span><input value="Submit" class="myButton" type="submit"></span>
+		<span><input value="Submit" class="myButton" id="mySubmit" type="submit"></span>
 	</div>
 	
 </div>
@@ -209,83 +191,11 @@
 			<h3>MENU </h3>
 		</div>
 	</div>
-	<div class="row">
 
-		<div class="col-sm-3" id="display">
-			<div class="row">
-			 <img src="images/tea2.jpg" class="img-rounded" name="img1"  height="125" width="125" alt="">
-			 <div >
-				<br><span align="center"><input value="5LE" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-		<div class="col-sm-1" ></div>
-		<div class="col-sm-3" >
-			<div class="row">
-			 <img src="images/tea1.jpg" class="img-rounded" name="img1"  height="125" width="125" alt="">
-			 <div >
-				<br><span align="center"><input value="10LE" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-		<div class="col-sm-1" ></div>
-		<div class="col-sm-3" >
-			<div class="row">
-			 <img src="images/tea3.jpg" class="img-rounded" name="img1"  height="125" width="125" alt="">
-			 <div >
-				<br><span align="center"><input value="15LE" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-
-
-
-	</div>
 <!--------------------------------------------------------------------------------------------------------------------------->
-
+<div id="display"></div>
 <br>
-	<div class="row">
-
-		<div class="col-sm-3" >
-			<div class="row">
-			 <img src="images/tea2.jpg" class="img-rounded" name="img1"  height="125" width="125" alt="">
-			 <div >
-				<br><span align="center"><input value="5LE" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-		<div class="col-sm-1" ></div>
-		<div class="col-sm-3" >
-			<div class="row">
-			 <img src="images/tea4.jpg" class="img-rounded" name="img1"   height="125" width="125" alt="">
-				<input type="hidden" name="1" value="6" >
-				<input type="hidden" name="40" value="50" >
-			 <div >
-				<br><span align="center"><input value="10" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-		<div class="col-sm-1" ></div>
-		<div class="col-sm-3" >
-			<div class="row">
-			 	<img src="images/tea1.jpg" class="img-rounded" name="prod_name"   height="125" width="125" alt="">
-				<input type="hidden" name="2" value="6" >
-				<input type="hidden" name="15" value="50" >
-			 <div >
-				<br><span align="center"><input value="15" class="price" type="submit"></span>
-			</div>
-
-			</div>
-		</div>
-
-
-
-	</div>
+</div>
 
 <!--------------------------------------------------------------------------------------------------------------------------->
 	</div> <!---- col---->

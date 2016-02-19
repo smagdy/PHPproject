@@ -37,7 +37,7 @@
 				echo "Error creating table: " . connection :: $obj->error;
 			}
 			////create table products
-			$sq = "CREATE TABLE IF NOT EXISTS Products (pid int unsigned not null auto_increment primary key,pname char(50) not null,productPicture char(50) not null,price int not null,available enum('0','1') not null ,cid int unsigned not null);";
+			$sq = "CREATE TABLE IF NOT EXISTS Products (pid int unsigned not null auto_increment primary key,pname char(50) not null,productPicture char(50) not null,price int not null,available enum('0','1') not null,cid int unsigned not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}
@@ -53,17 +53,17 @@
 			}
 			////////////////////////////////////////////
 			////////////////////--Rooms--///////////////
-			for($i=1010;$i<2020;$i+=10) {
-				$query = "insert into Room values(null,'" . $i . "');";
+			for($i=2000,$j=1;$i<2020;$i+=1,$j++) {
+				$query = "insert into Room values($j,'" . $i . "');";
 				mysqli_query(connection :: $obj, $query);
 			}
 			/////////////--adminRecord--////////////
-			$query="insert into users values(null,'admin','admin123@gmail.com',md5('123'),'admin.jpg','1010',1);";
+			$query="insert into Users values(1,'admin','admin123@gmail.com',md5('123'),'admin.jpg','1010',1);";
 			mysqli_query(connection :: $obj,$query);
 			///////////////////////////////////
 			////////////////////////////////////////////
-			////create table Orders
-			$sq = "CREATE TABLE IF NOT EXISTS Orders (uid int unsigned not null,pid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,rid int unsigned not null);";
+			////create table Order
+			$sq = "CREATE TABLE IF NOT EXISTS Orders (uid int unsigned not null,pid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}

@@ -32,6 +32,11 @@
             $result=mysqli_query($this->con,$query);
             return mysqli_fetch_row($result);
         }
+        function selectbyName(){
+            $query="select uid,password from Users where name='".$this->name."';";
+            $result=mysqli_query($this->con,$query);
+            return mysqli_fetch_row($result);
+        }
         function select(){
             $query="select * from Users ;";
             $result=mysqli_query($this->con,$query);
@@ -61,6 +66,7 @@
         function __construct(){
             $this->pid=1;$this->pname='';
             $this->cid=1; $this->productPicture='';
+            $this->available='0';
             $this->con=connection :: createInstance();
         }
         function __get($name){
@@ -101,14 +107,14 @@
     }
 /////////////////////-----------Orders--------------///////////////////
 class Orders{
-    private $uid,$pid,$orderDate,$amount,$status,$rid,$con;
+    private $uid,$pid,$orderDate,$amount,$status,$comment,$con;
     function __construct(){
         $this->uid=0;
         $this->pid=0;
-        $this->orderDate=date('Y-mm-dd');
+        $this->orderDate=date('Y-m-d H:i:s');
         $this->amount=0;
         $this->status="";
-        $this->rid=0;
+        $this->comment='';
         $this->con=connection :: createInstance();
     }
     function __get($name){
@@ -118,11 +124,11 @@ class Orders{
         $this->$name = $value;
     }
     function update(){
-        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',rid='".$this->rid."' where uid='".$this->uid."' and pid='".$this->pid."';";
+        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->comment."' where uid='".$this->uid."' and pid='".$this->pid."';";
         mysqli_query($this->con,$query);
     }
     function insert(){
-        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."','".$this->rid."');";
+        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."','".$this->comment."');";
         mysqli_query($this->con,$query);
     }
     function delete(){

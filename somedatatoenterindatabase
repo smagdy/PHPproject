@@ -1,0 +1,5 @@
+insert into Category values(1,'cold');
+insert into Category values(2,'hot');
+insert into Products values(1,'cola','im1.jpg',5,'1',1);
+insert into Products values(2,'pepsi','im2.jpg',4,'1',1);
+insert into Products values(3,'tea','im3.jpg',4,'1',2);
