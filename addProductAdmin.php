@@ -67,7 +67,9 @@ if($count==0){
     $Product->productPicture=$upimage;
     $Product->price=$price_prodect; 
     $Product->available='1';
-    $Product->cid='1';
+    $query="select cid from Category where categoryName like '".$category."%'";
+    $res = $mysqli->query($query);
+    $Product->cid=$res;
     $Product->insert();
 }
  else {
@@ -78,7 +80,5 @@ if($count==0){
 else{
 echo "You much click on Submit";
 }
-
-
 
 ?>

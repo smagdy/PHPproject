@@ -9,8 +9,14 @@ code=2 ----------> edit
 */
 $user = new Users() ;           
 $totalRes =  $user->select(); 
+
+if ($_GET['code'] == "1" ){
+   $user->uid = $_GET['UID'] ; 
+//    echo "hiiiiiii" ;
+//    echo  $_GET['UID'] ;
+   $user->delete() ;
+};
 /*
-if ($_GET['code'] == "1" ){};
 else if ($_GET['code'] == "2"){};*/
 
 $limit = isset($_GET['limit'])?$_GET['limit']:0;
