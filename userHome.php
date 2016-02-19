@@ -13,7 +13,7 @@
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/task.js"></script> 
-	<script src="js/script.js"></script>
+	<script src="js/scripts.js"></script>
 	<script>
 		$(function() {
 			$.ajax({
