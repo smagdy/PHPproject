@@ -1,8 +1,17 @@
 $(function(){
 //---------------------------------------------------------------------------------------------------------
-
-
-
+		$.ajax({
+		url:"Ajax/home_user_Ajax.php",
+		method:'get',
+		data:{
+			"value":'ALL'	
+		},
+		success:function(response){
+		$('#display').html(response);
+			console.log(error);
+		
+		}	
+	});
 
 $("#search_input").keyup(function(e){
 var result=$("#search_input").val();
@@ -16,11 +25,8 @@ var result=$("#search_input").val();
 		},
 		success:function(response){
 		$('#display').html(response);
-			console.log(error);
 		
-		}
-		
-
+		}	
 	});
 
 });
@@ -28,8 +34,8 @@ var result=$("#search_input").val();
 
 //-------------------------------------------------------------------------------------------------------
 	var sumOrder=0;
-
-	$(".price").click(function(){
+	$("#display").on('click','.price',function(){
+	console.log("click");
 	var price =$(this).parent("span").parent("div").prev("input").attr("name");
 	var prod_id =$(this).parent("span").parent("div").prev("input").prev("input").attr("name");
 	var name =$(this).parent("span").parent("div").prev("input").prev("input").prev("img").attr("name");

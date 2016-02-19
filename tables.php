@@ -1,12 +1,12 @@
 <?php
     require('connection.php');
-//////////////////////////-----Users-----------------///////////////////
+    //////////////////////////-----Users--------/////////////////////////////
     class Users{
         private $uid,$name,$email,$password,$profilePicture,$EXT,$rid,$con;
         function __construct(){
             $this->uid='';$this->name=''; $this->email='';
             $this->password=''; $this->profilePicture=''; $this->EXT='';
-            $this->con=connection :: createInstance();
+            $this->con=connection :: createInstance();        
         }
         function __get($name){
             return $this->$name;
@@ -20,6 +20,7 @@
         }
         function insert(){
             $query="insert into Users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."','".$this->rid."');";
+            //echo $query;
             mysqli_query($this->con,$query);
         }
         function delete(){
@@ -28,11 +29,6 @@
         }
         function selectbykey(){
             $query="select * from Users where uid='".$this->uid."';";
-            $result=mysqli_query($this->con,$query);
-            return mysqli_fetch_row($result);
-        }
-        function selectbyName(){
-            $query="select uid,password from Users where name='".$this->name."';";
             $result=mysqli_query($this->con,$query);
             return mysqli_fetch_row($result);
         }
@@ -48,7 +44,7 @@
             return $data;
         }
     }
-////////////////////////------products--------------///////////////////
+    ////////////////////////-----------products--------------///////////////////
     class Products{
         private $pid,$pname,$productPicture,$cid,$price,$available,$con;
         function __construct(){
@@ -92,16 +88,15 @@
         }
 
     }
-////////////////////////------Orders---------------///////////////////
-    class Orders{
-    private $uid,$pid,$orderDate,$amount,$status,$rid,$con;
+/////////////////////-----------Orders--------------///////////////////
+class Orders{
+    private $uid,$pid,$orderDate,$amount,$status,$con;
     function __construct(){
         $this->uid=0;
         $this->pid=0;
-        $this->orderDate=date('Y-mm-dd');
+        $this->orderDate=date('Y-m-d H:i:s');
         $this->amount=0;
         $this->status="";
-        $this->rid=0;
         $this->con=connection :: createInstance();
     }
     function __get($name){
@@ -111,11 +106,11 @@
         $this->$name = $value;
     }
     function update(){
-        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',rid='".$this->rid."' where uid='".$this->uid."' and pid='".$this->pid."';";
+        $query="update Orders set uid='".$this->uid."',pid='".$this->pid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."' where uid='".$this->uid."' and pid='".$this->pid."';";
         mysqli_query($this->con,$query);
     }
     function insert(){
-        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."','".$this->rid."');";
+        $query="insert into Orders values('".$this->uid."','".$this->pid."','".$this->orderDate."','".$this->amount."','".$this->status."');";
         mysqli_query($this->con,$query);
     }
     function delete(){
@@ -145,7 +140,7 @@
         return $data;
     }
 }
-///////////////////////------Category--------------///////////////////
+    ////////////////////////-----------Category--------------///////////////////
     class Category{
         private $cid,$categoryName,$con;
         function __construct(){
@@ -187,7 +182,7 @@
             return $data;
         }
     }
-///////////////////////------Room-----------------///////////////////
+/////////////////////-----------Room--------------///////////////////
     class Room{
         private $rid,$roomNumber,$con;
         function __construct(){
