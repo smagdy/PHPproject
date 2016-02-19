@@ -86,16 +86,16 @@
 	 	  	  
 	  $("table").on("click",".delete",function(){	     
 	      code="1" ;
-// 	      console.log("ttttttttttttoooooooooooooooooooooooooo") ;
-// 	      UI = $(this).attr("id") ;
-// 	      console.log(UI) ;
-	     
-	     // sendToServer (code,limit,UID) ;
-	      console.log("code"+code);
+ 	      UID = $(this).parent().parent().attr("id") ;
+ 	      console.log(UID) ;
+              sendToServer (code,limit,UID) ;
+              console.log("code"+code);
 	  });
 	
 	$("table").on("click",".edit",function(){	     
-	      code="2" ; 
+	      code="2" ;
+	      UID = $(this).parent().parent().attr("id") ;
+ 	      console.log(UID) ;
 // 	      sendToServer (code,limit,UID) ;
 	      console.log("code"+code);
 	  });

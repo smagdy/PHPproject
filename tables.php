@@ -103,6 +103,17 @@ $i=$i+1;
 }
 return $data;
 }
+function selectLimit($limit,$length){
+$query="select * from Products limit ".$limit.",".$length.";";
+$result=mysqli_query($this->con,$query);
+$i=0;
+$data=array();
+while($row=$result->fetch_array()){
+$data[$i]=$row;
+$i++;
+}
+return $data;
+}
 }
 /////////////////////-----------Orders--------------///////////////////
 class Orders{
