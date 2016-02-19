@@ -10,9 +10,9 @@
 <script>
     $(function(){
           var code="0" ;
+          var UID = 0 ;
           var limit=0 ;
-          var page=1   ;
-          var oldPage=1 ;
+          var page=1 , oldPage=1 ;
           var n = 4 ;  
           var pagiNum ;
              function sendToServer (){
@@ -20,7 +20,8 @@
 			url:"allUsers.php",
 			method:'get',
 			data:{  "code":code,
-				"limit":limit
+				"limit":limit,
+				"UID":UID
 			},
 			success:function(response){
 			        console.log(response);	
@@ -52,10 +53,10 @@
 	            $("table").empty();
 	            $("table").append("<tr><th>Name</th><th>Room</th><th>Image</th><th>Ext.</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['usersArray'].length ; i++){
-  		    $("table").append('<tr><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="images/'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td><td><button class="delete">Del</button><button class="edit">Edit</button></td></tr>');
-  		   }	      
+  		    $("table").append('<tr id="'+i+'"><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="images/'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td><td><button class="delete">Del</button><button class="edit">Edit</button></td></tr>'); 		  
+  		  }	      
 	     }
-	      sendToServer (code,limit) ;
+	      sendToServer (code,limit,UID) ;
 	      
 	    $(".pagination").on("click","li",function(){
 		code="0" ; 
@@ -80,26 +81,52 @@
 		}
  			
 		limit = (page-1)*n ;		           	      	      
-		sendToServer (code,limit) ;
+		sendToServer (code,limit,UID) ;
 	  });
 	 	  	  
 	  $("table").on("click",".delete",function(){	     
 	      code="1" ;
-	      sendToServer (code,limit) ;
+// 	      console.log("ttttttttttttoooooooooooooooooooooooooo") ;
+// 	      UI = $(this).attr("id") ;
+// 	      console.log(UI) ;
+	     
+	     // sendToServer (code,limit,UID) ;
 	      console.log("code"+code);
 	  });
-	  $("table").on("click",".edit",function(){	     
+	
+	$("table").on("click",".edit",function(){	     
 	      code="2" ; 
-	      sendToServer (code,limit) ;
+// 	      sendToServer (code,limit,UID) ;
 	      console.log("code"+code);
 	  });
 	  
-        });
+      });
 
 </script>
 <body>
-   <div class="container form" style="width:900px ; min-height:400px ; margin:100px 200px">
-       <h2>All Users</h2><br/>
+	<div class="header navbar-fixed-top">
+	      <div class="header_top">
+	            <div class="menu">
+		      <nav>
+			  <ul>
+				<li class="active" ><a href="">HOME</a></li>
+				<li><a href="allProducts.html">All products</a></li>
+				<li><a href="allUsers.html">all users</a></li>
+				<li><a href="orders.html">Orders</a></li>
+				<li><a href="check.html">Checks</a></li>	
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
+				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
+				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+			</ul>
+		      </nav>		      
+	      </div>                 
+	    </div>
+	</div>
+
+   <div class="container form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
+       <h2>All Users</h2>
        <span style="float:right;"><a href="addUser.html">add User</a></span>
        <table class="table table-bordered myTable">        
        </table>
@@ -113,7 +140,7 @@
       
   </div>
     
-  <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px">
+  <div class="copy-right"  style="margin-bottom:0px ;height:40px">
       <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
   </div>
     

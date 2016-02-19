@@ -15,7 +15,7 @@
 <body>
    <div class="container form " style="width:900px ; min-height:400px ; margin:100px 200px">
        <h2>Add Product</h2><br/>
-       <form action="addProductAdmin.php" enctype='multipart/form-data' method="post">
+       <form action="addProductAdmin.php" method="post" enctype="multipart/form-data" >
             <div class="row">
                  <span class="col-lg-2"><label>Product</label></span>
                  <span class="col-lg-6"><input type="text" name="nameProduct" /></span>

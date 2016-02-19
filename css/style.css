@@ -8,8 +8,8 @@ table{border-collapse:collapse;border-spacing:0;}
 /* start editing from here */
 a{text-decoration:none;}
 
-nav.vertical ul li{	display:block;}/* vertical menu */
-nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+nav.vertical ul li{display:block;}/* vertical menu */
+nav.horizontal ul li{display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 @font-face {
@@ -27,8 +27,7 @@ body{
 }
 /*----start-header-----*/
 .header{
-	 float:right;
-	 width:225px;
+         width:100% ;
 	 clear:both;
 	 position:absolute;
 	 top:0;
@@ -36,35 +35,42 @@ body{
 	 background:url(../images/bg.png);
 }
 nav {
-	width: 100%;
+	/*width: 100%;*/
 	position: relative;
 }
 nav ul {
 	padding: 0;
 	margin: 0 auto;
-	display: none;
+/* 	display: none; */
 }
-nav li {
+.header nav li {
 	display: block;
+	float:left ;
+	width:120px ;
+	height:50px ;
+	
+}
+.navbar-right li {
+	width:120px ;
+	text-align:right;
 }
 nav a {
 	 font-family: 'caviar_dreamsregular';
 	 font-size:1.2em;
   	 color:#A3793D;
 	 display: block;
-	 width:100%;
 	 text-indent: 10px;
-	 text-align: left;
+	 text-align:left;
 	 text-decoration: none;
-	 line-height:40px;
+	 line-height:50px;
 	 text-transform:uppercase;
 }
 nav li a {
 	 font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
 	 font-size:0.85em;
 	 text-align:center;
-     color:#A3793D;
-     font-family: 'caviar_dreamsregular';
+         color:#A3793D;
+         font-family: 'caviar_dreamsregular';
 	 text-transform:uppercase;
 }
 nav li a:hover,nav li.active a{
@@ -78,23 +84,9 @@ nav li:last-child a {
 nav a:hover{
 	color:#FFF;
 	text-shadow:0 1px 0 #222;
+	text-decoration: none;
 }
-nav a#pull {
-	display: block;
-	width:100%;
-	position: relative;
-	border-top:2px ridge #663C01;
-}
-nav a#pull:after {
-	
-	content:"";
-	width:40px;
-	height:40px;
-	display: inline-block;
-	position: absolute;
-	right:0px;
-	top:0px;
-}
+
 .logo {
 	background:#FFF;
 	text-align:center;
