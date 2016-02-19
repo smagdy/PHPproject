@@ -31,13 +31,13 @@ if (isset($_POST["save"]) ){
     }
     
   //////////////////////////////////////////////////////
- if ($_FILES["Pimage"]["type"] != "image/jpeg")
+ if ($_FILES['Pimage']['type'] != 'image/jpeg')
 			{
 			echo "Problem ";
 			exit;
 			}
 		
-			$upimage = '/var/www/html/php/'.$_FILES["Pimage"]["name"];
+			$upimage = 'images/'.$_FILES["Pimage"]["name"];
 			if (is_uploaded_file($_FILES['Pimage']['tmp_name'])){
 				if(!move_uploaded_file($_FILES['Pimage']['tmp_name'], $upimage)){
 				echo "problemrrrtttt";}
@@ -50,12 +50,7 @@ if (isset($_POST["save"]) ){
 					//$copy_file.=$img;
 					}
 			}
-                        
-////////////////////////////////////////////////////////////////////////////////////////////////                        
-    
-
-
-
+////////////////////////////////////////////////////////////////////////////////////////////////
 }
 else{
 echo "You much click on Submit";
