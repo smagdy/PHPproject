@@ -29,7 +29,7 @@ if(isset($_POST['userName']) && isset($_POST['userPass']))
             }
             $_SESSION['userName'] =$_POST['userName'];
             $_SESSION['userId'] = $row[0];
-            header("Location:userHome.php");
+            header("Location:userHome.html");
         }else header("Location:index.html");
 
     }

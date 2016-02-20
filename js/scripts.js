@@ -134,7 +134,8 @@ var result=$("#search_input").val();
 				'comment':$('#comment').val()
 			},
 			success:function(response){
-				console.log(response);
+				//console.log(response);
+				window.location.href = "userOrder.html";
 			},
 			error: function (xhr, status, error) {
 				console.log(error);
@@ -142,7 +143,6 @@ var result=$("#search_input").val();
 			complete: function (xhr) {
 				console.log("Complete ");
 			},
-			//dataType: 'json',
 			async: true
 		});
 	});
