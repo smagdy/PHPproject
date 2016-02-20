@@ -49,7 +49,7 @@ $i++;
 return $data;
 }
 function selectLimit($limit,$length){
-$query="select * from Users where uid > 1s limit ".$limit.",".$length.";";
+$query="select * from Users where uid > 1 limit ".$limit.",".$length.";";
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
