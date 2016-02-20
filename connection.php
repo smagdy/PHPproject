@@ -63,7 +63,7 @@
 			///////////////////////////////////
 			////////////////////////////////////////////
 			////create table Orders
-			$sq = "CREATE TABLE IF NOT EXISTS Orders (oid int unsigned not null auto_increment primary key,uid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null);";
+			$sq = "CREATE TABLE IF NOT EXISTS Orders (oid int unsigned not null auto_increment primary key,uid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null,rid int unsigned not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}
@@ -134,11 +134,13 @@
 			DELIMITER ;";
 			mysqli_query(connection :: $obj,$query);
 			/////////////////add relationship between tables
-			$sq="alter table Users add foreign key (rid)  references Room (rid);";
+			$sq="alter table Users add foreign key (rid) references Room (rid);";
 			connection :: $obj->query($sq);
-			$sq="alter table Products add foreign key (cid)  references Category (cid);";
+			$sq="alter table Products add foreign key (cid) references Category (cid);";
 			connection :: $obj->query($sq);
-			$sq="alter table Orders add foreign key (uid)  references Users (uid);";
+			$sq="alter table Orders add foreign key (uid) references Users (uid);";
+			connection :: $obj->query($sq);
+			$sq="alter table Orders add foreign key (rid) references Room (rid);";
 			connection :: $obj->query($sq);
 			$sq="alter table orderProducts add foreign key (oid)  references Orders (oid);";
 			connection :: $obj->query($sq);

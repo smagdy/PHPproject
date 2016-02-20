@@ -1,14 +1,14 @@
 $(function(){
 //---------------------------------------------------------------------------------------------------------
-		$.ajax({
+	$.ajax({
 		url:"Ajax/home_user_Ajax.php",
 		method:'get',
 		data:{
-			"value":'ALL'	
+			"value":'ALL'
 		},
 		success:function(response){
-		$('#display').html(response);		
-		}	
+		$('#display').html(response);
+		}
 	});
 	$.ajax({
 		url: "selectRoom.php",
@@ -71,7 +71,7 @@ var result=$("#search_input").val();
 		}
 		else
 		{
-			$("#myOrders").append("<tr id='"+pid+"' name='"+uid+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text'  style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
+			$("#myOrders").append("<tr id='"+pid+"' name='"+uid+"' ><td><h3>"+name+"</h3></td><td><button class='btn btn-danger decrease'> - </button></td><td><input type='text' class='numofItems' style='width: 30px;' value='1'/></td><td><button class='btn btn-success increase'> + </button></td><td><label name='result'><h3>"+price+"</h3></label></td><td><label name='coin'><h4>EGP</h4></label> </td><td><button class='btn btn-danger delete' >delete</button></td>  </tr>");
 		}
 	});
 	$('#myOrders').on('click','.decrease',function(){
@@ -108,28 +108,42 @@ var result=$("#search_input").val();
 		$('#mytotal').text(total);
 		$('#myOrders').find(parent).remove();
 	});
-
+/////////////////////////////////////////////////////
 	$("#mySubmit").click(function(){
-	var name_order=$("#myOrders tr");
-
-		console.log(name_order);
-		var object=array();
-	for(var i=0;i<name_order.size();i++){
+		var name_order=$("#myOrders tr");
+		var object=[];
+		var objectp=[];
+		for(var i=0;i<name_order.size();i++){
+			var products={};
 			var node = $(name_order.get(i));
-			var pid = node.attr('id');
-			var uid = node.attr('name');
-			var order =new Orders();
-			console.log(pid+","+uid);
-	}
+			var pid = parseInt(node.attr('id'));
+			var uid = parseInt(node.attr('name'));
+			products['pid']=pid;
+			products['numofItems']=parseInt(node.find('.numofItems').val());
+			objectp[i]=JSON.stringify(products);
+		}
 		$.ajax({
-			url:"Ajax/home_user_Ajax.php",
-			method:'get',
+			url:"addOrder.php",
+			method:'post',
 			data:{
-				"order":json.stringify(object)
+				'products[]':objectp,
+				'uid':uid,
+				'rid':parseInt($('#roomNum').val()),
+				'amount':parseInt($('#mytotal').text()),
+				'state':'processing',
+				'comment':$('#comment').val()
 			},
 			success:function(response){
-
-			}
+				console.log(response);
+			},
+			error: function (xhr, status, error) {
+				console.log(error);
+			},
+			complete: function (xhr) {
+				console.log("Complete ");
+			},
+			//dataType: 'json',
+			async: true
 		});
-});
+	});
 });

@@ -16,21 +16,41 @@ require('tables.php');
 	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script>
 		$(function() {
+			$.ajax({
+				url:"ajaxOrder.php",
+				method:'get',
+				data:{
+					'all':'all'
+				},
+				success:function(response){
+					console.log(response);
+					bulidTable(response);
+				},
+				error:function(xhr,status,error){
+					console.log(error);
+				},
+				complete:function(xhr){
+					console.log("Complete ");
+				},
+				dataType:'json',
+				async:true
+
+			});
 			$( ".datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
 			$( ".datepicker" ).change(function(e){
 				if($( "#datetimepicker1").val() != "" && $( "#datetimepicker2").val() != "") {
-					var uid=1;
 					var from = $("#datetimepicker1").val();
 					var to = $("#datetimepicker2").val();
 					$.ajax({
 						url:"ajaxOrder.php",
 						method:'get',
 						data:{
-							"uid":uid,
 							"to":to,
 							"from":from
 						},
 						success:function(response){
+							console.log(response);
+							//console.log(response[0]['products'][0]);
 							bulidTable(response);
 						},
 						error:function(xhr,status,error){
@@ -44,22 +64,56 @@ require('tables.php');
 
 					});
 				}
-//////////////////////////////////////////////////////////////////////////////
-/*
-				<a data-toggle="collapse" data-target="#demo">Details</a>
-				<div id="demo" class="collapse">
-				<pre>
-				</pre>
-				</div>
-
-*/
-///////////////////////////////////////////////////////////////////////
 		});
+
 		function bulidTable(data){
 			for(var i=0;i<data.length;i++){
-				$('.tbody').html($('.tbody').html()+" <tr><td>data[i][orderDate] AM <button><img src='images/plus.png' heigth='25' width='25' align='right'/></button></td><td>data[i][status]</td><td>data[i][amount] LE </td><td><button class='action'> Cancel</button></td></tr>");
+				var t=" <tr><td>"+data[i]['orderDate']+" <a data-toggle='collapse' data-target='#"+(i+1)+"'>+</a></td><td>"+data[i]['status']+"</td><td>"+data[i]['amount']+" LE </td>";
+				if(data[i]['status']=='processing')
+					t+="<td><button class='action' id='"+data[i]['oid']+"'> Cancel</button></td></tr>";
+				else t+="<td></td></tr>";
+				t+="<tr><td colspan='4'><div id="+(i+1)+" class='collapse'> <pre>";
+				for(var j=0;j<data[i]['products'].length;j++){
+					if (j%3 == 0)  t+="<div class='row'>";
+					t+="<div class='col-sm-4' >";
+					t+="<img src='"+data[i]['products'][j]['picture']+"' class='img-rounded' height='125' width='125'/>"
+					t+="<br><span align='center'>"+data[i]['products'][j]['pname']+"</span>";
+					t+="<br><span align='center'>"+data[i]['products'][j]['price']+" LE</span>";
+					t+="<br><span align='center'>#"+data[i]['products'][j]['numofItems']+"</span></div>";
+					if (j%3==0&&j!=0) t+="</div>";
+				}
+				t+="</pre></div></td></tr>";
+				$('.tbody').html($('.tbody').html()+t);
 			}
+			$('.tbody').on('click','a',function(){
+				if($(this).text()=="+") {$(this).text("-");}
+				else {$(this).text("+");}
+			});
+			$('.tbody').on('click','.action',function(){
+				$.ajax({
+					url:"ajaxOrder.php",
+					method:'get',
+					data:{
+						"oid":$(this).attr('id')
+					},
+					success:function(response){
+						console.log(response);
+					},
+					error:function(xhr,status,error){
+						console.log(error);
+					},
+					complete:function(xhr){
+						console.log("Complete ");
+					},
+					async:true
+
+				});
+				$(this).parent().prev().prev().text("canceled");
+				$(this).parent().remove($(this));
+			});
 		}
+
+
 		});
 	</script>
 
@@ -147,78 +201,19 @@ require('tables.php');
 <div class="col-sm-8" >
 <table class="table  table-bordered table-hover">
 	  <thead>
-		      <tr>
-			<th>Order Data</th>
-			<th>Status</th>
-			<th>Amount</th>
-			<th>Action</th>
-		      </tr>
+			<tr>
+				<th>Order Data</th>
+				<th>Status</th>
+				<th>Amount</th>
+				<th>Action</th>
+			</tr>
 	    </thead>
 	    <tbody class="tbody">
-		       <tr>
-			<td>2016/1/12 10:44 AM <button><img src="images/plus.png" heigth="25" width="25" align="right"/></button></td>
-			<td>Processing</td>
-			<td>55 LE </td>
-			<td><a href="#"> Cancel</a></td>
-    			</tr>
-
-			  <tr>
-			<td>2016/1/12 10:44 AM <a href="#"><img src="images/plus.png" heigth="25" width="25" align="right"></img></a></td>
-			<td>Processing</td>
-			<td>55 LE</td>
-			<td><a href="#"> Cancel</a></td>
-    			</tr>
-
-			 <tr>
-			<td>2016/1/12 10:44 AM <a href="#"><img src="images/minus.png" heigth="25" width="25" align="right"></img></a></td>
-			<td>Processing</td>
-			<td>55 LE</td>
-			<td><a href="#"> Cancel</a></td>
-    			</tr>
 	    </tbody>	
 </table>
 </div>	
 </div>
 <br>
-<!----------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div class="col-sm-2" ></div>
-	<div class="col-sm-7 total">
-		<br>
-		<div class="row">
-			<div class="col-sm-3 detail"  >
-				 <img src="images/tea1.jpg" class="img-rounded" name="img1"  height="150" width="150" alt="">
-				<p> 5 LE </p> 
-				<p> # 2</p> 
-			</div>
-			<div class="col-sm-1 " ></div>
-			<div class="col-sm-3 detail" >
-				 <img src="images/tea3.jpg" class="img-rounded" name="img2"   height="150" width="150" alt="">
-				<p> 15 LE </p> 
-				<p> # 1</p> 
-			</div>
-			<div class="col-sm-1 " ></div>
-			<div class="col-sm-3 detail" >
-				 <img src="images/tea5.jpg" class="img-rounded" name="img3"  height="150" width="150" alt="">
-				<p> 25 LE </p> 
-				<p># 2</p> 
-			</div>
-		</div>
-		<br>
-	</div>
-</div>
-<br>
-<!----------------------------------------------------------------------------------------------------->
-<div class="row">
-	<div class="col-sm-3 detail"  ></div>
-	<div class="col-sm-2 detail"  >
-	<p> Total </p>
-	</div>
-	<div class="col-sm-2 detail"  >
-	<p name ="totalOfDay"> 165 </p>
-	</div>
-	<div class="col-sm-3 detail"  ></div>
-</div>
 <!----------------------------------------------------------------------------------------------------->
 </div>  <!---------- container ---------------->
 </body>

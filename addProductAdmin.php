@@ -34,6 +34,7 @@ if (isset($_POST["save"]) ){
     $category=$_POST['category'];    
     }
     
+    
   ////////////////////////////image//////////////////////////
  if ($_FILES["Pimage"]["type"] != "image/jpg" &&$_FILES["Pimage"]["type"] != "image/png" && $_FILES["Pimage"]["type"] != "image/jpeg" && $_FILES["Pimage"]["type"] != "image/gif" )
 			{
@@ -67,11 +68,7 @@ if($count==0){
     $Product->productPicture=$upimage;
     $Product->price=$price_prodect; 
     $Product->available='1';
-    require_once('connection.php');
-    $mysqli =connection::createInstance();
-    $query="select cid from Category where categoryName like '".$category."%'";
-    $res = $mysqli->query($query);
-    $Product->cid=$res;
+    $Product->cid=$category;
     $Product->insert();
 }
  else {
@@ -82,5 +79,19 @@ if($count==0){
 else{
 echo "You much click on Submit";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
