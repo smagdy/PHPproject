@@ -1,0 +1,252 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+
+nav.vertical ul li{display:block;}/* vertical menu */
+nav.horizontal ul li{display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+@font-face {
+      font-family: 'caviar_dreamsregular';
+      src: url(../fonts/CaviarDreams-webfont.ttf) format('truetype');
+}
+body{
+	background: url(../images/bg.jpg);
+	font-family:Arial, Helvetica, sans-serif;
+}
+/*----start-wrap-----*/
+.wrap{
+	width:80%;
+	margin:0 auto;
+}
+/*----start-header-----*/
+.header{
+         width:100% ;
+	 clear:both;
+	 position:absolute;
+	 top:0;
+	 z-index:9;
+	 background:url(../images/bg.png);
+}
+nav {
+	width: 100%;
+	position: relative;
+}
+nav ul {
+	padding: 0;
+	margin: 0 auto;
+	display: none; 
+}
+.header nav li {
+	display: block;
+	float:left ;
+	width:120px ;
+	height:50px ;
+	
+}
+.navbar-right li {
+	width:120px ;
+	text-align:right;
+}
+nav a {
+	 font-family: 'caviar_dreamsregular';
+	 font-size:1.2em;
+  	 color:#A3793D;
+	 display: block;
+	 text-indent: 10px;
+	 text-align:left;
+	 text-decoration: none;
+	 line-height:50px;
+	 text-transform:uppercase;
+}
+nav li a {
+	 font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	 font-size:0.85em;
+	 text-align:center;
+         color:#A3793D;
+         font-family: 'caviar_dreamsregular';
+	 text-transform:uppercase;
+}
+nav li a:hover,nav li.active a{
+	color:#FFF;
+	text-shadow:0 1px 0 #222;
+	background:url(../images/menu-hover.png) center ;
+}
+nav li:last-child a {
+	border-right: 0;
+}
+nav a:hover{
+	color:#FFF;
+	text-shadow:0 1px 0 #222;
+	text-decoration: none;
+}
+
+.logo {
+	background:#FFF;
+	text-align:center;
+	padding:20px 0;
+}
+/*---pagination-----*/
+ .navPagi li{
+	 float:left;
+ }
+/*----copy-right-----*/
+.copy-right{
+	text-align:center;
+	padding:15px 0px;
+	background:url(../images/bg.png);
+}
+.copy-right p{
+	font-family: 'Open Sans', sans-serif;
+	color: #FFF;
+	font-size: 0.875em;
+	text-transform: uppercase;
+}
+.copy-right p a{
+	color:#DBB25F;
+	font-family: 'Open Sans', sans-serif;
+}
+.copy-right p a:hover{
+	color:#fff;
+}
+
+/**************table*********/
+
+ .myTable{	
+	font-family: 'Open Sans', sans-serif;
+	color:#82592D;
+	font-weight:12;
+	text-align:center ;
+
+	 }
+table th {
+	background:url(../images/bg.png);
+	opacity:.9;
+	text-align:center;
+	font-weight:16;
+	color:#FFF;
+ }
+ .myTable tr:nth-child(odd){
+	 background-color:#DBB25F;
+	 }
+ .myTable tr:hover, .myTr:hover {
+    background-color:#D0EA77;
+	color:#FFF;
+ }
+
+.orders img{
+        width:125px ;
+	height:100px ;
+}
+.orders {
+  text-align:center;
+}
+.orders li {
+  float:left ;
+  margin:5px 20px ;
+  
+}
+/************* form ********/
+
+.form h2{
+	color:#82592D;
+	margin:5px 0 15px 0;
+	font-size:2em;
+	text-transform:uppercase;
+    font-family: 'caviar_dreamsregular';
+}
+.form{
+	position:relative;
+	padding-bottom:10px;
+}
+.left_form{
+	float:left;
+	width:48%;
+}
+.right_form{
+	float:left;
+	width:48%;
+	margin-left:3.8%;
+}
+.form div{
+	padding:5px 0;
+}
+.form span,span a,font {
+	display:block;
+	font-size:0.85em;
+	font-family: 'Open Sans', sans-serif;
+	color:#82592D;
+	padding-bottom:5px;
+}
+ span a{
+	 font-size:14px ;
+	 } 
+ span a:hover{
+	 text-decoration:none; 
+	 color:#DBB25F;	 
+	 } 
+
+.form input[type="text"], input[type="password"],input[type="email"],select , option  {
+		    padding:10px;
+			display:block;
+			width:95%;
+			background:#fcfcfc;
+			border:1px solid #F5E7D9;
+			outline:none;
+			color:#693700;
+			font-size:1em;
+			font-family:Arial, Helvetica, sans-serif;	
+}
+
+ input[type="number"] ,select {outline:none;}
+ 
+.form input[type="text"]:focus,input[type="password"]:focus, input[type="number"]:focus,input[type="email"]:focus, select:focus{
+	border:1px solid #E4CFBA;
+}
+
+
+.fileUpload {
+      position:relative ;
+      overflow: hidden;
+	  margin-left:15px ;
+	  height:40px ;
+	  padding-top:5px;
+	  border-radius:0px;
+  
+}
+.fileUpload input.upload {
+
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+.myButton{
+    background:#82592D;
+	color:#DBB25F;
+	font-size:1em;
+	padding:10px 20px;
+	border:none;
+	text-decoration: none;
+	outline: 0;
+    display:inline-block;
+    font-family: 'Open Sans', sans-serif;
+    cursor:pointer;
+    text-transform:uppercase;
+    float:right;
+}
+.myButton:hover{
+		background:#DBB25F;
+		color:#FFF;
+}
