@@ -67,11 +67,7 @@ if($count==0){
     $Product->productPicture=$upimage;
     $Product->price=$price_prodect; 
     $Product->available='1';
-    require_once('connection.php');
-    $mysqli =connection::createInstance();
-    $query="select cid from Category where categoryName like '".$category."%'";
-    $res = $mysqli->query($query);
-    $Product->cid=$res;
+    $Product->cid=$category;
     $Product->insert();
 }
  else {

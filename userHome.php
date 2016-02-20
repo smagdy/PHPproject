@@ -82,7 +82,7 @@
 <!----------------------- Sub row 4------------------------------>
 		<div class="row">
 			<div class="col-sm-1"> </div>
-			<div class="col-sm-11"> <textarea  placeholder="Note about order" rows="4" cols="30"></textarea></div>
+			<div class="col-sm-11"> <textarea  id='comment' placeholder="Note about order" rows="4" cols="30"></textarea></div>
 			
 		</div><br>
 

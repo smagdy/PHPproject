@@ -19,7 +19,7 @@ while($row=mysqli_fetch_array($res))
 		<div class="col-sm-1" ></div>
 		<div class="col-sm-3" >
 			<div class="row">
-			 <img src="images/<?php echo $row['productPicture']; ?>" class="img-rounded" name="<?php echo $row['pname']; ?>" height="125" width="125" alt="">
+			 <img src="<?php echo $row['productPicture']; ?>" class="img-rounded" name="<?php echo $row['pname']; ?>" height="125" width="125" alt="">
 				<input type="hidden" name="1" value="6" >
 				<input type="hidden" name="<?php echo $row['price']; ?>"  value="50" >
 				<input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">

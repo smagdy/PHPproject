@@ -117,7 +117,7 @@ return $data;
 }
 /////////////////////-----------Orders--------------///////////////////
 class Orders{
-private $oid,$uid,$orderDate,$amount,$status,$comment,$con;
+private $oid,$uid,$orderDate,$amount,$status,$comment,$rid,$con;
 function __construct(){
 $this->oid=0;
 $this->uid=0;
@@ -125,6 +125,7 @@ $this->orderDate=date('Y-m-d H:i:s');
 $this->amount=0;
 $this->status="";
 $this->comment='';
+$this->rid=0;
 $this->con=connection :: createInstance();
 }
 function __get($name){
@@ -134,12 +135,25 @@ function __set ($name, $value){
 $this->$name = $value;
 }
 function update(){
-$query="update Orders set uid='".$this->uid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->comment."' where oid='".$this->oid."' and uid='".$this->uid."';";
+$query="update Orders set uid='".$this->uid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->rid."',comment='".$this->rid."' where oid='".$this->oid."' and uid='".$this->uid."';";
 mysqli_query($this->con,$query);
 }
 function insert(){
-$query="insert into Orders values(null,'".$this->uid."',".$this->orderDate."','".$this->amount."','".$this->status."','".$this->comment."');";
-mysqli_query($this->con,$query);
+$query="insert into Orders values(null,$this->uid,'".$this->orderDate."',$this->amount,'".$this->status."','".$this->comment."',$this->rid);";
+echo $query;
+    mysqli_query($this->con,$query);
+}
+function getLastOrderName(){
+$query="select oid from Orders ;";
+$result=mysqli_query($this->con,$query);
+$i=0;
+$data=array();
+while($row=$result->fetch_array()){
+    $data[$i]=$row;
+    $i++;
+}
+$i--;
+return $data[$i];
 }
 function delete(){
 $query="delete from Orders where oid='".$this->oid."' and uid='".$this->uid."';";
