@@ -9,7 +9,30 @@
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.min.js" ></script> 
 <body>
-   <div class="container form" style="width:900px ; min-height:400px ; margin:100px 200px">
+
+    <div class="header navbar-fixed-top">
+	  <div class="header_top">
+		<div class="menu">
+		  <nav>
+		      <ul>
+			    <li class="active" ><a href="">HOME</a></li>
+			    <li><a href="allProducts.html">All products</a></li>
+			    <li><a href="allUsers.html">all users</a></li>
+			    <li><a href="orders.html">Orders</a></li>
+			    <li><a href="check.html">Checks</a></li>	
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
+			    <li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+			    <li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
+			    <li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+		    </ul>
+		  </nav>		      
+	  </div>                 
+	</div>
+    </div>
+
+
+   <div class="container form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
        <h2>Orders</h2><br/>
        <table class="table table-bordered orders">
            <tr>
@@ -65,86 +88,22 @@
            
        </table>
        
-       <table class="table table-bordered orders">
-           <tr>
-              <th>Order Date</th>
-              <th>Name</th>
-              <th>Room</th>
-              <th>Ext.</th>
-              <th>Action</th> 
-           </tr>
-           <tr>
-              <td>2/12/2004</td>
-              <td>Room</td>
-              <td>Image</td>
-              <td>Ext.</td>
-              <td>Action</td> 
-           </tr>
-           <tr>
-              <td colspan="5">
-                  <ul style="float:left">
-                     <li>                         
-                         <figure>
-			    <img src="images/O1.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     <li>                         
-                         <figure>
-			    <img src="images/O2.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     <li>                         
-                         <figure>
-			    <img src="images/O3.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                      <li>                         
-                         <figure>
-			    <img src="images/O4.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     
-                  </ul>
-                  <span style="float:left ver-align:bottom">Total : 500 EPG </span>
-              </td>
-           </tr>
-           
-       </table>
       
-   <div class="row">
-       <nav class=" col-xs-offset-4 navPagi">
-          <ul class="pagination">
-                <li>
-                  <a href="#" aria-label="Previous">
-                     <span aria-hidden="true">&laquo;</span>
-                  </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li>
-                  <a href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                  </a>
-                </li>
-          </ul>
-        </nav>
-   </div>
-       
-   </div>
+       </table>
     
-   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px">
-        <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
-   </div>
+      <div class="row">
+	  <nav class=" col-xs-offset-4 navPagi">
+	      <ul class="pagination">                        
+	      </ul>
+	  </nav>
+      </div> 
+      
+  </div>
+    
+  <div class="copy-right"  style="margin-bottom:0px ;height:40px">
+      <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
+  </div>
+    
     
 </body>
 </html>
