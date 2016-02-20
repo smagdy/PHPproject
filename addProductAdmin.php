@@ -34,6 +34,7 @@ if (isset($_POST["save"]) ){
     $category=$_POST['category'];    
     }
     
+    
   ////////////////////////////image//////////////////////////
  if ($_FILES["Pimage"]["type"] != "image/jpg" &&$_FILES["Pimage"]["type"] != "image/png" && $_FILES["Pimage"]["type"] != "image/jpeg" && $_FILES["Pimage"]["type"] != "image/gif" )
 			{
@@ -78,5 +79,19 @@ if($count==0){
 else{
 echo "You much click on Submit";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ?>
