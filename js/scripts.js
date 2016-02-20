@@ -1,14 +1,14 @@
 $(function(){
 //---------------------------------------------------------------------------------------------------------
-		$.ajax({
+	$.ajax({
 		url:"Ajax/home_user_Ajax.php",
 		method:'get',
 		data:{
-			"value":'ALL'	
+			"value":'ALL'
 		},
 		success:function(response){
-		$('#display').html(response);		
-		}	
+		$('#display').html(response);
+		}
 	});
 	$.ajax({
 		url: "selectRoom.php",
@@ -114,27 +114,19 @@ var result=$("#search_input").val();
 		var object=[];
 		var objectp=[];
 		for(var i=0;i<name_order.size();i++){
-			var products=[];
+			var products={};
 			var node = $(name_order.get(i));
 			var pid = parseInt(node.attr('id'));
 			var uid = parseInt(node.attr('name'));
-			products['id']=pid;
+			products['pid']=pid;
 			products['numofItems']=parseInt(node.find('.numofItems').val());
-			objectp[i]=products;
+			objectp[i]=JSON.stringify(products);
 		}
-		object['products']=objectp;
-		object['uid']=uid;
-		object['rid']=parseInt($('#roomNum').val());
-		object['amount']=parseInt($('#mytotal').text());
-		object['state']='processing';
-		object['comment']=$('#comment').val();
-		console.log(object);
-		console.log(JSON.stringify(object));
 		$.ajax({
 			url:"addOrder.php",
-			method:'get',
+			method:'post',
 			data:{
-				'products':JSON.stringify(objectp),
+				'products[]':objectp,
 				'uid':uid,
 				'rid':parseInt($('#roomNum').val()),
 				'amount':parseInt($('#mytotal').text()),

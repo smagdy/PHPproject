@@ -192,7 +192,8 @@ class orderProducts{
         mysqli_query($this->con,$query);
     }
     function insert(){
-        $query="insert into orderProducts values('".$this->oid."',".$this->pid."','".$this->numofItems."');";
+        $query="insert into orderProducts values($this->oid,$this->pid,$this->numofItems);";
+        echo $query;
         mysqli_query($this->con,$query);
     }
     function delete(){
