@@ -176,6 +176,18 @@ $i++;
 }
 return $data;
 }
+function selectLimit($limit,$length){
+$query="select o.orderDate,u.name,roomNumber,u.EXT,numofItems,productPicture, pname ,p.price,amount from Orders o,Users u,orderProducts op ,Products p,Room r where o.uid=u.uid and op.oid = o.oid and op.pid=p.pid and u.rid = r.rid order by orderDate desc limit ".$limit.",".$length.";";
+$result=mysqli_query($this->con,$query);
+$i=0;
+$data=array();
+while($row=$result->fetch_array()){
+$data[$i]=$row;
+$i++;
+}
+return $data;
+}
+
 }
 ////////////////////-----------orderProducts-------///////////////////
 class orderProducts{
