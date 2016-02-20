@@ -33,6 +33,31 @@
                     async: true
 
                 });
+                $("#saveCategory").click(function(){
+		         $.ajax({
+		            url: "allCategory.php",
+		            method: 'get',
+		            data: {
+		                'categoryName':$("#newCategory").val()
+		            },
+		            success: function (response) {
+		                console.log(response);
+		                $('#category').html("");
+		               for(var i=0;i<response.length;i++){
+		                  $('#category').html($('#category').html()+"<option value= "+(i+1)+" >"+response[i][1]+"</option>");
+		               }
+		            },
+		            error: function (xhr, status, error) {
+		                console.log(error);
+		            },
+		            complete: function (xhr) {
+		                console.log("Complete ");
+		            },
+		            dataType: 'json',
+		            async: true
+
+		        });
+                });
         });
 
 </script>
@@ -59,7 +84,37 @@
                        
                        <option  value="Cold drinks">Cold drinks</option>-->
                  </select></span>
-                 <span><a href="">Add category</a></span>                
+    <!--------------------------------------------------------------------------------------------------------------->
+      
+  <!---------------------------------------------- model  --------------------------------------------------------->               
+  <a data-toggle="modal" href="#myModal" class="btn btn-link btn-lg">Add Category</a>
+		<div class="modal fade" id="myModal"  role="dialog">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+				
+					<span aria-hidden="true">&times;</span>
+					
+					<span class="sr-only">Close</span>
+					
+				</button>
+				<h4 class="modal-title">Add Category</h4>
+				</div>
+				
+				<div class="modal-body">
+				<p>Category Name </p> <input type="text" name="newCategory" id="newCategory" />
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="saveCategory">OK</button>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+                 
+  <!------------------------------------------------------------------------------------------------------------------------->               
+                             
                 
             </div>
             <br/>
