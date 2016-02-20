@@ -4,7 +4,8 @@ header('Content-Type: text/event-stream');
 header('Cache-Control: no-cache');
 
 $order = new Orders () ;
-$totalRes = $order->selectLimit(0,99999999999);
+$totalRes = $order->select();
+
 /*
 if ($_GET['code'] == "1" ){
    $user->uid = $_GET['UID'] ; 
@@ -17,7 +18,7 @@ if ($_GET['code'] == "1" ){
 $limit = isset($_GET['limit'])?$_GET['limit']:0;
 // echo $limit ;
 // echo $_GET['code'] ;
-$res = $order->selectLimit($limit,2);
+$res = $order->selectLimit($limit,899);
 
 $ordersArray = array();
 
@@ -26,12 +27,12 @@ for( $i =0 ; $i< count($res); $i++){
   $ordersArray[$i]['name'] =  $res[$i][1] ;
   $ordersArray[$i]['room'] =  $res[$i][2] ; 
   $ordersArray[$i]['ext']  =  $res[$i][3] ;
-  
-  $ordersArray[$i]['numofItems']=  $res[$i][4] ; 
-  $ordersArray[$i]['image']=  $res[$i][5] ;    
-  $ordersArray[$i]['pname ']  =  $res[$i][6] ;
-  $ordersArray[$i]['price']  =  $res[$i][7] ;
-  $ordersArray[$i]['amount']=  $res[$i][8] ;  
+  $ordersArray[$i]['amount']=  $res[$i][4] ;  
+  $ordersArray[$i]['numofItems']=  7;//$res[$i][4] ; 
+  $ordersArray[$i]['image']=  7;//$res[$i][5] ;    
+  $ordersArray[$i]['pname ']  = 7;// $res[$i][6] ;
+  $ordersArray[$i]['price']  =  7;//$res[$i][7] ;
+ 
     }
     
   $replayArr["allRowsNum"]= count($totalRes) ;

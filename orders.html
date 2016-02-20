@@ -63,8 +63,9 @@
 		  $(".pagination").empty();
 		  $(".pagination").append('<li id="Previous" value="prev" style="float:left"><a aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>');
 		  $(".pagination").append('<li id="next" value="next" style="float:left"><a aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>');
-		  for (var j=1 ; j<=pagiNum ; j++){		   
-		    $("#next").before("<li  style='float:left' value="+j+"><a>"+j+"</a></li>");
+		  for (var j=1 ; j<=pagiNum ; j++){		        
+		        $("#next").before("<li  style='float:left' value="+j+"><a>"+j+"</a></li>");
+		       
 		  }
 	     }
 	   
@@ -101,7 +102,7 @@
                                page = ++oldPage ; 
   			}else {page = pagiNum ;}
 		}
- 			
+		
 		limit = (page-1)*n ;
 		console.log("limit : "+limit);
 	        source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
