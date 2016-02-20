@@ -88,7 +88,7 @@ $query="delete from Products where pid='".$this->pid."';";
 mysqli_query($this->con,$query);
 }
 function selectbykey(){
-$query="select * from Products where pid='".$this->pid."';";
+$query="select * from Products where pid='".$this->pid."' and available='1' ;";
 $result=mysqli_query($this->con,$query);
 return mysqli_fetch_row($result);
 }
@@ -138,6 +138,10 @@ function update(){
 $query="update Orders set uid='".$this->uid."',orderDate='".$this->orderDate."',amount='".$this->amount."',status='".$this->status."',comment='".$this->rid."',comment='".$this->rid."' where oid='".$this->oid."' and uid='".$this->uid."';";
 mysqli_query($this->con,$query);
 }
+function updateStatus(){
+    $query="update Orders set status='".$this->status."' where oid='".$this->oid."';";
+    mysqli_query($this->con,$query);
+}
 function insert(){
 $query="insert into Orders values(null,$this->uid,'".$this->orderDate."',$this->amount,'".$this->status."','".$this->comment."',$this->rid);";
     if(mysqli_query($this->con,$query)==true)
@@ -162,7 +166,7 @@ $i++;
 return $data;
 }
 function select(){
-$query="select * from Orders ;";
+$query="select * from Orders where uid='".$this->uid."' ;";
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
@@ -173,6 +177,7 @@ $i++;
 return $data;
 }
 }
+////////////////////-----------orderProducts-------///////////////////
 class orderProducts{
     private $oid,$pid,$numofItems,$con;
     function __construct(){
@@ -200,8 +205,8 @@ class orderProducts{
         $query="delete from orderProducts where oid='".$this->oid."' and pid='".$this->pid."';";
         mysqli_query($this->con,$query);
     }
-    function select(){
-        $query="select * from orderProducts ;";
+    function selectByOrderId(){
+        $query="select * from orderProducts where oid=$this->oid;";
         $result=mysqli_query($this->con,$query);
         $i=0;
         $data=array();

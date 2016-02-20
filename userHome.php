@@ -39,7 +39,7 @@
 				<ul class="nav navbar-nav navbar-right">
 
 					<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
-					
+
 					<li class="ts" ><a href="#"><span class="glyphicon "></span> Doaa Negm </a></li>
 
 					 <li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>

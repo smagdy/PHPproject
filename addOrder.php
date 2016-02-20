@@ -18,16 +18,4 @@ foreach ($products as $p) {
     $orderProducts->numofItems=$p->numofItems;
     $orderProducts->insert();
 }
-/*for ($i=0;$i<count($products);$i++)
-{
-    //$product=json_decode($products[$i]);
-    echo $products[$i][pid];
-    $product=$products[$i];
-    echo $product['pid'];
-    $orderProducts=new orderProducts();
-    $orderProducts->oid=$oid;
-    $orderProducts->pid=$product['pid'];
-    $orderProducts->numofItems=$product['numofItems'];
-    //$orderProducts->insert();
-}*/
 ?>
