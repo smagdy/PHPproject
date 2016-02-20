@@ -140,20 +140,11 @@ mysqli_query($this->con,$query);
 }
 function insert(){
 $query="insert into Orders values(null,$this->uid,'".$this->orderDate."',$this->amount,'".$this->status."','".$this->comment."',$this->rid);";
-echo $query;
-    mysqli_query($this->con,$query);
-}
-function getLastOrderName(){
-$query="select oid from Orders ;";
-$result=mysqli_query($this->con,$query);
-$i=0;
-$data=array();
-while($row=$result->fetch_array()){
-    $data[$i]=$row;
-    $i++;
-}
-$i--;
-return $data[$i];
+    if(mysqli_query($this->con,$query)==true)
+    {
+        $last_id = $this->con->insert_id;
+        return $last_id;
+    }
 }
 function delete(){
 $query="delete from Orders where oid='".$this->oid."' and uid='".$this->uid."';";

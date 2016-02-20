@@ -10,7 +10,7 @@ $order->amount=$_GET['amount'];
 $order->status=$_GET['state'];
 $order->comment=$_GET['comment'];
 $order->rid=$_GET['rid'];
-$order->insert();
-$oid=$order->getLastOrderName();
+$oid=$order->insert();
+
 echo $oid;
 ?>
