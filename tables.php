@@ -38,7 +38,7 @@ $result=mysqli_query($this->con,$query);
 return mysqli_fetch_row($result);
 }
 function select(){
-$query="select * from Users ;";
+$query="select * from Users where uid > 1;";
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
@@ -49,7 +49,7 @@ $i++;
 return $data;
 }
 function selectLimit($limit,$length){
-$query="select * from Users limit ".$limit.",".$length.";";
+$query="select * from Users where uid > 1 limit ".$limit.",".$length.";";
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
