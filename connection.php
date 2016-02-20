@@ -62,13 +62,18 @@
 			mysqli_query(connection :: $obj,$query);
 			///////////////////////////////////
 			////////////////////////////////////////////
-			////create table Order
-			$sq = "CREATE TABLE IF NOT EXISTS Orders (uid int unsigned not null,pid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null);";
+			////create table Orders
+			$sq = "CREATE TABLE IF NOT EXISTS Orders (oid int unsigned not null auto_increment primary key,uid int unsigned not null,orderDate date not null,amount int not null,status char(50) not null,comment char(100) not null);";
+			if (connection :: $obj->query($sq) === FALSE) {
+				echo "Error creating table: " . connection :: $obj->error;
+			}
+			/////create table orderProducts
+			$sq = "CREATE TABLE IF NOT EXISTS orderProducts (oid int unsigned not null,pid int unsigned not null,numofItems int not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}
 			///////////////////////////////////////////////////create table change
-			$sq = "CREATE TABLE IF NOT EXISTS changes (tableName char(20) not null,changeDate date not null,serverDate date not null);";
+			$sq = "CREATE TABLE IF NOT EXISTS changes (tableName char(20) not null UNIQUE ,changeDate date not null,serverDate date not null);";
 			if (connection :: $obj->query($sq) === FALSE) {
 				echo "Error creating table: " . connection :: $obj->error;
 			}
@@ -135,9 +140,11 @@
 			connection :: $obj->query($sq);
 			$sq="alter table Orders add foreign key (uid)  references Users (uid);";
 			connection :: $obj->query($sq);
-			$sq="alter table Orders add foreign key (pid)  references Products (pid);";
+			$sq="alter table orderProducts add foreign key (oid)  references Orders (oid);";
 			connection :: $obj->query($sq);
-			$sq="alter table Orders add primary key (uid,pid);";
+			$sq="alter table orderProducts add foreign key (pid)  references Products (pid);";
+			connection :: $obj->query($sq);
+			$sq="alter table orderProducts add primary key (oid,pid);";
 			connection :: $obj->query($sq);
 		}
     }
