@@ -16,7 +16,6 @@ require('tables.php');
 	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script>
 		$(function() {
-			console.log($('#users').val());
 			$.ajax({
 				url: "selectUsers.php",
 				method: 'get',

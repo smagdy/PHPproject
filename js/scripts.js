@@ -30,7 +30,6 @@ $(function(){
 		},
 		dataType: 'json',
 		async: true
-
 	});
 
 $("#search_input").keyup(function(e){
