@@ -19,7 +19,7 @@ if(isset($_POST['userName']) && isset($_POST['userPass']))
         header('Location:adminHome.php');
     }
     else{
-        echo $_POST['userName'].' '.$row[1].'---'.$pass;
+        //echo $_POST['userName'].' '.$row[1].'---'.$pass;
         if($row[1]==$pass)
         {
             if(isset($_POST['keep']))

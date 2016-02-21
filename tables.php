@@ -166,17 +166,14 @@ $i++;
 }
 return $data;
 }
-function selectbyId(){
-<<<<<<< HEAD
+    //selectbykey
+/*function selectbyId(){
 $query="select * from Orders where oid='".$this->oid."';";
 $result=mysqli_query($this->con,$query);
 return mysqli_fetch_row($result);
-}
-function select(){
-$query="select * from Orders ;";
-=======
+}*/
+function selectbyId(){
 $query="select * from Orders where uid='".$this->uid."' ;";
->>>>>>> fa6e2403e356216fc22737ee903c8c966fe8b70c
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
@@ -248,7 +245,7 @@ class orderProducts{
         }
         return $data;
     }
-    function selectOID(){
+    function selectByOrderId(){
         $query="select * from orderProducts where oid='".$this->oid."';";
         $result=mysqli_query($this->con,$query);
         $i=0;
