@@ -90,7 +90,7 @@ else{
     $user->password=md5($pwd);
     $user->profilePicture=$upfile;
     $user->insert();
-    header('Location:adminHome.html');
+    header('Location:adminHome.php');
 }
 ?>
 

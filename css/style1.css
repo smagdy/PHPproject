@@ -8,17 +8,18 @@
 nav li a:hover,nav li.active a{
 	color:#FFF;
 	text-shadow:4 1px 0 #222;
-	/* background:url(../images/menu-hover.png) center ;*/
+	 background:url(../images/menu-hover.png) center ;
 }
 
 .navbar{
 	background-color: #8a8a5c; 
+	background:url(../images/bg.png);
 
 }
 
 nav a {
-	 font-family: 'caviar_dreamsregular';
-	 font-size:1.2em;
+	 font-family: 'caviar_dreamsregular',bold;
+	 font-size:1.3em;
 	color:#A3793D;
 	 display: block;
 }
@@ -117,7 +118,15 @@ table {
 		background:#DBB25F;
 		color:#FF0000;
 }
-
+.ch{
+	font-size: 4em; 
+	font-family: 'Open Sans', sans-serif ,bold;
+	color:#82592D;
+	width: 75%;
+	margin: 0 auto;
+	line-height: 1.8em;
+	margin-bottom: 1em;
+}
 
 p{
 	font-size: 4em; 
@@ -129,7 +138,7 @@ p{
 	margin-bottom: 1em;
 }
 tr th {
-	font-size: 2em; 
+	font-size: 1.5em; 
 	font-family: 'Open Sans', sans-serif;
 	color:#82592D;
 	

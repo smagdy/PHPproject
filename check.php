@@ -120,11 +120,11 @@ require('tables.php');
 					t+="<table class='table  table-bordered table-hover'><thead><tr><th>Order Data</th><th>Status</th><th>Amount</th><th>Action</th></tr></thead><tbody class='tbody'>";
 					data=userdata[u]['orders'];
 					for (var i = 0; i < data.length; i++) {
-						t+= " <tr><td>" + data[i]['orderDate'] + " <a data-toggle='collapse' data-target='#" + (i + 1) + "'>+</a></td><td>" + data[i]['status'] + "</td><td>" + data[i]['amount'] + " LE </td>";
+						t+= " <tr><td>" + data[i]['orderDate'] + " <a data-toggle='collapse' data-target='#" +(u+1)+"-" +(i + 1) + "'>+</a></td><td>" + data[i]['status'] + "</td><td>" + data[i]['amount'] + " LE </td>";
 						if (data[i]['status'] == 'processing')
 							t += "<td><button class='action' id='" + data[i]['oid'] + "'> Cancel</button></td></tr>";
 						else t += "<td></td></tr>";
-						t += "<tr><td colspan='4'><div id=" + (i + 1) + " class='collapse'> <pre>";
+						t += "<tr><td colspan='4'><div id=" + (u+1)+"-" +(i + 1) + " class='collapse'> <pre>";
 						for (var j = 0; j < data[i]['products'].length; j++) {
 							if (j % 3 == 0)  t += "<div class='row'>";
 							t += "<div class='col-sm-4' >";
@@ -190,7 +190,7 @@ require('tables.php');
 </head>
 <body>
 
-<div class="container">
+<div class="container" >
 	<div class="row">
 
 		<div class="col-sm-12">
@@ -206,15 +206,19 @@ require('tables.php');
 					</div>
 					<div class="collapse navbar-collapse" id="my-navbar">
 						<ul class="nav navbar-nav">
-							<li class="ts "><a  href="#">Home</a></li>
-							<li class="ts active" ><a  href="#">Order</a></li>
+
+							<li class="ts"  ><a href="adminHome.php">HOME</a></li>
+							<li class="ts" ><a href="allProduct.php">All products</a></li>
+							<li class="ts" ><a href="allUser.php">All users</a></li>
+							<li class="ts" ><a href="order.php">Orders</a></li>
+							<li class="ts active"><a href="check.php">Checks</a></li>
 
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 
-							<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" /></li>
+							<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
 
-							<li class="ts" ><a href="#"><span class="glyphicon "></span> Doaa Negm </a></li>
+							<li class="ts" ><a href="#"><span class="glyphicon "></span> Admin </a></li>
 
 							<li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
 
@@ -223,11 +227,8 @@ require('tables.php');
 
 				</div>
 			</nav>
-
-
 		</div>
-		<!----------------------------------------------------------------------------------------------------->
-
+		<!------------------------------------>
 		<div class="row">
 
 			<p> Checks </p>

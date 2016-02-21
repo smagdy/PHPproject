@@ -134,7 +134,7 @@ var result=$("#search_input").val();
 			},
 			success:function(response){
 				//console.log(response);
-				window.location.href = "userOrder.html";
+				window.location.href = "userOrder.php";
 			},
 			error: function (xhr, status, error) {
 				console.log(error);
