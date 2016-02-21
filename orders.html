@@ -7,15 +7,17 @@
 </head>
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.min.js" ></script>
-<script>    
-    $(function(){      
+<script>  
           var code="0" ;
           var UID = 0 ;
           var limit=0 ;
           var page=1 , oldPage=1 ;
           var n = 2;  
           var pagiNum ;   
-       var source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
+      // var source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
+       var source = new EventSource("orders.php");
+    $(function(){      
+       
 		source.onmessage = function(event) {
 			var x = JSON.parse(event.data);			
 			pagiNum = Math.ceil(x.allRowsNum/n) ;
@@ -26,6 +28,7 @@
 			console.log("allRowsNum : "+x.allRowsNum);
 			console.log("pagiNum : "+pagiNum) ;
 			console.log("length: "+x.ordersArray.length);
+			console.log("limitresponse: "+x['limit']);
 			console.log("limit : "+limit);
 		
 		};
@@ -33,7 +36,7 @@
 			console.log("error : "+event) ;
 		};
 
-   /*          function sendToServer (){
+           function sendToServer (){
 		$.ajax({
 			url:"orders.php",
 			method:'get',
@@ -43,9 +46,10 @@
 			},
 			success:function(response){
 			        console.log(response);	
-// 				response = JSON.parse(response);
-				showPagination (response) ;
-				showTableData (response)			        
+ 				response = JSON.parse(response);
+ 				console.log("limitresponseWith ajax : "+response['limit']);
+				/*showPagination (response) ;
+				showTableData (response)		*/	        
 			},
 			error:function(xhr,status,error){
 				console.log(error);
@@ -57,7 +61,7 @@
 
 		});
 	     }
-      	*/ 
+      	 
 	     function showPagination (response){
 		  pagiNum = Math.ceil(response.allRowsNum/n) ;
 		  $(".pagination").empty();
@@ -75,8 +79,15 @@
 	         for(var i=0 ; i< response.ordersArray.length ; i++){
 	            $("table").append("<tr><th>orderDate</th><th>Name</th><th>Room</th><th>Ext.</th><th>Action</th></tr>");
 	            $("table").append('<tr id="'+i+'"><td>'+response['ordersArray'][i]["date"]+'</td><td>'+response['ordersArray'][i]["name"]+'</td><td>'+response['ordersArray'][i]["room"]+'</td><td>'+response['ordersArray'][i]["ext"]+'</td><td><button class="action">Action</button></td></tr>');	         
-  		    $("table").append('<tr id="'+i+'"><td colspan="4"><img width="60px" height="60px" src="images/'+response['ordersArray'][i]["image"]+'"/>'+response['ordersArray'][i]["amount"]+'<td> <span style="float:left vertical-align:text-bottom;">Total : '+response['ordersArray'][i]["amount"]+'</span></td></td></tr>'); 		  
-  		  }	      
+  		    var row = '<tr id="'+i+'"><td colspan="5"><ul style="float:left">';                  
+                    for(var h=0 ; h< response['ordersArray'][i]["products"].length ;h++){
+                        row +='<li><figure><img width="60px" height="60px" style="postion:relative; z-index:-1" src="images/'+response["ordersArray"][i]["products"][h]["picture"]+'"/><figcaption>'+response["ordersArray"][i]["products"][h]["pname"]+'</figcaption></figure>';
+                        row +='<div style="postion:absolute ;margin-top:-100px ;border-radius:50px;color:white;font-size:11px ;font-weight:bold ; margin-left:165px ;float:left; z-index:99999; background:#77b300 ;" >&nbsp;&nbsp;'+response["ordersArray"][i]["products"][h]["price"]+'&nbsp;EPG&nbsp;</div>' ;
+                        row +='<div>'+response["ordersArray"][i]["products"][h]["numofItems"]+'</div></li>';
+                           }
+                   $("table").append(row+'</ul><span style="float:left vertical-align:text-bottom;">Total : '+response['ordersArray'][i]["amount"]+'EPG</span></td></tr>');
+  		
+  		}	      
 	     }
 	    
 	   //   sendToServer (code,limit,UID) ;
@@ -105,13 +116,13 @@
 		
 		limit = (page-1)*n ;
 		console.log("limit : "+limit);
-	        source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
+	        //source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
                 //  source = new EventSource("orders.php?limit="+limit+"");
                 //  source = new EventSource(orders.php?limit=limit);
-		//  sendToServer (code,limit,UID) ;
+		  sendToServer (code,limit,UID) ;
 	  });
 	/* 	  	  
-	  $("table").on("click",".delete",function(){	     
+	  $("table").on("click",".action",function(){	     
 	      code="1" ;
  	      UID = $(this).parent().parent().attr("id") ;
  	      console.log(UID) ;
@@ -152,61 +163,8 @@
    <div class="container form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
        <h2>Orders</h2><br/>
        <table class="table table-bordered orders">
-           <!--<tr>
-              <th>Order Date</th>
-              <th>Name</th>
-              <th>Room</th>
-              <th>Ext.</th>
-              <th>Action</th> 
-           </tr>
-           <tr>
-              <td>2/12/2004</td>
-              <td>Room</td>
-              <td>Image</td>
-              <td>Ext.</td>
-              <td>Action</td> 
-           </tr>
-           <tr>
-              <td colspan="5">
-                  <ul style="float:left">
-                     <li>                         
-                         <figure>
-			    <img src="images/O1.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     <li>                         
-                         <figure>
-			    <img src="images/O2.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     <li>                         
-                         <figure>
-			    <img src="images/O3.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                      <li>                         
-                         <figure>
-			    <img src="images/O4.jpg"/>
-			    <figcaption>Coffee</figcaption>
-		         </figure>
-                         <div>2</div>
-                     </li>
-                     
-                  </ul>
-                  <span style="float:left ver-align:bottom">Total : 500 EPG </span>
-              </td>
-           </tr>-->
-           
        </table>
-       
-      
-       </table>
+
     
       <div class="row">
 	  <nav class=" col-xs-offset-4 navPagi">
