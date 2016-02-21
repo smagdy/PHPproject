@@ -54,7 +54,7 @@
 	            $("table").append("<tr><th>Product</th><th>price</th><th>Image</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['productsArray'].length ; i++){
 	            var row ='<tr id="'+response['productsArray'][i]["pid"]+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
-  		     row += '<td><img width="60px" height="60px" src="images/'+response['productsArray'][i]["image"]+'"/></td>';
+  		     row += "<td><img width='60px' height='60px' src='"+response['productsArray'][i]['image']+"'/></td>";
   		     row += '<td><button class="Availability">Availability</button><button class="delete">Del</button>';
   		    
   		     row += '<button class="edit" data-toggle="modal" data-target="#my-modal">Edit</button>';
@@ -109,8 +109,27 @@
  	      PID = $(this).parent().parent().attr("id") ;
  	      console.log(PID) ;
            //   sendToServer (code,limit,PID) ;
-
-              console.log("code"+code);
+		  $.ajax({
+			  url: "editProduct.php",
+			  method: 'get',
+			  data: {
+				  'pid':PID,
+				  'delete':'yes'
+			  },
+			  success: function (response) {
+				  console.log(response);
+			  },
+			  error: function (xhr, status, error) {
+				  console.log(error);
+			  },
+			  complete: function (xhr) {
+				  console.log("Complete ");
+			  },
+			  async: true
+		  });
+		  var parent=$(this).parent().parent();
+		  $("table").find(parent).remove();
+             // console.log("code"+code);
 	  });
 	
 	$("table").on("click",".edit",function(){	     
@@ -118,6 +137,26 @@
 	      PID = $(this).parent().parent().attr("id") ;
  	      console.log(PID) ;
 // 	      sendToServer (code,limit,PID) ;
+		/*$.ajax({
+			url: "editProduct.php",
+			method: 'get',
+			data: {
+				'pid':PID,
+				'edit':'yes',
+				'':''
+			},
+			success: function (response) {
+				console.log(response);
+				$('#displaylast').html(response);
+			},
+			error: function (xhr, status, error) {
+				console.log(error);
+			},
+			complete: function (xhr) {
+				console.log("Complete ");
+			},
+			async: true
+		});*/
 	      console.log("code"+code);
 	  });
  /////////----------------------------------------------
@@ -157,7 +196,7 @@
 				<li><a href="check.html">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
 				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
 			</ul>

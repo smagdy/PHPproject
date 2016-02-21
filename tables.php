@@ -89,12 +89,17 @@ function update(){
 $query="update Products set pname='".$this->pname."',cid='".$this->cid."',productPicture='".$this->productPicture."',price='".$this->price."',available='".$this->available."' where pid='".$this->pid."';";
 mysqli_query($this->con,$query);
 }
+function updatecolumn($name,$value){
+    $query="update Products set '".$name."'='".$value."' where pid='".$this->pid."';";
+    mysqli_query($this->con,$query);
+}
 function insert(){
 $query="insert into Products values(null,'".$this->pname."','".$this->productPicture."','".$this->price."','".$this->available."','".$this->cid."');";
 mysqli_query($this->con,$query);
 }
 function delete(){
 $query="delete from Products where pid='".$this->pid."';";
+    echo $query;
 mysqli_query($this->con,$query);
 }
 function selectbykey(){
@@ -232,6 +237,10 @@ class orderProducts{
     }
     function delete(){
         $query="delete from orderProducts where oid='".$this->oid."' and pid='".$this->pid."';";
+        mysqli_query($this->con,$query);
+    }
+    function deleteByPID(){
+        $query="delete from orderProducts where pid='".$this->pid."';";
         mysqli_query($this->con,$query);
     }
     function select(){

@@ -53,7 +53,7 @@
 	            $("table").empty();
 	            $("table").append("<tr><th>Name</th><th>Room</th><th>Image</th><th>Ext.</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['usersArray'].length ; i++){
-  		    $("table").append('<tr id="'+i+'"><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="images/'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td><td><button class="delete">Del</button><button class="edit">Edit</button></td></tr>'); 		  
+  		    $("table").append('<tr id="'+i+'"><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td><td><button class="delete">Del</button><button class="edit">Edit</button></td></tr>');
   		  }	      
 	     }
 	      sendToServer (code,limit,UID) ;
@@ -116,7 +116,7 @@
 				<li><a href="check.html">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
 				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
 			</ul>

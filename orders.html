@@ -81,7 +81,7 @@
 	            $("table").append('<tr id="'+i+'"><td>'+response['ordersArray'][i]["date"]+'</td><td>'+response['ordersArray'][i]["name"]+'</td><td>'+response['ordersArray'][i]["room"]+'</td><td>'+response['ordersArray'][i]["ext"]+'</td><td><button class="action">Action</button></td></tr>');	         
   		    var row = '<tr id="'+i+'"><td colspan="5"><ul style="float:left">';                  
                     for(var h=0 ; h< response['ordersArray'][i]["products"].length ;h++){
-                        row +='<li><figure><img width="60px" height="60px" style="postion:relative; z-index:-1" src="images/'+response["ordersArray"][i]["products"][h]["picture"]+'"/><figcaption>'+response["ordersArray"][i]["products"][h]["pname"]+'</figcaption></figure>';
+                        row +='<li><figure><img width="60px" height="60px" style="postion:relative; z-index:-1" src="'+response["ordersArray"][i]["products"][h]["picture"]+'"/><figcaption>'+response["ordersArray"][i]["products"][h]["pname"]+'</figcaption></figure>';
                         row +='<div style="postion:absolute ;margin-top:-100px ;border-radius:50px;color:white;font-size:11px ;font-weight:bold ; margin-left:165px ;float:left; z-index:99999; background:#77b300 ;" >&nbsp;&nbsp;'+response["ordersArray"][i]["products"][h]["price"]+'&nbsp;EPG&nbsp;</div>' ;
                         row +='<div>'+response["ordersArray"][i]["products"][h]["numofItems"]+'</div></li>';
                            }
@@ -150,7 +150,7 @@
 			    <li><a href="check.html">Checks</a></li>	
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-			    <li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+			    <li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
 			    <li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
 			    <li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
 		    </ul>
