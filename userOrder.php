@@ -16,6 +16,27 @@ require('tables.php');
 	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script>
 		$(function() {
+			$.ajax({
+				url: "userInfo.php",
+				method: 'get',
+				data: {
+					'a':'a'
+				},
+				success: function (response) {
+					console.log(response);
+					$('#userImage').attr('src',response[4]);
+					$('#userName').text(response[1]);
+				},
+				error: function (xhr, status, error) {
+					console.log(error);
+				},
+				complete: function (xhr) {
+					console.log("Complete ");
+				},
+				dataType: 'json',
+				async: true
+
+			});
 			function allOrders(){
 				$.ajax({
 					url:"ajaxOrder.php",
@@ -139,7 +160,11 @@ require('tables.php');
 </head>
 <body>
 
-<div class="container">
+<?php
+if(!isset($_COOKIE['userName']))
+	if(!isset($_SESSION['userName']))
+		header('Location:index.html');
+?>
 	<div class="container">
 
 		<div class="row">
@@ -162,18 +187,17 @@ require('tables.php');
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 
-								<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
+								<li class="ts" ><img src="" heigth="50px" width="30px"  class="img-rounded" id="userImage"/></li>
 
-								<li class="ts" ><a href="#"><span class="glyphicon "></span> Doaa Negm </a></li>
+								<li class="ts" ><a href="#"><span class="glyphicon " id="userName"></span></a></li>
 
-								<li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+								<li class="ts" ><a href="#" id="logout"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
 
 							</ul>
 						</div>
 
 					</div>
 				</nav>
-
 				<!--------------------------- end Nav ------------------------------------------------>
 			</div>
 		</div>
