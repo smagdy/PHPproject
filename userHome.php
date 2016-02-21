@@ -59,9 +59,8 @@ if(!isset($_COOKIE['userName']))
 				complete: function (xhr) {
 					console.log("Complete ");
 				},
-				dataType: 'json',
+				//dataType: 'json',
 				async: true
-
 			});
 		});
 	</script>

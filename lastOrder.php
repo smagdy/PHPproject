@@ -25,7 +25,7 @@ $res = $mysqli->query($query) or die (mysqli_error($mysqli));
 $count =0;
 while($row=mysqli_fetch_array($res))
 {
-	($count%3 == 0) echo "<div class='row'>";
+	if($count%3 == 0) echo "<div class='row'>";
 ?>
 <div class="col-sm-3" >
 	 <img src="<?php echo $row['productPicture'];?>" class="img-rounded" name="img1"  height="150" width="150" alt="">
