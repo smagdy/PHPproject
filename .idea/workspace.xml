@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4719a951-0004-44b6-b961-680e02ec2495" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/Ajax/pppp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Ajax/userInfo.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/addProduct.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/addUser.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Ghada/allProducts.html" afterPath="" />
@@ -228,9 +229,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/jquery-1.11.2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/user/js/task.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/userOrder.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Ajax/userInfo.php" afterPath="$PROJECT_DIR$/Ajax/userInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userHome.php" afterPath="$PROJECT_DIR$/userHome.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userInfo.php" afterPath="$PROJECT_DIR$/userInfo.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userOrder.php" afterPath="$PROJECT_DIR$/userOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/validateUser.php" afterPath="$PROJECT_DIR$/validateUser.php" />
     </list>
     <ignored path="PHPproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -262,31 +264,41 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="userOrder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4288577">
+              <caret line="192" column="58" selection-start-line="192" selection-start-column="58" selection-end-line="192" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userHome.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userHome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.035714">
+              <caret line="92" column="0" selection-start-line="62" selection-start-column="20" selection-end-line="92" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="validateUser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/validateUser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.041667">
-              <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+            <state vertical-scroll-proportion="-16.875">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userOrder.php">
+      <file leaf-file-name="userInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userInfo.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.964286">
-              <caret line="166" column="2" selection-start-line="166" selection-start-column="2" selection-end-line="166" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userHome.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/userHome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.09018036">
-              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -300,16 +312,6 @@
               <folding>
                 <marker date="1456051600584" expanded="true" signature="2336:2348" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375">
-              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -456,15 +458,15 @@
         <option value="$PROJECT_DIR$/js/checkscriptAjax.js" />
         <option value="$PROJECT_DIR$/js/adminscript.js" />
         <option value="$PROJECT_DIR$/Ajax/home_user_Ajax.php" />
-        <option value="$PROJECT_DIR$/validateUser.php" />
         <option value="$PROJECT_DIR$/done.php" />
         <option value="$PROJECT_DIR$/js/scripts.js" />
         <option value="$PROJECT_DIR$/adminHome.php" />
         <option value="$PROJECT_DIR$/check.php" />
         <option value="$PROJECT_DIR$/Ajax/userInfo.php" />
+        <option value="$PROJECT_DIR$/validateUser.php" />
         <option value="$PROJECT_DIR$/userInfo.php" />
-        <option value="$PROJECT_DIR$/userOrder.php" />
         <option value="$PROJECT_DIR$/userHome.php" />
+        <option value="$PROJECT_DIR$/userOrder.php" />
       </list>
     </option>
   </component>
@@ -1375,32 +1377,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/userInfo.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.964286">
-          <caret line="166" column="2" selection-start-line="166" selection-start-column="2" selection-end-line="166" selection-end-column="2" />
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/validateUser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.041667">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state vertical-scroll-proportion="-16.875">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userHome.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09018036">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        <state vertical-scroll-proportion="-7.035714">
+          <caret line="92" column="0" selection-start-line="62" selection-start-column="20" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4288577">
+          <caret line="192" column="58" selection-start-line="192" selection-start-column="58" selection-end-line="192" selection-end-column="58" />
           <folding />
         </state>
       </provider>

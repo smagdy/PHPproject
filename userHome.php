@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php
+session_start();
 if(!isset($_COOKIE['userName']))
-	if(!isset($_SESSION['userName']))
+	if(!isset($_SESSION['userId']))
 		header('Location:index.html');
 ?>
 <html lang="en">
@@ -58,8 +59,8 @@ if(!isset($_COOKIE['userName']))
 						<button class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
 							<span class="glyphicon glyphicon-align-justify"></span>
 						</button>
-
 					</div>
+					<form method="post">
 					<div class="collapse navbar-collapse" id="my-navbar">
 						<ul class="nav navbar-nav">
 							<li class="ts active "><a  href="userHome.php">Home</a></li>
@@ -72,12 +73,24 @@ if(!isset($_COOKIE['userName']))
 
 							<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 
-							<li class="ts" ><a hrf="#" name="logout">LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>
+							<li class="ts" ><button class="btn-link" name="logout"><a>LogOut<span class="glyphicon glyphicon-log-out"></span><a></button></li>
 						</ul>
 					</div>
-
+					</form>
 				</div>
 			</nav>
+			<!----logout----->
+			<?php
+			if(isset($_POST['logout']))
+			{
+				setcookie ('userName',$_COOKIE['user'],mktime());
+				unset($_SESSION['userName']);
+				unset($_SESSION['userId']);
+				session_destroy();
+				header('Location:index.html');
+			}
+			?>
+
 
 			<!--------------------------- end Nav ------------------------------------------------>
 		</div>

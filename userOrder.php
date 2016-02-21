@@ -1,5 +1,9 @@
 <?php
+session_start();
 require('tables.php');
+if(!isset($_COOKIE['userName']))
+	if(!isset($_SESSION['userId']))
+		header('Location:index.html');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -159,12 +163,6 @@ require('tables.php');
 	</style>
 </head>
 <body>
-
-<?php
-if(!isset($_COOKIE['userName']))
-	if(!isset($_SESSION['userName']))
-		header('Location:index.html');
-?>
 	<div class="container">
 
 		<div class="row">
@@ -179,25 +177,36 @@ if(!isset($_COOKIE['userName']))
 							</button>
 
 						</div>
-						<div class="collapse navbar-collapse" id="my-navbar">
-							<ul class="nav navbar-nav">
-								<li class="ts"><a  href="userHome.php">Home</a></li>
-								<li class="ts active" ><a  href="userOrder.php">Order</a></li>
+						<form method="post">
+							<div class="collapse navbar-collapse" id="my-navbar">
+								<ul class="nav navbar-nav">
+									<li class="ts active "><a  href="userHome.php">Home</a></li>
+									<li class="ts" ><a  href="userOrder.php">Order</a></li>
 
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
 
-								<li class="ts" ><img src="" heigth="50px" width="30px"  class="img-rounded" id="userImage"/></li>
+									<li class="ts" ><img src="" heigth="50px" width="30px" id="userImage" class="img-rounded" /></li>
 
-								<li class="ts" ><a href="#"><span class="glyphicon " id="userName"></span></a></li>
+									<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 
-								<li class="ts" ><a href="#" id="logout"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
-
-							</ul>
-						</div>
-
+									<li class="ts" ><button class="btn-link" name="logout"><a>LogOut<span class="glyphicon glyphicon-log-out"></span><a></button></li>
+								</ul>
+							</div>
+						</form>
 					</div>
 				</nav>
+				<!----logout----->
+				<?php
+				if(isset($_POST['logout']))
+				{
+					setcookie ('userName',$_COOKIE['user'],mktime());
+					unset($_SESSION['userName']);
+					unset($_SESSION['userId']);
+					session_destroy();
+					header('Location:index.html');
+				}
+				?>
 				<!--------------------------- end Nav ------------------------------------------------>
 			</div>
 		</div>

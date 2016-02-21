@@ -6,3 +6,4 @@ $user->uid=$_SESSION['userId'];
 $data=$user->selectbykey();
 echo json_encode($data);
 ?>
+
