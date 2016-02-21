@@ -167,16 +167,12 @@ $i++;
 return $data;
 }
 function selectbyId(){
-<<<<<<< HEAD
 $query="select * from Orders where oid='".$this->oid."';";
 $result=mysqli_query($this->con,$query);
 return mysqli_fetch_row($result);
 }
 function select(){
-$query="select * from Orders ;";
-=======
 $query="select * from Orders where uid='".$this->uid."' ;";
->>>>>>> fa6e2403e356216fc22737ee903c8c966fe8b70c
 $result=mysqli_query($this->con,$query);
 $i=0;
 $data=array();
@@ -186,7 +182,7 @@ $i++;
 }
 return $data;
 }
-function select(){
+function selectbyuid(){
     $query="select * from Orders;";
     $result=mysqli_query($this->con,$query);
     $i=0;

@@ -15,7 +15,7 @@ if ($_GET['code'] == "1" ){
 //    echo "hiiiiiii" ;
 //    echo  $_GET['UID'] ;
    $user->delete() ;
-};
+}
 /*
 else if ($_GET['code'] == "2"){};*/
 
