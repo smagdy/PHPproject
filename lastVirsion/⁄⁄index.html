@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Coffee Shop Website</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/bootstrap.min.js" ></script> 
+<script>
+$(function(){
+
+$('#savePass').click(function(){
+	var newP =$('#newPass').val();
+	var newC =$('#ConfirmePass').val();
+	var nameUser =$('#userName').val();
+	console.log(newC);
+	if( newP === newC){
+	console.log("Password equal done");
+	$.ajax({
+		url: "forgetPassword.php",
+	        method: 'get',
+	        data:{
+			"value":newC,
+			"username": nameUser	
+		},
+	        success: function (response) {
+	                console.log(response);
+	              
+	            },
+	            error: function (xhr, status, error) {
+	                console.log(error);
+	            },
+	            complete: function (xhr) {
+	                console.log("Complete ");
+	            },
+	            dataType: 'json',
+	            async: true
+	});
+	
+	}
+	else{
+	console.log("password not equal");
+	}
+	
+});
+
+
+});
+
+</script>
+
+<body>
+	<!----start-header----->
+    <!--   <div class="wrap">
+	        <div class="header">
+	        	<div class="header_top">
+	        		<div class="logo">
+                  			  <a href="index.html"><img src="images/logo.png" alt=""></a>
+                  		 </div>
+	      	       <div class="menu">
+			      <nav >						
+				   <a id="pull" style=" text-decoration:none">&nbsp;</a>
+				</nav>
+                 	 </div>                 
+                </div>
+             </div>
+          </div> -->
+   <!----End-header----->
+   <!----start-container----->
+		<div id="container" style="min-height:593px">      
+           <div style="margin-top:80px; margin-left:100px ; float:left" > 
+                 <img src="images/intro.jpg" width="600px" height="400px">
+           </div>
+           <div style="width:530px; min-height:400px ; margin-top:100px; margin-right:100px; float:right"  > 
+                <div class="form">
+				  	   <h2>LOgin</h2>
+                     
+					     <form method="post" action="validateUser.php" >
+					    	<div>
+						    	<span><label>NAME</label></span>
+						    	<span><input name="userName" type="text" id="userName"></span>
+						    </div>
+						    <div>
+						    	<span><label>PASSWORD</label></span>
+						    	<span><input name="userPass" type="password"></span>
+						    </div>
+<!---------------------------------------------------------------------------------->
+<div class="form-group">
+	 <span><input type="checkbox" name="keep" ><label> Keep Me LogIn</label></span>
+ </div> 
+<!-------------------------------------------------------------------------------------------->	
+ <a data-toggle="modal" href="#myModal" class="btn btn-link btn-lg forget">Forget my Password</a>
+		<div class="modal fade" id="myModal"  role="dialog">
+			<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+				
+					<span aria-hidden="true">&times;</span>
+					
+					<span class="sr-only">Close</span>
+					
+				</button>
+				<h4 class="modal-title">Edit Password</h4>
+				</div>
+				
+				<div class="modal-body">
+				<p>New Password </p> <input type="password" name="newPass" id="newPass" />
+				<p>Confirm Password </p> <input type="password" name="ConfirmePass" id="ConfirmePass" />
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-primary" data-dismiss="modal" id="savePass">Reset Password</button>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+
+<!----------------------------------------------------------------------------------------------------------->				    
+                               <!-- <span style="float:right"><a href=""><font size="-1.5" color="#3399FF">forget my password</font></a></span>-->
+                            <br/><br/>
+						    <div>
+                                <span><input type="submit" value="login" class="myButton"></span>
+						    </div>
+						    
+					    </form>
+				  </div>
+          
+           </div>
+        </div>
+   <!----End-container----->
+		 <!---start-footer---->	
+			 
+	<div class="copy-right navbar-fixed-bottom" >
+        <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
+	</div>
+	<br>
+		 <!---End-footer---->
+	</body>
+</html>
+
