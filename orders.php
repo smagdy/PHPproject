@@ -53,8 +53,8 @@ for( $i =0 ; $i< count($res); $i++){
   $replayArr["ordersArray"] = $ordersArray ;
 
   $replayArr = json_encode($replayArr);
-  echo "data: {$replayArr}\n\n";
-  
+//  echo "data: {$replayArr}\n\n";
+  echo $replayArr ;
 	flush();	
  // }
 

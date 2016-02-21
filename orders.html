@@ -9,15 +9,15 @@
 <script src="js/bootstrap.min.js" ></script>
 <script>  
           var code="0" ;
-          var UID = 0 ;
+          var OID = 0 ;
           var limit=0 ;
           var page=1 , oldPage=1 ;
           var n = 2;  
           var pagiNum ;   
-      // var source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
-       var source = new EventSource("orders.php");
+       // var source = new EventSource("orders.php?code="+code+"&limit="+limit+"&OID="+OID+"");
+       //var source = new EventSource("orders.php");
     $(function(){      
-       
+       /*
 		source.onmessage = function(event) {
 			var x = JSON.parse(event.data);			
 			pagiNum = Math.ceil(x.allRowsNum/n) ;
@@ -35,6 +35,7 @@
 		source.onerror = function(event) {		      
 			console.log("error : "+event) ;
 		};
+	*/
 
            function sendToServer (){
 		$.ajax({
@@ -42,14 +43,17 @@
 			method:'get',
 			data:{  "code":code,
 				"limit":limit,
-				"UID":UID
+				"OID":OID
 			},
 			success:function(response){
 			        console.log(response);	
  				response = JSON.parse(response);
  				console.log("limitresponseWith ajax : "+response['limit']);
-				/*showPagination (response) ;
-				showTableData (response)		*/	        
+ 				console.log("limit : "+limit);			
+				showPagination (response) ;
+				showTableData (response)
+			       // sendToServer (code,limit,OID) ;
+			        setTimeout(sendToServer,10000);	
 			},
 			error:function(xhr,status,error){
 				console.log(error);
@@ -90,7 +94,7 @@
   		}	      
 	     }
 	    
-	   //   sendToServer (code,limit,UID) ;
+	     sendToServer (code,limit,OID) ;
 	      
 	    $(".pagination").on("click","li",function(){
 		code="0" ; 
@@ -116,17 +120,15 @@
 		
 		limit = (page-1)*n ;
 		console.log("limit : "+limit);
-	        //source = new EventSource("orders.php?code="+code+"&limit="+limit+"&UID="+UID+"");
-                //  source = new EventSource("orders.php?limit="+limit+"");
-                //  source = new EventSource(orders.php?limit=limit);
-		  sendToServer (code,limit,UID) ;
+	        //  source = new EventSource("orders.php?code="+code+"&limit="+limit+"&OID="+OID+"");
+     		 sendToServer (code,limit,OID) ;
 	  });
 	/* 	  	  
 	  $("table").on("click",".action",function(){	     
 	      code="1" ;
- 	      UID = $(this).parent().parent().attr("id") ;
- 	      console.log(UID) ;
-              sendToServer (code,limit,UID) ;
+ 	      OID = $(this).parent().parent().attr("id") ;
+ 	      console.log(OID) ;
+              sendToServer (code,limit,OID) ;
               console.log("code"+code);
 	  });
 	
