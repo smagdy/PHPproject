@@ -20,7 +20,6 @@ if ($_GET['code'] == "1" ){
 else if ($_GET['code'] == "2"){};*/
 
 $limit = isset($_GET['limit'])?$_GET['limit']:0;
-$limit = 0 ;
 $res = $product->selectLimit($limit,4);
 
 $productsArray = array();
@@ -31,7 +30,7 @@ for( $i =0 ; $i< count($res); $i++){
    $productsArray[$i]['price'] =  $res[$i][3] ;
    $productsArray[$i]['image'] =  $res[$i][2] ; 
      }
-
+  $replayArr["limit"]= $limit ;
   $replayArr["allRowsNum"]= count($totalRes) ;
   $replayArr["productsArray"] = $productsArray ;
 

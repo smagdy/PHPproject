@@ -43,6 +43,26 @@ if(!isset($_COOKIE['userName']))
 				async: true
 
 			});
+			$.ajax({
+				url: "lastOrder.php",
+				method: 'get',
+				data: {
+					'userId':'userName'
+				},
+				success: function (response) {
+					console.log(response);
+					$('#displaylast').html(response);
+				},
+				error: function (xhr, status, error) {
+					console.log(error);
+				},
+				complete: function (xhr) {
+					console.log("Complete ");
+				},
+				dataType: 'json',
+				async: true
+
+			});
 		});
 	</script>
 </head>
@@ -197,7 +217,8 @@ if(!isset($_COOKIE['userName']))
 			<h3>Last ORDER </h3>
 		</div>
 	</div>
-	<div class="row">
+	<div id="displaylast"></div>
+	<!--<div class="row">
 		<div class="col-sm-3" >
 			 <img src="images/tea1.jpg" class="img-rounded" name="img1"  height="150" width="150" alt="">
 		</div>
@@ -209,7 +230,7 @@ if(!isset($_COOKIE['userName']))
 		<div class="col-sm-3" >
 			 <img src="images/tea5.jpg" class="img-rounded" name="img3"  height="150" width="150" alt="">
 		</div>
-	</div>
+	</div>-->
 <br>
 <!--------------------------------------------------------------------------------------------------------------------------->
 <div class="divborder"></div>

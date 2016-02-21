@@ -85,7 +85,7 @@
 		if (page != "prev" && page != "next" ){
 		      console.log("oldPage "+oldPage);
 		      oldPage = page ;
-		      console.log("oldPage "+oldPage);
+		      console.log("oldPage "+oldPage);		      
 		}
 		else if(page == "prev") {	
 			if(oldPage > 1 ){ 
@@ -99,7 +99,7 @@
                                page = ++oldPage ; 
   			}else {page = pagiNum ;}
 		}
- 			
+ 		 console.log("limit"+limit);	
 		limit = (page-1)*n ;		           	      	      
 		sendToServer (code,limit,PID) ;
 	  });

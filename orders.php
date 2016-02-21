@@ -32,7 +32,7 @@ for( $i =0 ; $i< count($res); $i++){
   
       $product = new orderProducts();
       $product->oid = $ordersArray[$i]['oid'];
-      $Oproducts = $product->selectOID();
+      $Oproducts = $product->selectByOrderId();
       $arr = array();
 		for ($j = 0; $j < count($Oproducts); $j++) {
 		    $arr[$j]['pid'] = $Oproducts[$j]['pid'];
