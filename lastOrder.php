@@ -16,7 +16,7 @@ $uid=$_GET['userId'];
 $mysqli =connection::createInstance();
 
 
- $query = " select * from Products p ,orderProducts op where op.pid=p.pid and op.oid in(select oid from Orders where uid='".$uid."' order by orderDate desc); ";
+ $query = " select products.* from Products products,Orders,orderProducts where Orders.oid = orderProducts.oid and products.pid = orderProducts.pid and Orders.uid = $uid order by Orders.orderDate desc limit 2;";
 
 $res = $mysqli->query($query) or die (mysqli_error($mysqli));
 ?>
@@ -25,7 +25,7 @@ $res = $mysqli->query($query) or die (mysqli_error($mysqli));
 $count =0;
 while($row=mysqli_fetch_array($res))
 {
-f ($count%3==0) echo "<div class='row'>";
+	($count%3 == 0) echo "<div class='row'>";
 ?>
 <div class="col-sm-3" >
 	 <img src="<?php echo $row['productPicture'];?>" class="img-rounded" name="img1"  height="150" width="150" alt="">
