@@ -63,13 +63,13 @@
                      row += '<form><div class="modal-header"><button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>';
                      row += '<h4 class="modal-title">PRODUCT MODAL</h4></div>';
                      row += '<div class="modal-body">';
-                     row += '<div class="row"><span class="col-lg-3"><label>Product</label></span><span class="col-lg-5"><input type="text" name="nameProduct" /></span></div><br/>';
-		     row += '<div class="row"><span class="col-lg-3"><label>Price</label></span><span class="col-lg-1"><input type="number" step=".5" min="1" max="20" name="price_prodect"/>&nbsp; &nbsp;EPG</span></div><br/>';
+                     row += '<div class="row"><span class="col-lg-3"><label>Product</label></span><span class="col-lg-5"><input type="text" name="nameProduct" id="nameProdect" /></span></div><br/>';
+		     row += '<div class="row"><span class="col-lg-3"><label>Price</label></span><span class="col-lg-1"><input type="number" id="numder" step=".5" min="1" max="20" name="price_prodect"/>&nbsp; &nbsp;EPG</span></div><br/>';
 		     row += '<div class="row"><span class="col-lg-3"><label>Category</label></span><span class="col-lg-3"><select name="category" id="category"></select></span></div><br/>';
 		     row += '<div class="row"><span class="col-sm-3"><label>Product image</label></span><div class="col-lg-2 fileUpload btn btn-warning" style="color:white">';
 		     row += '<input type="hidden" name="MAX_FILE_SIZE" value="1000000" /><span><label for="Pimage">Upload Image</label></span><span class="col-lg-2">';
 		     row += '<input type="file" name="pimage"  class="upload" id="Pimage" /></span></div></div>';
-	             row += '<div class="modal-footer"><button class="btn btn-success" data-dismiss="modal">Submit</button><button class="btn btn-danger" data-dismiss="modal">Cancel</button>';
+	             row += '<div class="modal-footer"><button class="btn btn-success" data-dismiss="modal" id="submit">Submit</button><button class="btn btn-danger" data-dismiss="modal">Cancel</button>';
 		     row += '</div></form></div></div></div>';                           		      
   		     row += '</td></tr> '; 
   
@@ -136,27 +136,32 @@
 	      code="2" ;
 	      PID = $(this).parent().parent().attr("id") ;
  	      console.log(PID) ;
+		 $("#submit").click(function(){
+			 $.ajax({
+				 url: "editProduct.php",
+				 method: 'get',
+				 data: {
+					 'pid':PID,
+					 'edit':'yes',
+					 'numder':$('#numder').val(),
+					 'category':'category',
+					 'nameProdect':$('#nameProdect').val()
+				 },
+				 success: function (response) {
+					 console.log(response);
+					 $('#displaylast').html(response);
+				 },
+				 error: function (xhr, status, error) {
+					 console.log(error);
+				 },
+				 complete: function (xhr) {
+					 console.log("Complete ");
+				 },
+				 async: true
+			 });*/
+		});
 // 	      sendToServer (code,limit,PID) ;
-		/*$.ajax({
-			url: "editProduct.php",
-			method: 'get',
-			data: {
-				'pid':PID,
-				'edit':'yes',
-				'':''
-			},
-			success: function (response) {
-				console.log(response);
-				$('#displaylast').html(response);
-			},
-			error: function (xhr, status, error) {
-				console.log(error);
-			},
-			complete: function (xhr) {
-				console.log("Complete ");
-			},
-			async: true
-		});*/
+
 	      console.log("code"+code);
 	  });
  /////////----------------------------------------------
