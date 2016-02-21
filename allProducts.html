@@ -57,7 +57,7 @@
   		     row += '<td><img width="60px" height="60px" src="images/'+response['productsArray'][i]["image"]+'"/></td>';
   		     row += '<td><button class="Availability">Availability</button><button class="delete">Del</button>';
   		    
-  		     row += '<button class="edit" data-toggle="modal" data-target="#my-modal">Edit</button></td>';
+  		     row += '<button class="edit" data-toggle="modal" data-target="#my-modal">Edit</button>';
   		     row += '<div  id="my-modal" class="modal" ><div class="modal-dialog">' ;
                      row += '<div class="modal-content" style="padding:25px;display:block;font-family:"Open Sans", sans-serif;color:#82592D;padding-bottom:5px">';
                      row += '<form><div class="modal-header"><button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>';
@@ -71,7 +71,7 @@
 		     row += '<input type="file" name="pimage"  class="upload" id="Pimage" /></span></div></div>';
 	             row += '<div class="modal-footer"><button class="btn btn-success" data-dismiss="modal">Submit</button><button class="btn btn-danger" data-dismiss="modal">Cancel</button>';
 		     row += '</div></form></div></div></div>';                           		      
-  		     row += '</tr> '; 
+  		     row += '</td></tr> '; 
   
   		     $("table").append(row);
   		 }	      
