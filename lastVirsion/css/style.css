@@ -12,6 +12,7 @@ nav.vertical ul li{display:block;}/* vertical menu */
 nav.horizontal ul li{display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
+
 @font-face {
       font-family: 'caviar_dreamsregular';
       src: url(../fonts/CaviarDreams-webfont.ttf) format('truetype');
@@ -20,13 +21,13 @@ body{
 	background: url(../images/bg.jpg);
 	font-family:Arial, Helvetica, sans-serif;
 }
-/*----start-wrap-----*/
-.wrap{
+	/*----start-wrap-----*/
+/*.wrap{
 	width:80%;
 	margin:0 auto;
 }
-/*----start-header-----*/
-.header{
+	/*----start-header-----*/
+/*.header{
          width:100% ;
 	 clear:both;
 	 position:absolute;
@@ -91,7 +92,7 @@ nav a:hover{
 	background:#FFF;
 	text-align:center;
 	padding:20px 0;
-}
+}*/
 /*---pagination-----*/
  .navPagi li{
 	 float:left;
@@ -157,9 +158,9 @@ table th {
 .form h2{
 	color:#82592D;
 	margin:5px 0 15px 0;
-	font-size:2em;
+	font-size:4em;
 	text-transform:uppercase;
-    font-family: 'caviar_dreamsregular';
+    	font-family: 'caviar_dreamsregular',bold;
 }
 .form{
 	position:relative;
@@ -249,4 +250,48 @@ table th {
 .myButton:hover{
 		background:#DBB25F;
 		color:#FFF;
+}
+/* ----------------------- edit doaa ----------------------*/
+nav li a:hover,nav li.active a{
+	color:#FFF;
+	text-shadow:4 1px 0 #222;
+	background:url(../images/menu-hover.png) center ;
+	/* background:url(../images/menu-hover.png) center ;*/
+}
+
+.navbar{
+	background-color: #8a8a5c; 
+	background:url(../images/bg.png);
+
+}
+
+nav a {
+	 font-family: 'caviar_dreamsregular',bold;
+	 font-size:1.3em;
+	color:#A3793D;
+	 display: block;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #ffffff;  /*Sets the text hover color on navbar*/
+}
+
+.tex{
+font-size: 1.5em; 
+	font-family: 'Open Sans', sans-serif ;
+	color:#82592D;
+	width: 100%;
+	margin: 0 auto;
+	line-height: 1em;
+	margin-bottom: 1em;
+
+}
+p{
+	font-size: 4em; 
+	font-family: 'Open Sans', sans-serif ,bold;
+	color:#82592D;
+	width: 75%;
+	margin: 0 auto;
+	line-height: 1.8em;
+	margin-bottom: 1em;
 }

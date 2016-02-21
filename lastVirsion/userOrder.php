@@ -8,6 +8,7 @@ require('tables.php');
 	<title> Order User </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style1.css">
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -220,7 +221,15 @@ require('tables.php');
 </div>	
 </div>
 <br>
+<br>
+<br>
 <!----------------------------------------------------------------------------------------------------->
+ <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px ;height:50px">
+      <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
+  </div>
+  <br>
+
+
 </div>  <!---------- container ---------------->
 </body>
 

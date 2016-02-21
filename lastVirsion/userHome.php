@@ -5,6 +5,7 @@
 	<title>Home User </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/style1.css">
 	<style>
 	 	 
@@ -203,6 +204,13 @@
 	</div> <!---- frist row  -->
 <!----------------------------------------------------------------------->
 <br>
+<br>
+<br>
+<br>
+ <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px ;height:50px">
+      <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
+  </div>
+  <br>
 </div> <!---- >
 
 </body>

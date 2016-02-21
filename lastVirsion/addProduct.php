@@ -63,20 +63,20 @@
 </script>
 <body>
    <div class="container form " style="width:900px ; min-height:400px ; margin:100px 200px">
-       <h2>Add Product</h2><br/>
+       <p>Add Product</p><br/>
        <form action="addProductAdmin.php" method="post" enctype="multipart/form-data" >
             <div class="row">
-                 <span class="col-lg-2"><label>Product</label></span>
+                 <span class="col-lg-2"><label class="tex">Product</label></span>
                  <span class="col-lg-6"><input type="text" name="nameProduct" /></span>
             </div>
             <br/>
             <div class="row">
-                 <span class="col-lg-2"><label>Price</label></span>
+                 <span class="col-lg-2"><label class="tex">Price</label></span>
                  <span class="col-lg-2"><input type="number" step=".5" min="1" max="20" name="price_prodect"  />&nbsp; &nbsp;EPG</span>
             </div>
             <br/>
             <div class="row">
-                 <span class="col-lg-2"><label>Category</label></span>
+                 <span class="col-lg-2"><label class="tex">Category</label></span>
                  <span class="col-lg-3"><select name="category" id="category">
                        <!--<option  value="Hot drinks">Hot drinks</option>
                        
@@ -119,7 +119,7 @@
             </div>
             <br/>
             <div class="row">
-                 <div class="col-sm-2"><label>Product image</label></div>                 
+                 <div class="col-sm-2"><label class="tex">Product image</label></div>                 
                      <div class="col-sm-4">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                         <label for="Pimage">Upload Image</label>
@@ -136,7 +136,7 @@
        </form> 
    </div>
    
-   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px">
+   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px; height:50px">
         <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
    </div>
     

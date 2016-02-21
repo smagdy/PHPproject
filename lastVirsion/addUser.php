@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html  >
+<html >
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Add User</title>
@@ -39,26 +39,26 @@
 <script src="js/bootstrap.min.js" ></script> 
 <body>
    <div class="container form " style="width:900px ; min-height:400px ; margin:100px 200px">
-       <h2>Add User</h2><br/>
+       <p>Add User</p><br/>
        <form class="form-horizontal" method="post" enctype='multipart/form-data' action="done.php">
             <div class="row">
-                 <span class="col-lg-2"><label>Name</label></span>
+                 <span class="col-lg-2"><label class="tex">Name</label></span>
                  <span class="col-lg-6"><input type="text" name="name" /></span>
             </div>
             <div class="row">
-                 <span class="col-lg-2"><label>Email</label></span>
+                 <span class="col-lg-2"><label class="tex">Email</label></span>
                  <span class="col-lg-6"><input type="email" name="email" /></span>
             </div>
             <div class="row">
-                 <span class="col-lg-2"><label>Password</label></span>
+                 <span class="col-lg-2"><label class="tex">Password</label></span>
                  <span class="col-lg-6"><input type="password" name="pwd" /></span>
             </div>
             <div class="row">
-                 <span class="col-lg-2"><label>Confirm Password</label></span>
+                 <span class="col-lg-2"><label class="tex">Confirm Password</label></span>
                  <span class="col-lg-6"><input type="password" name="confirmpwd" /></span>
             </div>         
             <div class="row">
-                 <span class="col-lg-2"><label>Room No.</label></span>
+                 <span class="col-lg-2"><label class="tex">Room No.</label></span>
                  <span class="col-lg-6">
                      <select name="room" id="roomNum">
                          <option>Select Room Number</option>
@@ -66,14 +66,14 @@
                  </span>
             </div>          
             <div class="row">
-                 <span class="col-lg-2"><label>Ext.</label></span>
+                 <span class="col-lg-2"><label class="tex" >Ext.</label></span>
                  <span class="col-lg-6"><input type="text" name="EXT" /></span>
             </div>
             <br/> 
            
             
             <div class="row">
-                 <span class="col-lg-2"><label>Profile picture</label></span>                 
+                 <span class="col-lg-2"><label class="tex" >Profile picture</label></span>                 
                  <div class="col-lg-2 btn btn-default myButton fileUpload ">
                      <span>Browse</span>
                      <span class="col-lg-2"><input type="file" name="profileimage"  value="browse" class="upload" /></span>
@@ -88,7 +88,7 @@
    </div>
    
    
-   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px">
+   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px;height:50px">
         <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
    </div>
     

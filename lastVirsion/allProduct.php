@@ -2,11 +2,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>All Products</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link href="css/style1.css" rel="stylesheet" type="text/css"   />
+  <link href="css/style.css" rel="stylesheet" type="text/css"   />
   <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
 </head>
     <script src="js/jquery-1.11.2.js"></script>
     <script src="js/bootstrap.min.js" ></script> 
+    <script src="js/task.js"></script> 
     <script>	
 	 $(function(){
           var code="0" ;
@@ -124,29 +126,48 @@
         }
     </style>
 <body>
-  <div class="header ">
-	      <div class="header_top">
-	            <div class="menu">
-		      <nav>
-			  <ul>
-				<li class="active" ><a href="">HOME</a></li>
-				<li class="active"><a href="allProduct.php">All products</a></li>
-				<li><a href="allUser.php">All users</a></li>
-				<li><a href="order.php">Orders</a></li>
-				<li><a href="check.php">Checks</a></li>	
-			  </ul> 
-			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
-				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
-			</ul>
-		      </nav>		      
-	      </div>                 
-	    </div>
-	</div>
+ <div class="container" >
+ 	<div class="row"> 
 
-   <div class="container form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
-       <h2>All Products</h2><br/>
+		<div class="col-sm-12"> 
+<!---------------------- start nav --------------------------------------->
+<br>
+<nav  class="navbar navbar-default ">
+		<div class="container-fluid ">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+					<span class="glyphicon glyphicon-align-justify"></span>
+				</button>
+				
+			</div>
+			<div class="collapse navbar-collapse" id="my-navbar">
+				<ul class="nav navbar-nav">
+					
+					 <li class="ts"  ><a href="">HOME</a></li>
+					    <li class="ts active" ><a href="allProduct.php">All products</a></li>
+					    <li class="ts" ><a href="allUser.php">All users</a></li>
+					    <li class="ts" ><a href="order.php">Orders</a></li>
+					    <li class="ts "><a href="check.php">Checks</a></li>	
+					
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+
+					<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
+
+					<li class="ts" ><a href="#"><span class="glyphicon "></span> Admin </a></li>
+				
+					 <li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+					 
+				</ul>	
+			</div>
+			
+		</div>	
+	</nav>
+
+
+	</div>
+   <div class="form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
+        <p>All Products</p> 
        <span style="float:right;"><a href="addProduct.php" >add Product</a></span>
        <table class="table table-bordered myTable">
        <!--  
@@ -178,6 +199,7 @@
   <div class="copy-right navbar-fixed-bottom"  style="margin-bottom:0px ;height:40px">
       <p>&copy; 2016 All Rights Reserved | Designed by <a href="#">LIONS</a></p> 
   </div>
-    
+  <br>
+    </div>
 </body>
 </html>
