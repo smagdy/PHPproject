@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 if(!isset($_COOKIE['userName']))
 	if(!isset($_SESSION['userName']))
 		header('Location:index.html');

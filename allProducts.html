@@ -53,7 +53,7 @@
 	            $("table").empty();
 	            $("table").append("<tr><th>Product</th><th>price</th><th>Image</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['productsArray'].length ; i++){
-	            var row ='<tr id="'+i+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
+	            var row ='<tr id="'+response['productsArray'][i]["pid"]+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
   		     row += '<td><img width="60px" height="60px" src="images/'+response['productsArray'][i]["image"]+'"/></td>';
   		     row += '<td><button class="Availability">Availability</button><button class="delete">Del</button>';
   		    
@@ -108,7 +108,8 @@
 	      code="1" ;
  	      PID = $(this).parent().parent().attr("id") ;
  	      console.log(PID) ;
-              sendToServer (code,limit,PID) ;
+           //   sendToServer (code,limit,PID) ;
+
               console.log("code"+code);
 	  });
 	
