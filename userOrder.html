@@ -16,57 +16,72 @@ require('tables.php');
 	<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 	<script>
 		$(function() {
-			$.ajax({
-				url:"ajaxOrder.php",
-				method:'get',
-				data:{
-					'all':'all'
-				},
-				success:function(response){
-					console.log(response);
-					bulidTable(response);
-				},
-				error:function(xhr,status,error){
-					console.log(error);
-				},
-				complete:function(xhr){
-					console.log("Complete ");
-				},
-				dataType:'json',
-				async:true
+			function allOrders(){
+				$.ajax({
+					url:"ajaxOrder.php",
+					method:'get',
+					data:{
+						'all':'all'
+					},
+					success:function(response){
+						console.log(response);
+						bulidTable(response);
+					},
+					error:function(xhr,status,error){
+						console.log(error);
+					},
+					complete:function(xhr){
+						console.log("Complete ");
+					},
+					dataType:'json',
+					async:true
 
-			});
+				});
+			}
+			allOrders();
 			$( ".datepicker" ).datepicker({ dateFormat: 'yy-mm-dd' });
 			$( ".datepicker" ).change(function(e){
-				if($( "#datetimepicker1").val() != "" && $( "#datetimepicker2").val() != "") {
-					var from = $("#datetimepicker1").val();
-					var to = $("#datetimepicker2").val();
+				if($( "#datetimepicker1").val() == "" && $( "#datetimepicker2").val() == "") {
+					allOrders();
+				}
+				else {
+					if ($("#datetimepicker1").val() != "" && $("#datetimepicker2").val() != "") {
+						var from = $("#datetimepicker1").val();
+						var to = $("#datetimepicker2").val();
+					}else if ($("#datetimepicker1").val() == "" && $("#datetimepicker2").val() != "") {
+						var from = '1990-01-01';
+						var to = $("#datetimepicker2").val();
+					}else{
+						var from = $("#datetimepicker1").val();
+						var to = '2020-01-01';
+					}
 					$.ajax({
-						url:"ajaxOrder.php",
-						method:'get',
-						data:{
-							"to":to,
-							"from":from
+						url: "ajaxOrder.php",
+						method: 'get',
+						data: {
+							"to": to,
+							"from": from
 						},
-						success:function(response){
+						success: function (response) {
 							console.log(response);
 							//console.log(response[0]['products'][0]);
 							bulidTable(response);
 						},
-						error:function(xhr,status,error){
+						error: function (xhr, status, error) {
 							console.log(error);
 						},
-						complete:function(xhr){
+						complete: function (xhr) {
 							console.log("Complete ");
 						},
-						dataType:'json',
-						async:true
+						dataType: 'json',
+						async: true
 
 					});
 				}
 		});
 
 		function bulidTable(data){
+			$('.tbody').html("");
 			for(var i=0;i<data.length;i++){
 				var t=" <tr><td>"+data[i]['orderDate']+" <a data-toggle='collapse' data-target='#"+(i+1)+"'>+</a></td><td>"+data[i]['status']+"</td><td>"+data[i]['amount']+" LE </td>";
 				if(data[i]['status']=='processing')
@@ -109,11 +124,9 @@ require('tables.php');
 
 				});
 				$(this).parent().prev().prev().text("canceled");
-				$(this).parent().remove($(this));
+				$(this).disabled=true;
 			});
 		}
-
-
 		});
 	</script>
 

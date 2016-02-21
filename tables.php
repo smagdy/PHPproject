@@ -20,7 +20,6 @@ mysqli_query($this->con,$query);
 }
 function insert(){
 $query="insert into Users values(null,'".$this->name."','".$this->email."','".$this->password."','".$this->profilePicture."','".$this->EXT."','".$this->rid."');";
-//echo $query;
 mysqli_query($this->con,$query);
 }
 function delete(){
@@ -36,6 +35,17 @@ function selectbyName(){
 $query="select uid,password from Users where name='".$this->name."';";
 $result=mysqli_query($this->con,$query);
 return mysqli_fetch_row($result);
+}
+function selectUserName(){
+    $query="select uid,name from Users where uid > 1;";
+    $result=mysqli_query($this->con,$query);
+    $i=0;
+    $data=array();
+    while($row=$result->fetch_array()){
+        $data[$i]=$row;
+        $i++;
+    }
+    return $data;
 }
 function select(){
 $query="select * from Users where uid > 1;";
@@ -154,7 +164,7 @@ function delete(){
 $query="delete from Orders where oid='".$this->oid."' and uid='".$this->uid."';";
 mysqli_query($this->con,$query);
 }
-function selectbykey($from,$to){
+function selectbydate($from,$to){
 $query="select * from Orders where uid='".$this->uid."' and orderDate between '".$from."' and '".$to."' ;";
 $result=mysqli_query($this->con,$query);
 $i=0;
@@ -165,7 +175,7 @@ $i++;
 }
 return $data;
 }
-function select(){
+function selectbyId(){
 $query="select * from Orders where uid='".$this->uid."' ;";
 $result=mysqli_query($this->con,$query);
 $i=0;
@@ -175,6 +185,17 @@ $data[$i]=$row;
 $i++;
 }
 return $data;
+}
+function select(){
+    $query="select * from Orders;";
+    $result=mysqli_query($this->con,$query);
+    $i=0;
+    $data=array();
+    while($row=$result->fetch_array()){
+        $data[$i]=$row;
+        $i++;
+    }
+    return $data;
 }
 function selectLimit($limit,$length){
 $query="select o.orderDate,u.name,roomNumber,u.EXT,numofItems,productPicture, pname ,p.price,amount from Orders o,Users u,orderProducts op ,Products p,Room r where o.uid=u.uid and op.oid = o.oid and op.pid=p.pid and u.rid = r.rid order by orderDate desc limit ".$limit.",".$length.";";
