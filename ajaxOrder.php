@@ -9,11 +9,12 @@
     }
     else {
         $orders = new Orders();
-        $orders->uid=$_SESSION['userId'];
-        if(isset($_GET['all'])){  // all orders
-            $data = $orders->select();
-        }else
-            $data = $orders->selectbykey($_GET['from'], $_GET['to']);
+       //user
+            $orders->uid = $_SESSION['userId'];
+            if (isset($_GET['all']))  // all orders
+                $data = $orders->selectbyId();
+            else
+                $data = $orders->selectbydate($_GET['from'], $_GET['to']);
         $response = array();
         for ($i = 0; $i < count($data); $i++) {
             $response[$i]['oid'] = $data[$i]['oid'];

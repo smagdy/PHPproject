@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+if(!isset($_COOKIE['userName']))
+	if(!isset($_SESSION['userName']))
+		header('Location:index.html');
+?>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -14,48 +19,72 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/task.js"></script>
 	<script src="js/scripts.js"></script>
+	<script>
+		$(function() {
+			$.ajax({
+				url: "userInfo.php",
+				method: 'get',
+				data: {
+					'a':'a'
+				},
+				success: function (response) {
+					console.log(response);
+					$('#userImage').attr('src',response[4]);
+					$('#userName').text(response[1]);
+				},
+				error: function (xhr, status, error) {
+					console.log(error);
+				},
+				complete: function (xhr) {
+					console.log("Complete ");
+				},
+				dataType: 'json',
+				async: true
+
+			});
+		});
+	</script>
 </head>
 <body>
+<div class="container">
 
-	<div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-<!---------------------- start nav --------------------------------------->
-<br>
-<nav  class="navbar navbar-default ">
-		<div class="container-fluid ">
-			<div class="navbar-header">
-				<button class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
-					<span class="glyphicon glyphicon-align-justify"></span>
-				</button>
+			<!---------------------- start nav --------------------------------------->
+			<br>
+			<nav  class="navbar navbar-default ">
+				<div class="container-fluid ">
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
+							<span class="glyphicon glyphicon-align-justify"></span>
+						</button>
 
-			</div>
-			<div class="collapse navbar-collapse" id="my-navbar">
-				<ul class="nav navbar-nav">
-					<li class="ts active"><a  href="#">Home</a></li>
-					<li class="ts" ><a  href="#">Order</a></li>
+					</div>
+					<div class="collapse navbar-collapse" id="my-navbar">
+						<ul class="nav navbar-nav">
+							<li class="ts active "><a  href="userHome.php">Home</a></li>
+							<li class="ts" ><a  href="userOrder.php">Order</a></li>
 
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
 
-					<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
+							<li class="ts" ><img src="" heigth="50px" width="30px" id="userImage" class="img-rounded" /></li>
 
-					<li class="ts" ><a href="#"><span class="glyphicon "></span> Doaa Negm </a></li>
+							<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 
-					 <li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+							<li class="ts" ><a hrf="#" name="logout">LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>
+						</ul>
+					</div>
 
-				</ul>
-			</div>
+				</div>
+			</nav>
 
-		</div>
-	</nav>
-
-<!--------------------------- end Nav ------------------------------------------------>
+			<!--------------------------- end Nav ------------------------------------------------>
 		</div>
 	</div>
-<!-------------------------------------------------------------------------->
+	<!-------------------------------------------------------------------------->
 
-<br>
+	<br>
 	<div class="row"> 
 	<div class="col-sm-5" id="divRight">
 <!---------------------------------- sub row 00 ------------------------------------------>

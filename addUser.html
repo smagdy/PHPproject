@@ -32,6 +32,26 @@
                     async: true
 
                 });
+            /*$('.submit').click(function(){
+                $.ajax({
+                    url: "done.php",
+                    method: 'post',
+                    data: {
+                        "all":"all"
+                    },
+                    success: function (response) {
+                        console.log(response);
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(error);
+                    },
+                    complete: function (xhr) {
+                        console.log("Complete ");
+                    },
+                    async: true
+
+                });
+            });*/
         });
         </script>
 </head>
@@ -81,7 +101,7 @@
             </div>
             <br/><br/>
             <div class="row">
-                 <span class="col-lg-2 col-xs-offset-3"><input type="submit" value="Save" name="submit"  class="myButton"/></span>
+                 <span class="col-lg-2 col-xs-offset-3"><input type="submit" value="Save" name="submit"  class="myButton submit"/></span>
                  <span class="col-lg-2"><input type="reset" name=""   class="myButton"/></span>
             </div>
        </form> 

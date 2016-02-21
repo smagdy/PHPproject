@@ -64,7 +64,6 @@ if($_FILES['profileimage']['error'] > 0)
 }
 elseif($_FILES['profileimage']['type'] != 'image/png'&&$_FILES['profileimage']['type'] != 'image/jpeg'&&$_FILES['profileimage']['type'] != 'image/gif')
 {
-    echo $_FILES['profileimage']['type'];
     $erormessage.= 'Problem: file is not image <br>';
     $flag=false;
 }
@@ -78,8 +77,10 @@ if (!move_uploaded_file($_FILES['profileimage']['tmp_name'], $upfile)) {
     $erormessage.= "can't move image <br>";
     $flag=false;
 }
-if($flag == false)
-    echo "<h4 class='alert-danger'>".$erormessage."</h4>";
+if($flag == false) {
+    echo "<h4 class='alert-danger'>" . $erormessage . "</h4>";
+    echo "<a href='addUser.html'> back </a>";
+}
 else{
     $user=new Users();
     $user->name=$name;
@@ -89,7 +90,7 @@ else{
     $user->password=md5($pwd);
     $user->profilePicture=$upfile;
     $user->insert();
-    header('Location:admin.php');
+    header('Location:adminHome.php');
 }
 ?>
 

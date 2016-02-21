@@ -1,6 +1,8 @@
 <?php
 session_start();
 require_once('../connection.php');
+if(isset($_GET['uid']))$uid=$_GET['uid'];
+else $uid=$_SESSION['userId'];
 $mysqli =connection::createInstance();
 $product_name=$_GET['value'];
 if($product_name=='ALL') $query = " select * from Products where available  ='1' ";
@@ -23,7 +25,7 @@ while($row=mysqli_fetch_array($res))
 				<input type="hidden" name="1" value="6" >
 				<input type="hidden" name="<?php echo $row['price']; ?>"  value="50" >
 				<input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
-				<input type="hidden" name="uid" value="<?php echo $_SESSION['userId']; ?>">
+				<input type="hidden" name="uid" value="<?php echo $uid ?>">
 			 <div>
 			  <br><span align="center" name="<?php echo $row['pname']; ?>"><input value="<?php echo $row['price']; ?>" class="price" type="submit"></span>
 			 </div>
