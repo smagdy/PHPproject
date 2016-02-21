@@ -1,6 +1,5 @@
 <?php
 session_start();
-require('tables.php');
 if(!isset($_COOKIE['userName']))
 	if(!isset($_SESSION['userId']))
 		header('Location:index.html');
@@ -39,7 +38,6 @@ if(!isset($_COOKIE['userName']))
 				},
 				dataType: 'json',
 				async: true
-
 			});
 			function allOrders(){
 				$.ajax({
@@ -146,7 +144,6 @@ if(!isset($_COOKIE['userName']))
 						console.log("Complete ");
 					},
 					async:true
-
 				});
 				$(this).parent().prev().prev().text("canceled");
 				$(this).disabled=true;
