@@ -15,7 +15,6 @@ $uid=$_GET['userId'];
 	}
 $mysqli =connection::createInstance();
 
-$product_name=$_GET['value'];
 
  $query = " select * from Products p ,orderProducts op where op.pid=p.pid and op.oid in(select oid from Orders where uid='".$uid."' order by orderDate desc); ";
 
