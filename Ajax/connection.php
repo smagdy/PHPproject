@@ -3,7 +3,7 @@
     {
         static $obj;
         private  function __construct(){
-			self :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+			self :: $obj = mysqli_connect('localhost','adminACF8HjC','FNPkflRwqMUs','lions');
 			if (mysqli_connect_errno()) {
 				echo 'Error: Could not connect to database. Please try again later.';
 			}
@@ -17,17 +17,17 @@
             }
         }
 		public static function create(){
-			$connect = new mysqli('localhost','root','');
+			$connect = new mysqli('localhost','adminACF8HjC','FNPkflRwqMUs');
 			// Check connection
 			if ($connect->connect_error) {
 				die("Connection failed: " . $connect->connect_error);
 			}
 			// Create database
-			$sql = "CREATE DATABASE IF NOT EXISTS Cafeteria_DataBase";
+			$sql = "CREATE DATABASE IF NOT EXISTS lions";
 			if ($connect->query($sql) === FALSE) {
 				echo "Error creating database: " . $connect->error;
 			}
-			connection :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
+			connection :: $obj = mysqli_connect('localhost','adminACF8HjC','','lions');
 			if (mysqli_connect_errno()) {
 				echo 'Error: Could not connect to database. Please try again later.';
 			}
