@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../connection.php');
+require_once('connection.php');
 if(isset($_GET['uid']))$uid=$_GET['uid'];
 else $uid=$_SESSION['userId'];
 $mysqli =connection::createInstance();

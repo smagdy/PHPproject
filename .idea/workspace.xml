@@ -228,9 +228,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/userOrder.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/⁄⁄⁄index.html" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/⁄⁄⁄⁄index.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/allProducts.html" afterPath="$PROJECT_DIR$/allProducts.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/editProduct.php" afterPath="$PROJECT_DIR$/editProduct.php" />
     </list>
     <ignored path="PHPproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -323,8 +320,8 @@
       <file leaf-file-name="allProducts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/allProducts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9247312">
-              <caret line="146" column="43" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.41505376">
+              <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
               <folding>
                 <marker date="1456097648320" expanded="true" signature="1255:1265" placeholder="..." />
                 <marker date="1456097648320" expanded="true" signature="1407:1417" placeholder="..." />
@@ -539,7 +536,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="28" width="1368" height="707" extended-state="6" />
+    <frame x="-1" y="28" width="1368" height="707" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22693998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1263,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/allProducts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9247312">
-          <caret line="146" column="43" selection-start-line="146" selection-start-column="43" selection-end-line="146" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.41505376">
+          <caret line="221" column="44" selection-start-line="221" selection-start-column="44" selection-end-line="221" selection-end-column="44" />
           <folding>
             <marker date="1456097648320" expanded="true" signature="1255:1265" placeholder="..." />
             <marker date="1456097648320" expanded="true" signature="1407:1417" placeholder="..." />

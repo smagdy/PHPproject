@@ -20,7 +20,7 @@ if(!isset($_COOKIE['userName']))
 	<script>
 		$(function() {
 			$.ajax({
-				url: "userInfo.php",
+				url: "Ajax/userInfo.php",
 				method: 'get',
 				data: {
 					'a':'a'
@@ -41,7 +41,7 @@ if(!isset($_COOKIE['userName']))
 			});
 			function allOrders(){
 				$.ajax({
-					url:"ajaxOrder.php",
+					url:"Ajax/ajaxOrder.php",
 					method:'get',
 					data:{
 						'all':'all'
@@ -79,7 +79,7 @@ if(!isset($_COOKIE['userName']))
 						var to = '2020-01-01';
 					}
 					$.ajax({
-						url: "ajaxOrder.php",
+						url: "Ajax/ajaxOrder.php",
 						method: 'get',
 						data: {
 							"to": to,
@@ -129,7 +129,7 @@ if(!isset($_COOKIE['userName']))
 			});
 			$('.tbody').on('click','.action',function(){
 				$.ajax({
-					url:"ajaxOrder.php",
+					url:"Ajax/ajaxOrder.php",
 					method:'get',
 					data:{
 						"oid":$(this).attr('id')
@@ -177,8 +177,8 @@ if(!isset($_COOKIE['userName']))
 						<form method="post">
 							<div class="collapse navbar-collapse" id="my-navbar">
 								<ul class="nav navbar-nav">
-									<li class="ts active "><a  href="userHome.php">Home</a></li>
-									<li class="ts" ><a  href="userOrder.php">Order</a></li>
+									<li class="ts"><a  href="userHome.php">Home</a></li>
+									<li class="ts active " ><a  href="userOrder.php">Order</a></li>
 
 								</ul>
 								<ul class="nav navbar-nav navbar-right">
@@ -187,23 +187,15 @@ if(!isset($_COOKIE['userName']))
 
 									<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 
-									<li class="ts" ><button class="btn-link" name="logout"><a>LogOut<span class="glyphicon glyphicon-log-out"></span><a></button></li>
+									<li class="ts" ><a href="Ajax/logout.php">LogOut<span class="glyphicon glyphicon-log-out"></span><a></li>
 								</ul>
 							</div>
+							
 						</form>
 					</div>
 				</nav>
 				<!----logout----->
-				<?php
-				if(isset($_POST['logout']))
-				{
-					setcookie ('userName',$_COOKIE['user'],mktime());
-					unset($_SESSION['userName']);
-					unset($_SESSION['userId']);
-					session_destroy();
-					header('Location:index.html');
-				}
-				?>
+				
 				<!--------------------------- end Nav ------------------------------------------------>
 			</div>
 		</div>

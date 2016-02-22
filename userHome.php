@@ -23,7 +23,7 @@ if(!isset($_COOKIE['userName']))
 	<script>
 		$(function() {
 			$.ajax({
-				url: "userInfo.php",
+				url: "Ajax/userInfo.php",
 				method: 'get',
 				data: {
 					'a':'a'
@@ -44,7 +44,7 @@ if(!isset($_COOKIE['userName']))
 
 			});
 			$.ajax({
-				url: "lastOrder.php",
+				url: "Ajax/lastOrder.php",
 				method: 'get',
 				data: {
 					'userId':'userName'
@@ -91,7 +91,7 @@ if(!isset($_COOKIE['userName']))
 
 							<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 
-							<li class="ts" ><a hrf="#" name="logout">LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>
+							<li class="ts" ><a href="Ajax/logout.php">LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>
 						</ul>
 					</div>
 

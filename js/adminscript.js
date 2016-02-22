@@ -1,7 +1,7 @@
 $(function(){
     ////////////////////------------------------------------------////////////////////
     $.ajax({
-        url: "selectUsers.php",
+        url: "Ajax/selectUsers.php",
         method: 'get',
         data: {
             'uid': $('#users').val()
@@ -46,7 +46,7 @@ $(function(){
         }
     });
     $.ajax({
-        url: "selectRoom.php",
+        url: "Ajax/selectRoom.php",
         method: 'get',
         data: {
             "all":"all"
@@ -70,7 +70,7 @@ $(function(){
     $("#search_input").keyup(function(e){
         var result=$("#search_input").val();
         $.ajax({
-            url:"Ajax/home_user_Ajax.php",
+            url:"../Ajax/home_user_Ajax.php",
             method:'get',
             data:{
                 "value":result
@@ -157,7 +157,7 @@ $(function(){
             objectp[i]=JSON.stringify(products);
         }
         $.ajax({
-            url:"addOrder.php",
+            url:"Ajax/addOrder.php",
             method:'post',
             data:{
                 'products[]':objectp,
@@ -169,7 +169,7 @@ $(function(){
             },
             success:function(response){
                 //console.log(response);
-                window.location.href = "userHome.php";
+                window.location.href = "../userHome.php";
             },
             error: function (xhr, status, error) {
                 console.log(error);

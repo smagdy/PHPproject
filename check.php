@@ -1,5 +1,9 @@
+<!DOCTYPE>
 <?php
-require('tables.php');
+session_start();
+if(!isset($_COOKIE['admin']))
+	if(!isset($_SESSION['admin']))
+		header('Location:index.html');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +13,7 @@ require('tables.php');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style1.css">
+	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-1.11.2.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-1.9.0.min.js"></script>
@@ -17,7 +22,7 @@ require('tables.php');
 	<script>
 		$(function() {
 			$.ajax({
-				url: "selectUsers.php",
+				url: "Ajax/selectUsers.php",
 				method: 'get',
 				data: {
 					'uid':$('#users').val()
@@ -39,7 +44,7 @@ require('tables.php');
 			////////////////////////////////////////////////////////////////////////////////
 			function allOrders(){
 				$.ajax({
-					url:"ajaxCheck.php",
+					url:"Ajax/ajaxCheck.php",
 					method:'get',
 					data:{
 						'uid':$('#users').val()
@@ -190,48 +195,32 @@ require('tables.php');
 </head>
 <body>
 
-<div class="container" >
-	<div class="row">
 
-		<div class="col-sm-12">
-			<!---------------------- start nav --------------------------------------->
-			<br>
-			<nav  class="navbar navbar-default ">
-				<div class="container-fluid ">
-					<div class="navbar-header">
-						<button class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar">
-							<span class="glyphicon glyphicon-align-justify"></span>
-						</button>
-
-					</div>
-					<div class="collapse navbar-collapse" id="my-navbar">
-						<ul class="nav navbar-nav">
-
-							<li class="ts"  ><a href="adminHome.php">HOME</a></li>
-							<li class="ts" ><a href="allProduct.php">All products</a></li>
-							<li class="ts" ><a href="allUser.php">All users</a></li>
-							<li class="ts" ><a href="order.php">Orders</a></li>
-							<li class="ts active"><a href="check.php">Checks</a></li>
-
-						</ul>
-						<ul class="nav navbar-nav navbar-right">
-
-							<li class="ts" ><img src="images/d.jpg" heigth="40px" width="25px"  class="img-rounded" ></img></li>
-
-							<li class="ts" ><a href="#"><span class="glyphicon "></span> Admin </a></li>
-
-							<li class="ts" ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
-
-						</ul>
-					</div>
-
-				</div>
-			</nav>
-		</div>
+ <div class="header navbar-fixed-top">
+	      <div class="header_top">
+	            <div class="menu">
+		      <nav>
+			  <ul>
+				<li><a href="adminHome.php">HOME</a></li>
+				<li  class="active" ><a href="allProducts.php">All products</a></li>
+				<li><a href="allUsers.php">all users</a></li>
+				<li><a href="orders.php">Orders</a></li>
+				<li><a href="check.php">Checks</a></li>	
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
+				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
+				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+			</ul>
+		      </nav>		      
+	      </div>                 
+	    </div>
+	</div>
+	<div class="container" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
 		<!------------------------------------>
 		<div class="row">
 
-			<p> Checks </p>
+			<h2> Checks </h2>
 		</div>
 		<!----------------------------------------------------------------------------------------------------->
 		<div class="row">
@@ -259,6 +248,7 @@ require('tables.php');
 			</div>
 		</div>
 		<br>
+		
 		<!-------------------------------------------------users---------------------------------------------------->
 		<div class="row">
 			<div class='col-sm-1'></div>
