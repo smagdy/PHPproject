@@ -17,14 +17,14 @@
             }
         }
 		public static function create(){
-			$connect = new mysqli('localhost','adminACF8HjC','FNPkflRwqMUs');
+			self :: $obj = new mysqli('localhost','adminACF8HjC','FNPkflRwqMUs');
 			// Check connection
-			if ($connect->connect_error) {
+			if (self :: $obj->connect_error) {
 				die("Connection failed: " . $connect->connect_error);
 			}
 			// Create database
 			$sql = "CREATE DATABASE IF NOT EXISTS lions";
-			if ($connect->query($sql) === FALSE) {
+			if (self :: $obj->query($sql) === FALSE) {
 				echo "Error creating database: " . $connect->error;
 			}
 			connection :: $obj = mysqli_connect('localhost','adminACF8HjC','','lions');

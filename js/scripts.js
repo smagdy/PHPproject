@@ -11,7 +11,7 @@ $(function(){
 		}
 	});
 	$.ajax({
-		url: "selectRoom.php",
+		url: "Ajax/selectRoom.php",
 		method: 'get',
 		data: {
 			"all":"all"
@@ -122,7 +122,7 @@ var result=$("#search_input").val();
 			objectp[i]=JSON.stringify(products);
 		}
 		$.ajax({
-			url:"addOrder.php",
+			url:"Ajax/addOrder.php",
 			method:'post',
 			data:{
 				'products[]':objectp,

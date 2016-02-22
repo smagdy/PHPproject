@@ -202,10 +202,10 @@ if(!isset($_COOKIE['admin']))
 		      <nav>
 			  <ul>
 				<li><a href="adminHome.php">HOME</a></li>
-				<li  class="active" ><a href="allProducts.php">All products</a></li>
+				<li><a href="allProducts.php">All products</a></li>
 				<li><a href="allUsers.php">all users</a></li>
 				<li><a href="orders.php">Orders</a></li>
-				<li><a href="check.php">Checks</a></li>	
+				<li  class="active" ><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
 				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>

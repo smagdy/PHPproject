@@ -29,8 +29,8 @@ if(!isset($_COOKIE['admin']))
 	            <div class="menu">
 		      <nav>
 			  <ul>
-				<li><a href="adminHome.php">HOME</a></li>
-				<li  class="active" ><a href="allProducts.php">All products</a></li>
+				<li  class="active"><a href="adminHome.php">HOME</a></li>
+				<li><a href="allProducts.php">All products</a></li>
 				<li><a href="allUsers.php">all users</a></li>
 				<li><a href="orders.php">Orders</a></li>
 				<li><a href="check.php">Checks</a></li>	

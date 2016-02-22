@@ -49,11 +49,11 @@ if(!isset($_COOKIE['admin']))
 	            <div class="menu">
 		      <nav>
 			  <ul>
-				<li class="active" ><a href="adminHome.php">HOME</a></li>
+				<li><a href="adminHome.php">HOME</a></li>
 				<li><a href="allProducts.php">All products</a></li>
-				<li><a href="allUsers.html">all users</a></li>
-				<li><a href="orders.html">Orders</a></li>
-				<li><a href="check.html">Checks</a></li>	
+				<li class="active" ><a href="allUsers.php">all users</a></li>
+				<li><a href="orders.php">Orders</a></li>
+				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
 				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
