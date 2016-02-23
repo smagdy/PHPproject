@@ -69,6 +69,7 @@ if($count==0){
     $Product->available='1';
     $Product->cid=$category;
     $Product->insert();
+    header('Location:../allProducts.php');
 }
  else {
     echo $error;

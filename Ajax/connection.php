@@ -3,21 +3,10 @@
     {
         static $obj;
         private  function __construct(){
-        	/*$self :: $obj = mysqli_connect(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), "lions", getenv('OPENSHIFT_MYSQL_DB_PORT')) or die("Error: " . mysqli_error(self :: $obj));
-mysqli_select_db($self :: $obj, getenv('OPENSHIFT_APP_NAME')) or die("Error: " . mysqli_error(self :: $obj));
-			self :: $obj = mysqli_connect('localhost','adminACF8HjC','FNPkflRwqMUs','lions');
+			self :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
 			if (mysqli_connect_errno()) {
 				echo 'Error: Could not connect to database. Please try again later.';
-			}*/
-
-			$self :: $obj  = mysqli_connect('127.9.226.130:3306','adminACF8HjC','FNPkflRwqMUs','lions');
-			if ($self :: $obj ->connect_errno) {
-
-			    die('Connect Error (' . $self :: $obj ->connect_errno . ') '
-				. $self :: $obj ->connect_error);
-}
-mysqli_select_db($db,$db_name); 
-			
+			}
         }
         public static function createInstance(){
             if(self :: $obj)
@@ -28,20 +17,17 @@ mysqli_select_db($db,$db_name);
             }
         }
 		public static function create(){
-			/*$self :: $obj = mysqli_connect(getenv('OPENSHIFT_MYSQL_DB_HOST'), getenv('OPENSHIFT_MYSQL_DB_USERNAME'), getenv('OPENSHIFT_MYSQL_DB_PASSWORD'), "", getenv('OPENSHIFT_MYSQL_DB_PORT')) or die("Error: " . mysqli_error(self :: $obj));
-			//self :: $obj = new mysqli('localhost','adminACF8HjC','FNPkflRwqMUs');
+			$connect = new mysqli('localhost','root','');
 			// Check connection
-			if (self :: $obj->connect_error) {
+			if ($connect->connect_error) {
 				die("Connection failed: " . $connect->connect_error);
 			}
 			// Create database
-			*/
-			$con=new mysqli('127.9.226.130:3306','adminACF8HjC','FNPkflRwqMUs','lions');
-			$sql = "CREATE DATABASE IF NOT EXISTS lions";
-			if ($con->query($sql) === FALSE) {
-				echo "Error creating database: " . $con->error;
+			$sql = "CREATE DATABASE IF NOT EXISTS Cafeteria_DataBase";
+			if ($connect->query($sql) === FALSE) {
+				echo "Error creating database: " . $connect->error;
 			}
-			connection :: $obj = mysqli_connect('127.9.226.130:3306','adminACF8HjC','FNPkflRwqMUs','lions');
+			connection :: $obj = mysqli_connect('localhost','root','','Cafeteria_DataBase');
 			if (mysqli_connect_errno()) {
 				echo 'Error: Could not connect to database. Please try again later.';
 			}

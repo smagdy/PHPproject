@@ -140,6 +140,7 @@ $this->orderDate=date('Y-m-d H:i:s');
 $this->amount=0;
 $this->status="";
 $this->comment='';
+$this->rid='';
 $this->con=connection :: createInstance();
 }
 function __get($name){
@@ -153,8 +154,12 @@ $query="update Orders set uid='".$this->uid."',orderDate='".$this->orderDate."',
 mysqli_query($this->con,$query);
 }
 function insert(){
-$query="insert into Orders values(null,'".$this->uid."',".$this->orderDate."','".$this->amount."','".$this->status."','".$this->comment."');";
+$query="insert into Orders values(null,$this->uid,'".$this->orderDate."',$this->amount,'".$this->status."','".$this->comment."',$this->rid);";
+$this->rid."');";
+echo $query;
 mysqli_query($this->con,$query);
+echo $this->con->insert_id;
+ return mysqli_insert_id($this->con);
 }
 function delete(){
 $query="delete from Orders where oid='".$this->oid."' and uid='".$this->uid."';";

@@ -154,13 +154,14 @@ $(function(){
             console.log(uid);
             products['pid']=pid;
             products['numofItems']=parseInt(node.find('.numofItems').val());
-            objectp[i]=JSON.stringify(products);
+            objectp[i]=products;
         }
+        var p=JSON.stringify(objectp);
         $.ajax({
             url:"Ajax/addOrder.php",
             method:'post',
             data:{
-                'products[]':objectp,
+                'products':p,
                 'uid':uid,
                 'rid':parseInt($('#roomNum').val()),
                 'amount':parseInt($('#mytotal').text()),
@@ -170,6 +171,8 @@ $(function(){
             success:function(response){
                 //console.log(response);
                 $("#myOrders").text("");
+                $('#mytotal').text("");
+                $('#comment').val("");
             },
             error: function (xhr, status, error) {
                 console.log(error);

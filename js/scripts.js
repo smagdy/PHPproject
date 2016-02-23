@@ -119,13 +119,14 @@ var result=$("#search_input").val();
 			var uid = parseInt(node.attr('name'));
 			products['pid']=pid;
 			products['numofItems']=parseInt(node.find('.numofItems').val());
-			objectp[i]=JSON.stringify(products);
+			objectp[i]=products;
 		}
+		var p=JSON.stringify(objectp);
 		$.ajax({
 			url:"Ajax/addOrder.php",
 			method:'post',
 			data:{
-				'products[]':objectp,
+				'products':p,
 				'uid':uid,
 				'rid':parseInt($('#roomNum').val()),
 				'amount':parseInt($('#mytotal').text()),
