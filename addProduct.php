@@ -1,16 +1,16 @@
-<!DOCTYPE>
 <?php
 session_start();
 if(!isset($_COOKIE['admin']))
 	if(!isset($_SESSION['admin']))
 		header('Location:index.html');
 ?>
+<!DOCTYPE >
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>Add Product</title>
-  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
   <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
 </head>
 <script src="js/jquery-1.11.2.js"></script>
 <script src="js/bootstrap.min.js" ></script> 
@@ -68,7 +68,8 @@ if(!isset($_COOKIE['admin']))
 
 </script>
 <body>
-<div class="header navbar-fixed-top">
+   
+     <div class="header navbar-fixed-top">
 	      <div class="header_top">
 	            <div class="menu">
 		      <nav>
@@ -80,14 +81,15 @@ if(!isset($_COOKIE['admin']))
 				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="images/a.jpg" height="50px" width="50px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="Ajax/logout.php"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+				<li ><a href="Ajax/logout.php"> LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>				    
 			</ul>
 		      </nav>		      
 	      </div>                 
 	    </div>
 	</div>
+	
    <div class="container form " style="width:900px ; min-height:400px ; margin:100px 200px">
        <h2>Add Product</h2><br/>
        <form action="Ajax/addProductAdmin.php" method="post" enctype="multipart/form-data" >
@@ -98,7 +100,7 @@ if(!isset($_COOKIE['admin']))
             <br/>
             <div class="row">
                  <span class="col-lg-2"><label>Price</label></span>
-                 <span class="col-lg-2"><input type="number" step=".5" min="1" max="20" name="price_prodect"  />&nbsp; &nbsp;EPG</span>
+                 <span class="col-lg-2"><input type="number" step=".5" min="1" max="20" name="price_product"  />&nbsp;&nbsp;EPG</span>
             </div>
             <br/>
             <div class="row">
@@ -113,47 +115,55 @@ if(!isset($_COOKIE['admin']))
     <!--------------------------------------------------------------------------------------------------------------->
       
   <!---------------------------------------------- model  --------------------------------------------------------->               
-  <a data-toggle="modal" href="#myModal" class="btn btn-link btn-lg">Add Category</a>
-		<div class="modal fade" id="myModal"  role="dialog">
+   <span><a data-toggle="modal" href="#myModal" >Add Category</a><span>
+		<div class="modal" id="myModal"  role="dialog">
 			<div class="modal-dialog">
-			<div class="modal-content">
+			<div class="modal-content" style="padding:25px;display:block;font-family:'Open Sans';font-size:16; sans-serif; color:#82592D;padding-bottom:5px" >
 				<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">
-				
-					<span aria-hidden="true">&times;</span>
-					
-					<span class="sr-only">Close</span>
-					
+				<button type="button" class="close" data-dismiss="modal">				
+					<span aria-hidden="true">&times;</span>				
+					<span class="sr-only">Close</span>					
 				</button>
-				<h4 class="modal-title">Add Category</h4>
+				<h3 class="modal-title">Add Category</h3><br>
 				</div>
 				
-				<div class="modal-body">
-				<p>Category Name </p> <input type="text" name="newCategory" id="newCategory" />
+				<div class="modal-body"><br>
+				   <label>Category Name : </label><br><br>
+				   <input type="text" name="newCategory" class="form-control" id="newCategory" /><br>
 				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal" id="saveCategory">OK</button>
-				
+				<div class="modal-footer"><br>
+				 <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveCategory">Save</button>
+				 <button class="btn btn-danger" data-dismiss="modal">Cancel</button><br><br>
 				</div>
 			</div>
 			</div>
 		</div>
-                 
+    
+		     
   <!------------------------------------------------------------------------------------------------------------------------->               
                              
                 
             </div>
-            <br/>
+          <!--  <br/>
             <div class="row">
                  <div class="col-sm-2"><label>Product image</label></div>                 
                      <div class="col-sm-4">
                         <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                         <label for="Pimage">Upload Image</label>
-                        <input type="file" name="Pimage" id="Pimage"/>
-                       
+                        <input type="file" name="Pimage" id="Pimage"/>                    
                        </div>
+              </div>       -->    
+                       
+          <div class="row">
+                      <span class="col-sm-2"><label>Product image</label></span>
+                      <div class="col-lg-2 fileUpload btn btn-warning" style="color:white">
+			  <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+			  <span><label for="Pimage">Upload Image</label></span>
+			  <span class="col-lg-2"><input type="file" name="Pimage"  class="upload" id="Pimage" /></span>
+		     </div>
+           </div>
                  
-            </div>
+          
             <br/><br/>
             <div class="row">
                  <span class="col-lg-2 col-xs-offset-3"><input type="submit" value="Save" name="save"  class="myButton"/></span>

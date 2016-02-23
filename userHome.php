@@ -87,7 +87,7 @@ if(!isset($_COOKIE['userName']))
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 
-							<li class="ts" ><img src="" heigth="50px" width="30px" id="userImage" class="img-rounded" /></li>
+							<li class="ts" ><img src="" heigth="50px" width="50px" id="userImage" class="img-rounded" /></li>
 
 							<li class="ts" ><a href="#"><span class="glyphicon " id ="userName"></span></a></li>
 

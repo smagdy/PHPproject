@@ -56,9 +56,9 @@ if(!isset($_COOKIE['admin']))
 				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="images/d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="images/a.png" height="50px" width="50px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="Ajax/logout.php"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+				<li ><a href="Ajax/logout.php"> LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>				    
 			</ul>
 		      </nav>		      
 	      </div>                 
@@ -97,14 +97,14 @@ if(!isset($_COOKIE['admin']))
             </div>
             <br/> 
            
-            
             <div class="row">
-                 <span class="col-lg-3"><label>Profile picture</label></span>                 
-                 <div class="col-lg-3 btn btn-default myButton fileUpload ">
-                     <span>Browse</span>
-                     <span class="col-lg-3"><input style="width:50px" type="file" name="profileimage"  value="browse" class="upload" /></span>
-                 </div>
-            </div>
+                      <span class="col-sm-3"><label>Profile image</label></span>
+                      <div class="col-lg-3 fileUpload btn btn-warning" style="color:white">
+			  <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
+			  <span><label for="profileimage">Upload Image</label></span>
+			  <span class="col-lg-3"><input type="file" name="profileimage"  class="upload" id="profileimage" /></span>
+		     </div>
+           </div>
             <br/><br/>
             <div class="row">
                  <span class="col-lg-2 col-xs-offset-3"><input type="submit" value="Save" name="submit"  class="myButton submit"/></span>

@@ -38,6 +38,7 @@ $res = $product->selectLimit($limit,4);
 $productsArray = array();
 
 for( $i =0 ; $i< count($res); $i++){
+   $productsArray[$i]['pid'] =  $res[$i][0] ;
    $productsArray[$i]['name'] =  $res[$i][1] ;
    $productsArray[$i]['price'] =  $res[$i][3] ;
    $productsArray[$i]['image'] =  $res[$i][2] ; 

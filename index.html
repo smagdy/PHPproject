@@ -88,35 +88,36 @@ $('#savePass').click(function(){
 						    </div>
 <!---------------------------------------------------------------------------------->
 <div class="form-group">
-	 <span><input type="checkbox" name="keep" ><label> Keep Me LogIn</label></span>
+	 <span><input type="checkbox" name="keep" ><label>&nbsp;&nbsp;Keep Me LogIn</label></span>
  </div> 
 <!-------------------------------------------------------------------------------------------->	
- <a data-toggle="modal" href="#myModal" class="btn btn-link btn-lg forget">Forget my Password</a>
+ <span><a data-toggle="modal" href="#myModal" class="btn forget" style="margin-left:350px">Forget my Password</a><span>
 		<div class="modal fade" id="myModal"  role="dialog">
 			<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">
-				
-					<span aria-hidden="true">&times;</span>
-					
-					<span class="sr-only">Close</span>
-					
-				</button>
-				<h4 class="modal-title">Edit Password</h4>
-				</div>
-				
-				<div class="modal-body">
-				<p>New Password </p> <input type="password" name="newPass" id="newPass" />
-				<p>Confirm Password </p> <input type="password" name="ConfirmePass" id="ConfirmePass" />
-				</div>
-				<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal" id="savePass">Reset Password</button>
-				
-				</div>
-			</div>
+			    <div class="modal-content"  style="padding:25px;display:block;font-family:'Open Sans';font-size:16; sans-serif; color:#82592D;padding-bottom:5px" >
+				    <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal">				
+					    <span aria-hidden="true">&times;</span>					
+					    <span class="sr-only">Close</span>					
+				    </button>
+				    <h4 class="modal-title">Edit Password</h4>
+				    </div>				
+				    <div class="modal-body">
+					<h6>New Password </h6>
+					<input type="password" name="newPass" id="newPass" class="form-control"  /><br><br>
+					<h6>Confirm Password </h6>
+					<input type="password" name="ConfirmePass" id="ConfirmePass" class="form-control" /><br><br>
+				    </div>
+				   
+				    <div class="modal-footer">
+				    <button type="button" class="btn btn-primary" data-dismiss="modal" id="savePass">Reset Password</button><br><br>				
+				    </div>
+			    </div>
 			</div>
 		</div>
+				
+
+			
 
 <!----------------------------------------------------------------------------------------------------------->				    
                                <!-- <span style="float:right"><a href=""><font size="-1.5" color="#3399FF">forget my password</font></a></span>-->

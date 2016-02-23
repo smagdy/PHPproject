@@ -169,7 +169,7 @@ $(function(){
             },
             success:function(response){
                 //console.log(response);
-                window.location.href = "../userHome.php";
+                $("#myOrders").text("");
             },
             error: function (xhr, status, error) {
                 console.log(error);

@@ -60,13 +60,11 @@ if(!isset($_COOKIE['admin']))
 	            $("table").empty();
 	            $("table").append("<tr><th>Product</th><th>price</th><th>Image</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['productsArray'].length ; i++){
-<<<<<<< HEAD
-	            var row ='<tr id="'+i+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
+	            var row ='<tr id="'+response['productsArray'][i]["id"]+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
   		     row += '<td><img width="60px" height="60px" src="images/'+response['productsArray'][i]["image"]+'"/></td>';
-=======
 	            var row ='<tr id="'+response['productsArray'][i]["pid"]+'"><td>'+response['productsArray'][i]["name"]+'</td><td>'+response['productsArray'][i]["price"]+'</td>' ;
   		     row += "<td><img width='60px' height='60px' src='"+response['productsArray'][i]['image']+"'/></td>";
->>>>>>> ad3084be564af602e93305cf525ff82d6cabdb8d
+
   		     row += '<td><button class="Availability">Availability</button><button class="delete">Del</button>';
   		    
   		     row += '<button class="edit" data-toggle="modal" data-target="#my-modal">Edit</button>';
@@ -159,21 +157,21 @@ if(!isset($_COOKIE['admin']))
         }
     </style>
 <body>
-  <div class="header navbar-fixed-top">
+         <div class="header navbar-fixed-top">
 	      <div class="header_top">
 	            <div class="menu">
 		      <nav>
 			  <ul>
 				<li><a href="adminHome.php">HOME</a></li>
-				<li  class="active" ><a href="allProducts.php">All products</a></li>
+				<li class="active"><a href="allProducts.php">All products</a></li>
 				<li><a href="allUsers.php">all users</a></li>
 				<li><a href="orders.php">Orders</a></li>
 				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="images/a.png" height="50px" width="50px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+				<li ><a href="Ajax/logout.php"> LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>				    
 			</ul>
 		      </nav>		      
 	      </div>                 

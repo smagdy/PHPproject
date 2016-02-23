@@ -18,12 +18,12 @@ if (isset($_POST["save"]) ){
             
     }
     ////////////////////////////// price ///////////////////////////////////
-    if(empty($_POST["price_prodect"])){
+    if(empty($_POST["price_product"])){
         $count=$count+1;
          $error.="Pleas enter price Product <br>";
     } 
     else {
-        $price_prodect=$_POST["price_prodect"];
+        $price_product=$_POST["price_product"];
     }
  /////////////////////////// category ///////////////////////////////////    
     if(empty($_POST["category"])){
@@ -43,13 +43,12 @@ if (isset($_POST["save"]) ){
 			exit;
 			}
 		
-			$upimage = "images/".$_FILES["Pimage"]["name"];
+			$upimage = "http://lions-php08.rhcloud.com/".basename($_FILES["Pimage"]["name"]);
 			if (is_uploaded_file($_FILES['Pimage']['tmp_name'])){
 				
                             if(!move_uploaded_file($_FILES['Pimage']['tmp_name'], $upimage)){
 				
-                                    echo "problemrrrtttt";
-                                
+                                    echo "problem";
                                 }
 				
                                 else{
@@ -65,8 +64,8 @@ if (isset($_POST["save"]) ){
 if($count==0){
     $Product=new Products();
     $Product->pname=$name_product;
-    $Product->productPicture=$upimage;
-    $Product->price=$price_prodect; 
+    $Product->productPicture="images/".$_FILES["Pimage"]["name"];
+    $Product->price=$price_product; 
     $Product->available='1';
     $Product->cid=$category;
     $Product->insert();

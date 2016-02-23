@@ -10,8 +10,8 @@ $order->comment=$_POST['comment'];
 $order->rid=$_POST['rid'];
 $oid=$order->insert();
 
-foreach ($products as $p) {
-    $p=json_decode($p);
+foreach ($products as $pro) {
+    $p=json_decode($pro);
     $orderProducts=new orderProducts();
     $orderProducts->oid=$oid;
     $orderProducts->pid=$p->pid;

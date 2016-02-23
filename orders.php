@@ -159,9 +159,9 @@ if(!isset($_COOKIE['admin']))
 			    <li><a href="check.php">Checks</a></li>	
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-			    <li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+			    <li><img src="images/a.png" height="50px" width="50px"  class="img-rounded"></img></li>
 			    <li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-			    <li ><a href="Ajax/logout.php"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+			    <li ><a href="Ajax/logout.php"> LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>				    
 		    </ul>
 		  </nav>		      
 	  </div>                 

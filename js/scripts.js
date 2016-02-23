@@ -133,7 +133,6 @@ var result=$("#search_input").val();
 				'comment':$('#comment').val()
 			},
 			success:function(response){
-				//console.log(response);
 				window.location.href = "userOrder.php";
 			},
 			error: function (xhr, status, error) {

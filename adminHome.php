@@ -9,16 +9,19 @@ if(!isset($_COOKIE['admin']))
 <head>
 	<meta charset="UTF-8">
 	<title>Admin Home</title>
+	  <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.9.0.min.js"></script>
+ 	 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style1.css">
 	<link rel="stylesheet" href="css/style.css">
-	<style>
-
-	</style>
+	<script src="js/jquery-1.11.2.js"></script>
+	<script src="js/bootstrap.min.js" ></script> 
 
 	<script src="js/jquery-1.11.2.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 	<script src="js/task.js"></script>
 	<script src="js/adminscript.js"></script>
 </head>
@@ -36,9 +39,9 @@ if(!isset($_COOKIE['admin']))
 				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="images/a.png" height="50px" width="50px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="#"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+				<li ><a href="Ajax/logout.php"> LogOut<span class="glyphicon glyphicon-log-out"></span></a></li>				    
 			</ul>
 		      </nav>		      
 	      </div>                 

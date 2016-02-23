@@ -60,7 +60,30 @@ if(!isset($_COOKIE['admin']))
 	            $("table").empty();
 	            $("table").append("<tr><th>Name</th><th>Room</th><th>Image</th><th>Ext.</th><th>Action</th></tr>");
 	          for(var i=0 ; i< response['usersArray'].length ; i++){
-  		    $("table").append('<tr id="'+i+'"><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td><td><button class="delete">Del</button><button class="edit">Edit</button></td></tr>');
+  		   // -----------------------------------------------------------
+  		    var row ='<tr id="'+i+'"><td>'+response['usersArray'][i]["name"]+'</td><td>'+response['usersArray'][i]["room"]+'</td><td><img width="60px" height="60px" src="'+response['usersArray'][i]["image"]+'"/></td><td>'+response['usersArray'][i]["ext"]+'</td>';
+  		     row+= '<td><button class="delete">Del</button>';
+  		     row += '<button class="edit" data-toggle="modal" data-target="#my-modal">Edit</button>';
+  		     row += '<div  id="my-modal" class="modal" ><div class="modal-dialog">' ;
+                     row += '<div class="modal-content" style="padding:25px;display:block;font-family:"Open Sans", sans-serif;color:#82592D;padding-bottom:5px">';
+                     row += '<form><div class="modal-header"><button type="button" class="close" data-dismiss="modal" ><span >&times;</span></button>';
+                     row += '<h4 class="modal-title">Edit User</h4></div>';
+                     row += '<div class="modal-body">';
+                     row += '<div class="row"><span class="col-lg-3"><label>Name</label></span><span class="col-lg-6"><input type="text" name="userName" class="form-control" /></span></div><br/>';
+		     row += '<div class="row"><span class="col-lg-3"><label>E-Mail</label></span><span class="col-lg-6"><input type="email" name="umail" class="form-control"/></span></div><br/>';
+		     row += '<div class="row"><span class="col-lg-3"><label>Password</label></span><span class="col-lg-6"><input type="password" name="upass"  class="form-control"/></span></div><br/>';
+		     row += '<div class="row"><span class="col-lg-3"><label>Room No.</label></span><span class="col-lg-6"> <select name="room" id="roomNum"><option>Select Room Number</option></select></span></div><br/>';
+		     row += '<div class="row"><span class="col-lg-3"><label>EXT.</label></span><span class="col-lg-6"><input type="text" name="umail"  class="form-control"/></span></div><br/>';
+		     row += '<div class="row"><span class="col-sm-3"><label>Profile image</label></span><div class="col-lg-2 fileUpload btn btn-warning" style="color:white">';
+		     row += '<input type="hidden" name="MAX_FILE_SIZE" value="1000000" /><span><label for="Pimage">Browse</label></span><span class="col-lg-2">';
+		     row += '<input type="file" name="pimage"  class="upload" id="Pimage" /></span></div></div>';
+	             row += '<div class="modal-footer"><button class="btn btn-success" data-dismiss="modal">Submit</button><button class="btn btn-danger" data-dismiss="modal">Cancel</button>';
+		     row += '</div></form></div></div></div>';
+		     
+  		     row += '</td></tr> '; 
+                      
+  		     $("table").append(row);
+  		 //--------------------------------------------------------- ---
   		  }	      
 	     }
 	      sendToServer (code,limit,UID) ;
@@ -123,9 +146,9 @@ if(!isset($_COOKIE['admin']))
 				<li><a href="check.php">Checks</a></li>	
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right" style="margin-right:100px" >
-				<li><img src="d.jpg" height="50px" width="30px"  class="img-rounded"></img></li>
+				<li><img src="images/a.png" height="50px" width="50px"  class="img-rounded"></img></li>
 				<li ><a href="#"><span class="glyphicon "></span> Admin </a></li>				
-				<li ><a href="Ajax/logout.php"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>				    
+				<li ><a href="Ajax/logout.php">LogOut<span class="glyphicon glyphicon-log-out"></span> </a></li>				    
 			</ul>
 		      </nav>		      
 	      </div>                 
@@ -134,7 +157,7 @@ if(!isset($_COOKIE['admin']))
 
    <div class="container form" style="width:900px ; min-height:400px ; margin:80px 200px 0 200px ">
        <h2>All Users</h2>
-       <span style="float:right;"><a href="addUser.html">add User</a></span>
+       <span style="float:right;"><a href="addUser.php">add User</a></span>
        <table class="table table-bordered myTable">        
        </table>
 	  

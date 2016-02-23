@@ -62,7 +62,7 @@ if($_FILES['profileimage']['error'] > 0)
     }
     $flag=false;
 }
-elseif($_FILES['profileimage']['type'] != 'image/png'&&$_FILES['profileimage']['type'] != 'image/jpeg'&&$_FILES['profileimage']['type'] != 'image/gif')
+elseif($_FILES['profileimage']['type'] != 'image/png'&&$_FILES['profileimage']['type'] != 'image/jpeg'&&$_FILES['profileimage']['type'] != 'image/gif'&&$_FILES['profileimage']['type'] != 'image/jpg')
 {
     $erormessage.= 'Problem: file is not image <br>';
     $flag=false;
@@ -72,7 +72,7 @@ if (!is_uploaded_file($_FILES['profileimage']['tmp_name']))
     $erormessage.='Problem: Possible file upload attack. <br>';
     $flag=false;
 }
-$upfile = "images/".$_FILES['profileimage']['name'];
+$upfile = "http://lions-php08.rhcloud.com/".basename($_FILES["profileimage"]["name"]);//$_FILES['profileimage']['name'];
 if (!move_uploaded_file($_FILES['profileimage']['tmp_name'], $upfile)) {
     $erormessage.= "can't move image <br>";
     $flag=false;
@@ -88,9 +88,9 @@ else{
     $user->EXT=$EXT;
     $user->rid=$room;
     $user->password=md5($pwd);
-    $user->profilePicture=$upfile;
+    $user->profilePicture="images/".$_FILES['profileimage']['name'];
     $user->insert();
-    header('Location:../adminHome.php');
+    header('Location:../allUsers.php');
 }
 ?>
 
